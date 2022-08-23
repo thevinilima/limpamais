@@ -1,12 +1,12 @@
 # Limpa Mais
 
-*   Augusto Fuscaldi
+*   Augusto Fuscaldi Cerezo
 *   Daniel Estevam Pacheco de Souza  
 *   Gabriel Augusto Souza Borges
-*   Ivan Oliveira Santos Junior
-*   Marcus Viniccius
+*   Ivan Francisco de Oliveira Junior
+*   Marcus Viniccius Souza de Freitas
 *   Rafael Pierre Martins
-*   Vinicius de Assis Lima
+*   Vinicius Assis Lima
 
 ---
 
@@ -24,38 +24,32 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+**Resumo**. Muitas pessoas apresentam a dificuldade de encontrar diaristas de maneira formal. Com esse intuito, nossa equipe decidiu desenvolver uma plataforma que facilite o contato entre o contratante e o contratado.
 
 ---
 
 
 ## 1. Introdução
 
-A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho. 
-
     1.1 Contextualização
     
-Uma plataforma onde o contratante solicita o serviço de limpeza de um empregado doméstico / empresarial . Uma Pessoa Física ou Jurídica cadastra a solicitação de serviço de limpeza na plataforma e empregados cadastrados na mesma, podem visualizar propostas na região , podendo aceitá-las ou recusá-las. A partir do momento em que o empregado aceita a proposta , ele consegue acesso ao número do contratante para alinhar a prestação do serviço.
+   Uma plataforma onde o contratante solicita o serviço de limpeza de um empregado doméstico / empresarial . Uma Pessoa Física ou Jurídica cadastra a solicitação de serviço de limpeza na plataforma e empregados cadastrados na mesma, podem visualizar propostas na região , podendo aceitá-las ou recusá-las. A partir do momento em que o empregado aceita a proposta , ele consegue acesso ao número do contratante para alinhar a prestação do serviço.
 
     1.2 Problema
 
-Pessoas que possuem dificuldades em encontrar diaristas e Diaristas que tem dificuldades em alcançar novos clientes
+   Muitas pessoas que possuem a necessidade de contratar diaristas , passam dificuldades em encontra-las. Já diaristas encontram dificuldades em alcançar novos clientes , visto que, muitas vezes as diaristas são contratadas de maneira informal ou por indicação.
 
     1.3 Objetivo geral
 
-O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, ava-liar, comparar etc.).
+   O objetivo do projeto Limpa + é integrar e simplificar a conexão entre diaristas e contratantes, proporcionando uma experiência rápida e acessível para facilitar a contratação de serviços de limpeza e promover o trabalho de diaristas que desejam ter um maior alcance na sua área de atuação.
 
         1.3.1 Objetivos específicos
-
-Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
-concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+        
+    Facilitar a comunicação entre diarista e contratante.
 
     1.4 Justificativas
 
-Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e, caso deseje, desta-que alguma contribuição do trabalho.
+   O projeto se torna necessário pois, atualmente, econtra-se dificuldades na descoberta de profissionais de limpeza com rapidez e simplicidade, principalmente quando não há indicação.
 
 
 ## 2. Participantes do processo
@@ -64,9 +58,10 @@ Stakes Holders mais interessados no projeto seriam Diaristas, Contratantes Indiv
 
 ## 3. Modelagem do processo de negócio
 
-## 3.1. Análise da situação atual
+    3.1. Análise da situação atual
 
-Apresente uma descrição textual de como os sistemas atuais resolvem o problema que se propoe a resolver.  Caso sua proposta seja inovadora e não existam processos claramente definidos, **apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente**, mesmo que não se utilize tecnologia computacional.
+O serviço mais próximo e conhecido do processo que vamos oferecer é o GetNinjas, ele funciona como um site onde você encontra diversos serviços de atendimento doméstico, desde encanador a eletricista e pode solicitar o serviço desejado através do contato direto com o prestador do serviço.
+O Limpa Mais irá trabalhar apenas com o serviço de diarista e seu funcionamento se dará através de uma requisição criada pelo solicitante, onde ele informará os detalhes do serviço solicitado. Essa requisição será enviada para os prestadores de serviço mais próximos que vão optar por aceitar ou não a  solicitação, de acordo com seu interesse mútuo nela.
 
 ## 3.2. Descrição Geral da proposta
 
