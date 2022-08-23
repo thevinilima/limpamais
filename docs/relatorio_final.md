@@ -1,18 +1,20 @@
-# TITULO DO PROJETO
+# Limpa Mais
 
-
-**Nome completo do Aluno 1, email do aluno 1**
-
-**Nome completo do Aluno 2, email do aluno 2**
-
-**Nome completo do Aluno 3, email do aluno 3**
+*   Augusto Fuscaldi
+*   Daniel Estevam Pacheco de Souza  
+*   Gabriel Augusto Souza Borges
+*   Ivan Oliveira Santos Junior
+*   Marcus Viniccius
+*   Rafael Pierre Martins
+*   Vinicius de Assis Lima
 
 ---
 
 Professores:
 
-** Prof. NOme do Prof 1 **
-** Prof. NOme do Prof 2 **
+*   Hugo Bastos de Paula
+*   Felipe Augusto Lima Reis
+*   Cristiano Geraldo Teixeira Silva
 
 ---
 
@@ -40,10 +42,7 @@ A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenc
 
     1.2 Problema
 
-Em seguida o aluno deve caminhar a contextualização para descrever o **problema** que o artigo trata. 
-O **problema** pode ser algo vivido em uma empresa específica. Neste caso, o aluno deve rapidamente apresentar 
-o cenário de problema da empresa. A empresa só deve ser citada explicitamente se o aluno tiver autorização 
-para tal.
+Pessoas que possuem dificuldades em encontrar diaristas e Diaristas que tem dificuldades em alcançar novos clientes
 
     1.3 Objetivo geral
 
@@ -63,7 +62,7 @@ desenvolvimento do seu trabalho e, caso deseje, desta-que alguma contribuição 
 
 ## 2. Participantes do processo
 
-Apresente aqui os diferentes perfis dos Stakeholders (participantes do processo) chave do sistema. Diversas são as informações que podem ser relevantes para a definição dos perfis dos usuários, tais como idade, gênero, aspectos culturais, nível de educação, entre outros. A pesquisa de mercado pode ser uma ferramenta poderosa para se identificar e caracterizar os perfis de usuários.
+Stakes Holders mais interessados no projeto seriam Diaristas, Contratantes Individuais e Organizações Contratantes. Os menos interessados são: O time de Desenvolvedores, Investidores e o Mercado de Produtos de Limpeza.
 
 ## 3. Modelagem do processo de negócio
 
