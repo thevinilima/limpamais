@@ -35,10 +35,8 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho. 
 
     1.1 Contextualização
-
-Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere. 
-A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
-A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas).
+    
+Uma plataforma onde o contratante solicita o serviço de limpeza de um empregado doméstico / empresarial . Uma Pessoa Física ou Jurídica cadastra a solicitação de serviço de limpeza na plataforma e empregados cadastrados na mesma, podem visualizar propostas na região , podendo aceitá-las ou recusá-las. A partir do momento em que o empregado aceita a proposta , ele consegue acesso ao número do contratante para alinhar a prestação do serviço.
 
     1.2 Problema
 
