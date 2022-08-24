@@ -1,6 +1,6 @@
 # Limpa Mais
 
-
+  Muitas pessoas apresentam a dificuldade de encontrar diaristas de maneira formal. Com esse intuito, nossa equipe decidiu desenvolver uma plataforma que facilite o contato entre o contratante e o contratado.
 
 ## Integrantes
 
