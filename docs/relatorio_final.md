@@ -61,7 +61,8 @@ Stakes Holders mais interessados no projeto seriam Diaristas, Contratantes Indiv
    3.1. Análise da situação atual
 
 O serviço mais próximo e conhecido do processo que vamos oferecer é o GetNinjas, ele funciona como um site onde você encontra diversos serviços de atendimento doméstico, desde encanador a eletricista e pode solicitar o serviço desejado através do contato direto com o prestador do serviço.
-O Limpa Mais irá trabalhar apenas com o serviço de diarista e seu funcionamento se dará através de uma requisição criada pelo solicitante, onde ele informará os detalhes do serviço solicitado. Essa requisição será enviada para os prestadores de serviço mais próximos que vão optar por aceitar ou não a  solicitação, de acordo com seu interesse mútuo nela.
+O Limpa Mais irá trabalhar apenas com o serviço de diarista, moldado todo para esse tipo específico de serviço. e
+E seu funcionamento se dará através de uma requisição criada pelo solicitante, onde ele informará os detalhes do serviço solicitado. Essa requisição será enviada para os prestadores de serviço mais próximos que vão optar por aceitar ou não a  solicitação, de acordo com seu interesse mútuo nela.
 
 ## 3.2. Descrição Geral da proposta
 
