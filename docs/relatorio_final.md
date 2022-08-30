@@ -95,12 +95,13 @@ Usuário Diarista -
 Por conta da pandemia seu pai acabou falecendo e por isso ela voltou para o interior para estar junto de sua mãe, que acabou ficando sozinha e já em idade avançada precisava da companhia de alguém para seus cuidados. E por conta disso, Patrícia acabou indo para um local novo onde quase não tinha contatos para serviço e acabou ficando sem emprego por um tempo. Com o auxílio da aplicação Limpa Mais, Patrícia pode encontrar diversas pessoas precisando do seu serviço, e assim, mesmo em um local novo pode continuar trabalhando em sua área e encontrando contratantes que se adequam a sua rotina.
 
 Processo:
-O Usuário Diarista, faz o seu cadastro na plataforma (Nome completo, Regiões de atendimento, CPF, Telefone, Senha)
-Realiza o login (Telefone e senha)
-A partir do primeiro acesso ele recebe as solicitações de serviço próximas às regiões cadastradas
-Aceita uma solicitação de seu interesse
-informa o valor que será cobrado pelo serviço e aguarda o aceite do solicitante
-Após a realização do serviço, o Diarista recebe o pagamento pela plataforma e o feedback de avaliação
+1 - O Usuário Diarista, faz o seu cadastro na plataforma (Nome completo, Regiões de atendimento, CPF, Telefone, Senha)
+2 - Realiza o login (Telefone e senha)
+3 - A partir do primeiro acesso ele recebe as solicitações de serviço próximas às regiões cadastradas
+4 - Aceita uma solicitação de seu interesse
+5 - informa o valor que será cobrado pelo serviço e aguarda o aceite do solicitante
+6 - Após a realização do serviço, o Diarista recebe o pagamento pela plataforma e o feedback de avaliação
+
 
 ## 3.3. Modelagem dos Processos
 
