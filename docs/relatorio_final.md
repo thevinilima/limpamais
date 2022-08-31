@@ -69,24 +69,24 @@ E seu funcionamento se dará através de uma requisição criada pelo solicitant
 Usuário Pessoa Jurídica - Best Bikes é uma empresa de aluguel de bicicletas localizada na região da Pampulha em Belo Horizonte. Com o grande fluxo de clientes que solicitam os serviços da empresa, o local fica extremamente sujo nos dias de segunda-feira em que a empresa não abre. E como nenhum funcionário trabalha neste dia, a limpeza estava ficando a cargo do dono. Por motivos de tempo, desorganização sanitária e exaustão, a Best Bikes decidiu contratar diaristas freelancers para atuar toda segunda-feira no estabelecimento. Para isso, a Limpa Mais foi a escolhida para tal por ser uma intermediadora fácil entre contratante e contratado para esse tipo específico de situação.
 
 Processo:
-Usuário Pessoa Jurídica faz cadastro na plataforma (Nome da empresa, CNPJ, Telefone, E-mail, Senha), faz o login (Telefone/E-mail e senha)
-Realiza o login (Telefone/E-mail e senha)
-Cria a solicitação do serviço
-Informa o endereço onde o serviço será prestado, detalhamento do serviço (tamanho do ambiente), profissionais necessários, horário, forma de pagamento
-Finaliza a solicitação
-Usuário aguarda um aceite, para que o serviço seja atendido pelo prestador de serviço que aceitar a solicitação
-Usuário avalia o trabalho realizado e emite a nota fiscal para ser entregue aos prestadores.
+1 - Usuário Pessoa Jurídica faz cadastro na plataforma (Nome da empresa, CNPJ, Telefone, E-mail, Senha), faz o login (Telefone/E-mail e senha)
+2 - Realiza o login (Telefone/E-mail e senha)
+3 - Cria a solicitação do serviço
+4 - Informa o endereço onde o serviço será prestado, detalhamento do serviço (tamanho do ambiente), profissionais necessários, horário, forma de pagamento
+5 - Finaliza a solicitação
+6 - Usuário aguarda um aceite, para que o serviço seja atendido pelo prestador de serviço que aceitar a solicitação
+7 - Usuário avalia o trabalho realizado e emite a nota fiscal para ser entregue aos prestadores.
 
 
 Usuário Pessoa Física: O usuário Eduardo se mudou recentemente para Belo Horizonte e está precisando de um diarista para realizar a limpeza de sua casa. Ele não possui network em sua cidade nova e está sem tempo para procurar por indicações. Por isso decidiu acessar o Site Limpa Mais, que facilita e agiliza o processo de encontrar prestadores de serviços de limpeza. Utilizando os sistema de filtros e pesquisa que são oferecidos pelo site, Eduardo encontrou o diarista que se encaixa  melhor com o seu perfil e localização. Após isso, foi feito o agendamento para conclusão da limpeza e Eduardo resolveu seu problema de encontrar diaristas.
 
 Processo:
-Usuário Pessoa Física, faz o seu cadastro na plataforma (Nome completo, CPF, Telefone, E-mail, Senha)
-Realiza o login (Telefone/E-mail e senha)
-Cria a solicitação do serviço
-Informa o endereço de onde o serviço será prestado, detalhamento do serviço(Cômodos), horário(à combinar), forma de pagamento e finaliza a solicitação
-Aguarda um aceite, para que o serviço seja atendido pelo prestador de serviço que aceitar a solicitação
-Ao finalizar o serviço, o usuário avalia o trabalho realizado e encerra a solicitação
+1 - Usuário Pessoa Física, faz o seu cadastro na plataforma (Nome completo, CPF, Telefone, E-mail, Senha)
+2 - Realiza o login (Telefone/E-mail e senha)
+3 - Cria a solicitação do serviço
+4 - Informa o endereço de onde o serviço será prestado, detalhamento do serviço(Cômodos), horário(à combinar), forma de pagamento e finaliza a solicitação
+5 - Aguarda um aceite, para que o serviço seja atendido pelo prestador de serviço que aceitar a solicitação
+6 - Ao finalizar o serviço, o usuário avalia o trabalho realizado e encerra a solicitação
 
 
 Usuário Diarista - 
