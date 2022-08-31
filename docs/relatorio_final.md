@@ -91,7 +91,7 @@ Ao finalizar o serviço, o usuário avalia o trabalho realizado e encerra a soli
 
 Usuário Diarista - 
 
-	A usuária Patrícia durante anos trabalhou como Diarista na casa de pessoas que a contratavam. Ao longo dos anos ela exerceu suas funções em diversas casas diferentes e por conta disso foi adquirindo muitos contatos, sempre uma pessoa a indicava para outras, por isso, ela sempre tinha serviço à sua disposição. Uma outra questão que lhe trazia muitas propostas era o fato dela residir em Belo Horizonte e na cidade sempre havia muita procura pelo serviço, para Patrícia nunca foi um problema ter trabalho.
+A usuária Patrícia durante anos trabalhou como Diarista na casa de pessoas que a contratavam. Ao longo dos anos ela exerceu suas funções em diversas casas diferentes e por conta disso foi adquirindo muitos contatos, sempre uma pessoa a indicava para outras, por isso, ela sempre tinha serviço à sua disposição. Uma outra questão que lhe trazia muitas propostas era o fato dela residir em Belo Horizonte e na cidade sempre havia muita procura pelo serviço, para Patrícia nunca foi um problema ter trabalho.
 Por conta da pandemia seu pai acabou falecendo e por isso ela voltou para o interior para estar junto de sua mãe, que acabou ficando sozinha e já em idade avançada precisava da companhia de alguém para seus cuidados. E por conta disso, Patrícia acabou indo para um local novo onde quase não tinha contatos para serviço e acabou ficando sem emprego por um tempo. Com o auxílio da aplicação Limpa Mais, Patrícia pode encontrar diversas pessoas precisando do seu serviço, e assim, mesmo em um local novo pode continuar trabalhando em sua área e encontrando contratantes que se adequam a sua rotina.
 
 Processo:
