@@ -121,14 +121,14 @@ Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em segu
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/call_process.png "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemPJ.jpeg "Modelo BPMN do Processo 2.")
 
 
 ### 3.3.3 Processo 3 – Fluxo usuário Diarista
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/call_process.png "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemDiarista.jpeg "Modelo BPMN do Processo 2.")
 
 ## 4. Projeto da Solução
 
