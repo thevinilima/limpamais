@@ -1,12 +1,12 @@
 # Limpa Mais
 
-*   Augusto Fuscaldi Cerezo
-*   Daniel Estevam Pacheco de Souza  
-*   Gabriel Augusto Souza Borges
-*   Ivan Francisco de Oliveira Junior
-*   Marcus Viniccius Souza de Freitas
-*   Rafael Pierre Martins
-*   Vinicius Assis Lima
+*   Augusto Fuscaldi Cerezo - acerezo@sga.pucminas.br
+*   Daniel Estevam Pacheco de Souza - 
+*   Gabriel Augusto Souza Borges - 
+*   Ivan Francisco de Oliveira Junior - ivan.oliveirapro@gmail.com
+*   Marcus Viniccius Souza de Freitas - Marcus.viniccius@hotmail.com
+*   Rafael Pierre Martins - pierredoc28@gmail.com
+*   Vinicius Assis Lima - thelimavinicius@gmail.com
 
 ---
 
@@ -33,11 +33,13 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
    1.1 Contextualização
     
-   Uma plataforma onde o contratante solicita o serviço de limpeza de um empregado doméstico / empresarial . Uma Pessoa Física ou Jurídica cadastra a solicitação de serviço de limpeza na plataforma e empregados cadastrados na mesma, podem visualizar propostas na região , podendo aceitá-las ou recusá-las. A partir do momento em que o empregado aceita a proposta , ele consegue acesso ao número do contratante para alinhar a prestação do serviço.
+   No contexto atual vemos uma carência por aplicações voltados para os profissionais de limpeza, algo que sempre foi presente na vida de muitoas pessoas deve também ser colocada no mundo da tecnologia, assim pretendemos fazer algo que supra essa necessidade.
+   A nossa proposta é criar uma plataforma onde o contratante solicita o serviço de limpeza de um empregado doméstico / empresarial . Uma Pessoa Física ou Jurídica cadastra a solicitação de serviço de limpeza na plataforma e empregados cadastrados na mesma, podem visualizar propostas na região , podendo aceitá-las ou recusá-las. A partir do momento em que o empregado aceita a proposta , ele consegue acesso ao número do contratante para alinhar a prestação do serviço.
 
    1.2 Problema
 
    Muitas pessoas que possuem a necessidade de contratar diaristas , passam dificuldades em encontra-las. Já diaristas encontram dificuldades em alcançar novos clientes , visto que, muitas vezes as diaristas são contratadas de maneira informal ou por indicação.
+   Algo tão simples como a conexão entre a diarista e um contratante pode ser completamente dificultada se não houver os meios necessários, e atualmente com a indústria da tecnologia diversos problemas de logística como esse já foram resolvidos, e por isso o mercado de diaristas tem uma grande carência nesse âmbito. Uma carência de uma aplicação que supra essas necessidades.
 
    1.3 Objetivo geral
 
@@ -56,11 +58,8 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
 Stakes Holders mais interessados no projeto seriam Diaristas, Contratantes Individuais e Organizações Contratantes. Os menos interessados são: O time de Desenvolvedores, Investidores e o Mercado de Produtos de Limpeza.
 
-## 3. Modelagem do processo de negócio
+![imagemStakeholder](imagens/Stakeholders.png "Mapa de StakeHolders.")
 
-### 3.1. Análise da situação atual
-
-O serviço mais próximo e conhecido do processo que vamos oferecer é o GetNinjas, ele funciona como um site onde você encontra diversos serviços de atendimento doméstico, desde encanador a eletricista e pode solicitar o serviço desejado através do contato direto com o prestador do serviço.
 
 A seguir histórias de pessoas que poderiam ser beneficiadas com o sistema do Limpa Mais.
 
@@ -70,6 +69,14 @@ Usuário Pessoa Física: O usuário Eduardo se mudou recentemente para Belo Hori
 
 Usuário Diarista: A usuária Patrícia durante anos trabalhou como Diarista na casa de pessoas que a contratavam. Ao longo dos anos ela exerceu suas funções em diversas casas diferentes e por conta disso foi adquirindo muitos contatos, sempre uma pessoa a indicava para outras, por isso, ela sempre tinha serviço à sua disposição. Uma outra questão que lhe trazia muitas propostas era o fato dela residir em Belo Horizonte e na cidade sempre havia muita procura pelo serviço, para Patrícia nunca foi um problema ter trabalho.
 Por conta da pandemia seu pai acabou falecendo e por isso ela voltou para o interior para estar junto de sua mãe, que acabou ficando sozinha e já em idade avançada precisava da companhia de alguém para seus cuidados. E por conta disso, Patrícia acabou indo para um local novo onde quase não tinha contatos para serviço e acabou ficando sem emprego por um tempo. Com o auxílio da aplicação Limpa Mais, Patrícia pode encontrar diversas pessoas precisando do seu serviço, e assim, mesmo em um local novo pode continuar trabalhando em sua área e encontrando contratantes que se adequam a sua rotina.
+
+## 3. Modelagem do processo de negócio
+
+### 3.1. Análise da situação atual
+
+O serviço mais próximo e conhecido do processo que vamos oferecer é o GetNinjas, ele funciona como um site onde você encontra diversos serviços de atendimento doméstico, desde encanador a eletricista e pode solicitar o serviço desejado através do contato direto com o prestador do serviço.
+
+
 
 
 ## 3.2. Descrição Geral da proposta
