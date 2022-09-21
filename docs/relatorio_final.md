@@ -110,25 +110,34 @@ Processo Usuário Diarista:
 
 ## 3.3. Modelagem dos Processos
 
-### 3.3.1 Processo 1 – Fluxo Usuário pessoa Física
+### 3.3.1 Processo 1 – Processo de cadastro dos Usuários e Validação
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN.
-
-![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/modelagemPF.jpeg "Modelo BPMN do Processo 1.")
+![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/processoCadastroeValidacao.jpeg "Modelo BPMN do Processo 1.")
 
 
-### 3.3.2 Processo 2 – Fluxo usuário pessoa Jurídica
+### 3.3.2 Processo 2 – Processo de solicitação do Serviço
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelademPJ.jpeg "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemSolicitacaoServico.png "Modelo BPMN do Processo 2.")
 
 
-### 3.3.3 Processo 3 – Fluxo usuário Diarista
+### 3.3.3 Processo 3 – Processo de se colocar ativo para trabalhos
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+![Exemplo de um Modelo BPMN do PROCESSO 2]( "Modelo BPMN do Processo 3.")
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemDiarista.jpeg "Modelo BPMN do Processo 2.")
+
+### 3.3.4 Processo 4 – Processo de Pagamento
+
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/Processo de pagamento Diagrama.png "Modelo BPMN do Processo 4.")
+
+
+### 3.3.5 Processo 5 – Processo de encerramento e feedback
+
+![Exemplo de um Modelo BPMN do PROCESSO 2]( "Modelo BPMN do Processo 5.")
+
+
+### 3.3.3 Processo 6 – Processo de solicitação de serviços especiais
+
+![Exemplo de um Modelo BPMN do PROCESSO 2]( "Modelo BPMN do Processo 6.")
 
 ## 4. Projeto da Solução
 
