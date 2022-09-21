@@ -45,9 +45,13 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
    O objetivo do projeto Limpa + é integrar e simplificar a conexão entre diaristas e contratantes, proporcionando uma experiência rápida e acessível para facilitar a contratação de serviços de limpeza e promover o trabalho de diaristas que desejam ter um maior alcance na sua área de atuação.
 
-      1.3.1 Objetivos específicos
+   1.3.1 Objetivos específicos
         
-    Facilitar a comunicação entre diarista e contratante.
+   
+   Desenvolver uma plataforma que ajude diaristas a encontrarem trabalho.
+   Ajudar pessoas e empresas a encontrar profissionais de limpeza.
+   Facilitar a comunicação entre diarista e contratante.
+   Criar laços de contratantes com Diaristas
 
    1.4 Justificativas
 
@@ -75,8 +79,8 @@ Por conta da pandemia seu pai acabou falecendo e por isso ela voltou para o inte
 ### 3.1. Análise da situação atual
 
 O serviço mais próximo e conhecido do processo que vamos oferecer é o GetNinjas, ele funciona como um site onde você encontra diversos serviços de atendimento doméstico, desde encanador a eletricista e pode solicitar o serviço desejado através do contato direto com o prestador do serviço.
-
-
+Como posto, nada de fácil acesso e voltado especificamente para diaristas existe hoje no mercado. Além da questão que muitas diaristas não são grandes usuários digitais, desse modo, se torna ainda mais difícil a criação de plataformas como essa, já que não há um grande público alvo.
+Então, temos quase ou nenhum produto sendo ofericido que cubra as carências citadas, além de um público que ainda precisa ser cativado a usar esses tipos de tecnologias.
 
 
 ## 3.2. Descrição Geral da proposta
