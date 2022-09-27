@@ -138,7 +138,7 @@ Processo Usuário Diarista:
 
 ### 3.3.4 Processo 4 – Processo de Pagamento
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemPagamento.png "Modelo BPMN do Processo 4.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/image.png "Modelo BPMN do Processo 4.")
 
 
 ### 3.3.5 Processo 5 – Processo de encerramento e feedback
