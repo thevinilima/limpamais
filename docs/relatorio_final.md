@@ -143,7 +143,7 @@ Processo Usuário Diarista:
 
 ### 3.3.5 Processo 5 – Processo de encerramento e feedback
 
-![Exemplo de um Modelo BPMN do PROCESSO 2]( "Modelo BPMN do Processo 5.")
+![Exemplo de um Modelo BPMN do PROCESSO 2]( imagens/ModelagemEncerramento.jpeg "Modelo BPMN do Processo 5.")
 
 
 ### 3.3.3 Processo 6 – Processo de solicitação de serviços especiais
