@@ -146,9 +146,9 @@ Processo Usuário Diarista:
 ![Exemplo de um Modelo BPMN do PROCESSO 2]( imagens/ModelagemEncerramento.jpeg "Modelo BPMN do Processo 5.")
 
 
-### 3.3.3 Processo 6 – Processo de solicitação de serviços especiais
+### 3.3.3 Processo 6 – Processo de cancelamento de serviço
 
-![Exemplo de um Modelo BPMN do PROCESSO 2]( "Modelo BPMN do Processo 6.")
+![Exemplo de um Modelo BPMN do PROCESSO 2]( imagens/ProcessoCancelamento.png "Modelo BPMN do Processo 6.")
 
 ## 4. Projeto da Solução
 
