@@ -133,7 +133,7 @@ Processo Usuário Diarista:
 
 ### 3.3.3 Processo 3 – Processo de se colocar ativo para trabalhos
 
-![Exemplo de um Modelo BPMN do PROCESSO 2]( "Modelo BPMN do Processo 3.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemAtivos.png "Modelo BPMN do Processo 3.")
 
 
 ### 3.3.4 Processo 4 – Processo de Pagamento
