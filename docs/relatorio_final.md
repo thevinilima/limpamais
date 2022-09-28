@@ -156,6 +156,28 @@ Processo Usuário Diarista:
 
 Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
 
+#### Processo 1 – Processo de cadastro dos Usuários e Validação
+
+**Selecionar tipo de usuário**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Usuário Pessoa Física | Seleção única | - | Não selecionado |
+| Usuário Pessoa Jurídica | Seleção única | - | Não selecionado |
+| Usuário Diarista | Seleção única | - | Não selecionado |
+
+**Registro de Usuário diarista**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Nome | Caixa de texto | - | - |
+| CPF | Caixa de números | Apenas textos | - |
+| Numero de telefone | Caixa de Número | Apenas números | - |
+| Senha | Caixa de texto | - | - |
+| Chave pix | Caixa de texto | Email, texto, numero, chave aleatória | - 
+
+
+
 #### Processo 2 – PROCESSO DE SOLICITAÇÃO DE SERVIÇO
 
 **Informa detalhes do serviço**
