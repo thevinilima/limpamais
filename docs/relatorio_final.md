@@ -156,38 +156,48 @@ Processo Usuário Diarista:
 
 Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
 
-#### Processo 1 – NOME DO PROCESSO
+#### Processo 3 – PROCESSO DE CRIAÇÃO DE SOLICITAÇÃO
 
-**Nome da atividade 1**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-| ***Exemplo:***  |    |     |
-| login | Caixa de Texto | formato de e-mail |  |
-| senha | Caixa de Texto | mínimo de 8 caracteres |   |
-
-**Nome da atividade 2**
+**Criação de Solicitação**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| Descrição de Atividades | Área de Texto |  |  |
+| Imagens | Imagem |Tipo de Arquivo: .jpeg .jpg .png |
+| CEP | Número | CEP tem que ser válido |    |
+| Rua | Caixa de Texto |  |   |
+| Bairro | Caixa de Texto |  |   |
+| Número | Número | Apenas Números |   |
+| Complemento | Caixa de Texto |  |   |
+| Observações | Caixa de Texto |  |   |
+| Horário | Data/Hora |  |   |
+| Ativos Necessários | Número  | Acima de 1 ativo  |   |
 
-#### Processo 2 – NOME DO PROCESSO
-
-**Nome da atividade 1**
+**Aceite de Demanda de Solicitação por parte dos ativos**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| Atender Demanada| Múltipla Escolha  | Escolher uma Opção  |  |
 
-**Nome da atividade 2**
+**Avaliação de Atendimento**
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Avaliação | Caixa de Texto |   |   |
+
+#### Processo 4 – PROCESSO DE PAGAMENTO
+
+**Login**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
+| Login | Caixa de Texto | Formato de e-mail |  |
+| Senha | Caixa de Texto | Mínimo de 8 caracteres |  |
+
+**Requisição para Pagamento**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Chave Pix | Múltipla Escolha | Telefone,E-mail,CPF ou Chave Aleatória |  |
 |    |    |     |
 
 ### 4.2. Tecnologias
