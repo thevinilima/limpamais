@@ -156,6 +156,34 @@ Processo Usuário Diarista:
 
 Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
 
+#### Processo 2 – PROCESSO DE SOLICITAÇÃO DE SERVIÇO
+
+**Informa detalhes do serviço**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Descrição de atividades | Área de texto | - | - |
+| Imagens do local | Imagem | Tipo de arquivo jpg, jpeg, png | - |
+| CEP | Número | CEP válido | - |
+| Logradouro | Caixa de texto | - | Info. retornada pela API de CEPs |
+| Número | Número | Apenas números | Info. retornada pela API de CEPs |
+| Bairro | Caixa de texto | - | Info. retornada pela API de CEPs |
+| Complemento | Caixa de texto | - | Info. retornada pela API de CEPs |
+| Horário | Data/Hora | - | - |
+| Observações | Área de texto | - | - |
+
+**Aceitar/Ignorar solicitação**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Aceitar serviço | Botão | - | Aceitar |
+| Ignorar serviço | Botão | - | Ignorar |
+
+**Avaliar serviço**
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Avaliar serviço | Múltipla escolha | - | - |
+
 #### Processo 3 – PROCESSO DE CRIAÇÃO DE SOLICITAÇÃO
 
 **Criação de Solicitação**
