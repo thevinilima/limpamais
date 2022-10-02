@@ -156,7 +156,15 @@ Processo Usuário Diarista:
 
 Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
 
-#### Processo 1 – Processo de cadastro dos Usuários e Validação
+#### Processo 1 – Processo de Login
+**Login**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Login | Caixa de Texto | Formato de e-mail |  |
+| Senha | Caixa de Texto | Mínimo de 8 caracteres |  |
+
+#### Processo 2 – Processo de cadastro dos Usuários e Validação
 
 **Selecionar tipo de usuário**
 
@@ -171,14 +179,14 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Nome | Caixa de texto | - | - |
-| CPF | Caixa de números | Apenas textos | - |
-| Numero de telefone | Caixa de Número | Apenas números | - |
+| CPF | Caixa de texto | Apenas textos | - |
+| Numero de telefone | Número | Apenas números | - |
 | Senha | Caixa de texto | - | - |
 | Chave pix | Caixa de texto | Email, texto, numero, chave aleatória | - 
 
 
 
-#### Processo 2 – PROCESSO DE SOLICITAÇÃO DE SERVIÇO
+#### Processo 3 – PROCESSO DE SOLICITAÇÃO DE SERVIÇO
 
 **Informa detalhes do serviço**
 
@@ -186,12 +194,12 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | --- | --- | --- | --- |
 | Descrição de atividades | Área de texto | - | - |
 | Imagens do local | Imagem | Tipo de arquivo jpg, jpeg, png | - |
-| CEP | Número | CEP válido | - |
+| CEP | Caixa de texto | CEP válido | - |
 | Logradouro | Caixa de texto | - | Info. retornada pela API de CEPs |
 | Número | Número | Apenas números | Info. retornada pela API de CEPs |
 | Bairro | Caixa de texto | - | Info. retornada pela API de CEPs |
 | Complemento | Caixa de texto | - | Info. retornada pela API de CEPs |
-| Horário | Data/Hora | - | - |
+| Horário | Timestamp | - | - |
 | Observações | Área de texto | - | - |
 
 **Aceitar/Ignorar solicitação**
@@ -204,30 +212,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 **Avaliar serviço**
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Avaliar serviço | Múltipla escolha | - | - |
-
-#### Processo 3 – PROCESSO DE CRIAÇÃO DE SOLICITAÇÃO
-
-**Criação de Solicitação**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Descrição de Atividades | Área de Texto |  |  |
-| Imagens | Imagem |Tipo de Arquivo: .jpeg .jpg .png |
-| CEP | Número | CEP tem que ser válido |    |
-| Rua | Caixa de Texto |  |   |
-| Bairro | Caixa de Texto |  |   |
-| Número | Número | Apenas Números |   |
-| Complemento | Caixa de Texto |  |   |
-| Observações | Caixa de Texto |  |   |
-| Horário | Data/Hora |  |   |
-| Ativos Necessários | Número  | Acima de 1 ativo  |   |
-
-**Aceite de Demanda de Solicitação por parte dos ativos**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Atender Demanada| Múltipla Escolha  | Escolher uma Opção  |  |
+| Avaliar serviço | Numeros | - | - |
 
 **Avaliação de Atendimento**
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
@@ -236,18 +221,13 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 #### Processo 4 – PROCESSO DE PAGAMENTO
 
-**Login**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Login | Caixa de Texto | Formato de e-mail |  |
-| Senha | Caixa de Texto | Mínimo de 8 caracteres |  |
 
 **Requisição para Pagamento**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Chave Pix | Múltipla Escolha | Telefone,E-mail,CPF ou Chave Aleatória |  |
+| Chave Pix | Caixa de Texto | Telefone,E-mail,CPF ou Chave Aleatória |  |
 |    |    |     |
 
 ### 4.2. Tecnologias
