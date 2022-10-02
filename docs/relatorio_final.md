@@ -217,7 +217,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 **Avaliação de Atendimento**
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Avaliação | Caixa de Texto |   |   |
+| Avaliação | Caixa de Texto | -  | -  |
 
 #### Processo 4 – PROCESSO DE PAGAMENTO
 
@@ -227,7 +227,8 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Chave Pix | Caixa de Texto | Telefone,E-mail,CPF ou Chave Aleatória |  |
+| Chave Pix | Caixa de Texto | Telefone,E-mail,CPF ou Chave Aleatória | - |
+| Valor | Numero | - | - |
 |    |    |     |
 
 ### 4.2. Tecnologias
