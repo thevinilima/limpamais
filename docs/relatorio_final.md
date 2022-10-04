@@ -154,7 +154,7 @@ Processo Usuário Diarista:
 
 ### 4.1. Detalhamento das atividades
 
-Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
+Descrição das propriedades das atividades de cada um dos processos relacionados com os modelos de processos apresentados.
 
 #### Processo 1 – Processo de Login
 **Login**
