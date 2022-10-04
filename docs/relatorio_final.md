@@ -1,6 +1,6 @@
 # Limpa Mais
 
-*   Augusto Fuscaldi Cerezo - acerezo@sga.pucminas.br
+
 *   Daniel Estevam Pacheco de Souza - danielestevam282@gmail.com
 *   Gabriel Augusto Souza Borges - gabrielaugustosb13@gmail.com
 *   Ivan Francisco de Oliveira Junior - ivan.oliveirapro@gmail.com
