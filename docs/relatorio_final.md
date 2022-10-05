@@ -4,7 +4,7 @@
 *   Daniel Estevam Pacheco de Souza - danielestevam282@gmail.com
 *   Gabriel Augusto Souza Borges - gabrielaugustosb13@gmail.com
 *   Ivan Francisco de Oliveira Junior - ivan.oliveirapro@gmail.com
-*   Marcus Viniccius Souza de Freitas - Marcus.viniccius@hotmail.com
+*   Marcus Viniccius Souza de Freitas - marcus.viniccius@hotmail.com
 *   Rafael Pierre Martins - pierredoc28@gmail.com
 *   Vinicius Assis Lima - thelimavinicius@gmail.com
 
@@ -121,34 +121,35 @@ Processo Usuário Diarista:
 
 ## 3.3. Modelagem dos Processos
 
-### 3.3.1 Processo 1 – Processo de cadastro dos Usuários e Validação
+### 3.3.1 Processo 1 – Processo de Cadastro e Validação
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/processoCadastroeValidacao.jpeg "Modelo BPMN do Processo 1.")
-
-
-### 3.3.2 Processo 2 – Processo de solicitação do Serviço
-
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemSolicitacaoServico.png "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/CadastroeVald.jpeg "Modelo BPMN do Processo 1.")
 
 
-### 3.3.3 Processo 3 – Processo de se colocar ativo para trabalhos
+### 3.3.2 Processo 2 – Processo de Login
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemAtivos.png "Modelo BPMN do Processo 3.")
-
-
-### 3.3.4 Processo 4 – Processo de Pagamento
-
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/image.png "Modelo BPMN do Processo 4.")
+![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/Login2.jpeg "Modelo BPMN do Processo 2.")
 
 
-### 3.3.5 Processo 5 – Processo de encerramento e feedback
+### 3.3.3 Processo 3 – Processo de solicitação do Serviço
 
-![Exemplo de um Modelo BPMN do PROCESSO 2]( imagens/ModelagemEncerramento.jpeg "Modelo BPMN do Processo 5.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/SolicitaServ.jpeg "Modelo BPMN do Processo 3.")
 
 
-### 3.3.3 Processo 6 – Processo de cancelamento de serviço
+### 3.3.4 Processo 4 – Processo de se colocar ativo para trabalhos
 
-![Exemplo de um Modelo BPMN do PROCESSO 2]( imagens/ProcessoCancelamento.png "Modelo BPMN do Processo 6.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/RealizacaoServ.jpeg "Modelo BPMN do Processo 4.")
+
+
+### 3.3.5 Processo 5 – Processo de Pagamento
+
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/ProcessPagament.jpeg "Modelo BPMN do Processo 5.")
+
+
+### 3.3.6 Processo 6 – Processo de encerramento do serviço
+
+![Exemplo de um Modelo BPMN do PROCESSO 2]( imagens/EncerramenteServ.jpeg "Modelo BPMN do Processo 6.")
+
 
 ## 4. Projeto da Solução
 
