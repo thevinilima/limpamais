@@ -157,15 +157,9 @@ Processo Usuário Diarista:
 
 Descrição das propriedades das atividades de cada um dos processos relacionados com os modelos de processos apresentados.
 
-#### Processo 1 – Processo de Login
-**Login**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Login | Caixa de Texto | Formato de e-mail |  |
-| Senha | Caixa de Texto | Mínimo de 8 caracteres |  |
 
-#### Processo 2 – Processo de cadastro dos Usuários e Validação
+#### Processo 1 – Processo de cadastro dos Usuários e Validação
 
 **Selecionar tipo de usuário**
 
@@ -180,12 +174,39 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Nome | Caixa de texto | - | - |
-| CPF | Caixa de texto | Apenas textos | - |
+| CPF | Caixa de números | Apenas números | - |
 | Numero de telefone | Número | Apenas números | - |
 | Senha | Caixa de texto | - | - |
-| Chave pix | Caixa de texto | Email, texto, numero, chave aleatória | - 
+| Chave pix | Caixa de texto | Email, texto, numero, chave aleatória | - |
+
+**Registro de Usuário Pessoa Física**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Nome | Caixa de texto | - | - |
+| CPF | Caixa de texto | Apenas números | - |
+| Numero de telefone | caixa de Números | Apenas números | - |
+| Senha | Caixa de texto | - | - |
+| Endereço | Caixa de texto | - | - |
+
+**Registro de Usuário Pessoa Jurídica**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Nome | Caixa de texto | - | - |
+| CNPJ | Caixa de números | Apenas textos | - |
+| Numero de telefone | Caixa Números | Apenas números | - |
+| Senha | Caixa de texto | - | - |
+| Endereço | Caixa de texto | - | - |
 
 
+#### Processo 2 – Processo de Login
+**Login**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Login | Caixa de Texto | Formato de e-mail |  |
+| Senha | Caixa de Texto | Mínimo de 8 caracteres |  |
 
 #### Processo 3 – PROCESSO DE SOLICITAÇÃO DE SERVIÇO
 
