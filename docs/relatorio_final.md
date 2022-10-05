@@ -148,7 +148,7 @@ Processo Usuário Diarista:
 
 ### 3.3.6 Processo 6 – Processo de encerramento do serviço
 
-![Exemplo de um Modelo BPMN do PROCESSO 2]( imagens/EncerramenteServ.jpeg "Modelo BPMN do Processo 6.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/EncerramentoServ.jpg "Modelo BPMN do Processo 6.")
 
 
 ## 4. Projeto da Solução
