@@ -136,7 +136,7 @@ Processo Usuário Diarista:
 ![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/SolicitaServ.jpeg "Modelo BPMN do Processo 3.")
 
 
-### 3.3.4 Processo 4 – Processo de se colocar ativo para trabalhos
+### 3.3.4 Processo 4 – Processo de realização do serviço
 
 ![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/RealizacaoServ.jpeg "Modelo BPMN do Processo 4.")
 
