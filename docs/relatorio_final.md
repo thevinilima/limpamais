@@ -128,7 +128,7 @@ Processo Usuário Diarista:
 
 ### 3.3.2 Processo 2 – Processo de Login
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/Login2.jpeg "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/correcaoLogin.png "Modelo BPMN do Processo 2.")
 
 
 ### 3.3.3 Processo 3 – Processo de solicitação do Serviço
@@ -187,7 +187,10 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 | CPF | Caixa de texto | Apenas números | - |
 | Numero de telefone | caixa de Números | Apenas números | - |
 | Senha | Caixa de texto | - | - |
-| Endereço | Caixa de texto | - | - |
+| CEP | Caixa de texto | CEP válido | - |
+| Logradouro | Caixa de texto | - | Info. retornada pela API de CEPs |
+| Número | Número | Apenas números | Info. retornada pela API de CEPs |
+| Bairro | Caixa de texto | - | Info. retornada pela API de CEPs |
 
 **Registro de Usuário Pessoa Jurídica**
 
@@ -197,7 +200,10 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 | CNPJ | Caixa de números | Apenas textos | - |
 | Numero de telefone | Caixa Números | Apenas números | - |
 | Senha | Caixa de texto | - | - |
-| Endereço | Caixa de texto | - | - |
+| CEP | Caixa de texto | CEP válido | - |
+| Logradouro | Caixa de texto | - | Info. retornada pela API de CEPs |
+| Número | Número | Apenas números | Info. retornada pela API de CEPs |
+| Bairro | Caixa de texto | - | Info. retornada pela API de CEPs |
 
 
 #### Processo 2 – Processo de Login
@@ -205,7 +211,7 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Login | Caixa de Texto | Formato de e-mail |  |
+| Login | Caixa de Texto | Numero |  |
 | Senha | Caixa de Texto | Mínimo de 8 caracteres |  |
 
 #### Processo 3 – PROCESSO DE SOLICITAÇÃO DE SERVIÇO
@@ -239,7 +245,7 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 **Avaliação de Atendimento**
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Avaliação | Caixa de Texto | -  | -  |
+| Avaliação | Numeros | -  | -  |
 
 #### Processo 4 – PROCESSO DE PAGAMENTO
 
