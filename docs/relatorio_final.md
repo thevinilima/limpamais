@@ -262,6 +262,9 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 ### 4.2. Tecnologias
 
 As tecnologias que serão utilizadas para resolução do problema são:
+
+- Vscode: como editor de texto para o desenvolvimento dos códigos.
+- DBeaver: para teste e edição de cógigos SQL.
 - Vanilla JS: para desenvolvimento do Front-End;
 - Node JS: para desenvolvimento do Back-End;
 - PostGreSQL: para criação do Banco de dados;
@@ -271,6 +274,10 @@ As tecnologias que serão utilizadas para resolução do problema são:
 - Whatsapp e Discord: Comunicação da equipe e compartilhamento de dados.
 
 ## 5. Modelo de dados
+
+
+![Diagrama de entidade relacional](imagens/DER.png "DER - Esboço para o banco de dados")
+
 
 Apresente o modelo de dados por meio de um modelo relacional ou Diagrama de Entidade-Relacionamento (DER) que contemple todos conceitos e atributos apresentados item anterior. 
 
