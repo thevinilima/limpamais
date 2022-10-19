@@ -249,15 +249,22 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 
 #### Processo 4 – PROCESSO DE PAGAMENTO
 
-
-
 **Requisição para Pagamento**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Chave Pix | Caixa de Texto | Telefone,E-mail,CPF ou Chave Aleatória | - |
 | Valor | Numero | - | - |
-|    |    |     |
+
+
+#### Processo 5 – PROCESSO DE ENCERRAMENTO DO SERVIÇO
+
+**Avaliação do serviço com nota entre 0 e 5**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Avaliação do serviço | Número | Valores entre 0 e 5 | - |
+
 
 ### 4.2. Tecnologias
 
