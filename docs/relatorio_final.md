@@ -133,7 +133,7 @@ Processo Usuário Diarista:
 
 ### 3.3.3 Processo 3 – Processo de solicitação do Serviço
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/SolicitaServ.jpeg "Modelo BPMN do Processo 3.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/modelagemSolicitacaoServico.png "Modelo BPMN do Processo 3.")
 
 
 ### 3.3.4 Processo 4 – Processo de realização do serviço
