@@ -161,6 +161,14 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 
 #### Processo 1 – Processo de cadastro dos Usuários e Validação
 
+**Registro login do usuário**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Nome | Caixa de texto | - | - |
+| Numero de telefone | Número | Apenas números | - |
+| Senha | Caixa de texto | Pelo menos 6 dígitos | - |
+
 **Selecionar tipo de usuário**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
@@ -173,20 +181,14 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Nome | Caixa de texto | - | - |
 | CPF | Caixa de números | Apenas números | - |
-| Numero de telefone | Número | Apenas números | - |
-| Senha | Caixa de texto | - | - |
 | Chave pix | Caixa de texto | Email, texto, numero, chave aleatória | - |
 
 **Registro de Usuário Pessoa Física**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Nome | Caixa de texto | - | - |
 | CPF | Caixa de texto | Apenas números | - |
-| Numero de telefone | caixa de Números | Apenas números | - |
-| Senha | Caixa de texto | - | - |
 | CEP | Caixa de texto | CEP válido | - |
 | Logradouro | Caixa de texto | - | Info. retornada pela API de CEPs |
 | Número | Número | Apenas números | Info. retornada pela API de CEPs |
@@ -196,10 +198,7 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Nome | Caixa de texto | - | - |
 | CNPJ | Caixa de números | Apenas textos | - |
-| Numero de telefone | Caixa Números | Apenas números | - |
-| Senha | Caixa de texto | - | - |
 | CEP | Caixa de texto | CEP válido | - |
 | Logradouro | Caixa de texto | - | Info. retornada pela API de CEPs |
 | Número | Número | Apenas números | Info. retornada pela API de CEPs |
