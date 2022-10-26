@@ -9,7 +9,7 @@
 * Ivan Oliveira Santos Junior
 * Marcus Viniccius 
 * Rafael Pierre Martins
-* Vinicius de Assis Lima
+* Vinicius Assis Lima
 
 ## Professor
 
