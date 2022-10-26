@@ -159,7 +159,7 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 
 
 
-#### Processo 1 – Processo de cadastro dos Usuários e Validação
+#### Processo 1 – CADASTRO DE USUÁRIOS E VALIDAÇÃO
 
 **Registro login do usuário**
 
@@ -205,7 +205,8 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 | Bairro | Caixa de texto | - | Info. retornada pela API de CEPs |
 
 
-#### Processo 2 – Processo de Login
+#### Processo 2 – LOGIN
+
 **Login**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
@@ -213,7 +214,7 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 | Login | Caixa de Texto | Numero |  |
 | Senha | Caixa de Texto | Mínimo de 8 caracteres |  |
 
-#### Processo 3 – PROCESSO DE SOLICITAÇÃO DE SERVIÇO
+#### Processos 3 e 4 – SOLICITAÇÃO E REALIZAÇÃO DE SERVIÇO
 
 **Informa detalhes do serviço**
 
@@ -229,34 +230,17 @@ Descrição das propriedades das atividades de cada um dos processos relacionado
 | Horário | Timestamp | - | - |
 | Observações | Área de texto | - | - |
 
-**Aceitar/Ignorar solicitação**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Aceitar serviço | Botão | - | Aceitar |
-| Ignorar serviço | Botão | - | Ignorar |
-
-**Avaliar serviço**
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Avaliar serviço | Numeros | - | - |
-
-**Avaliação de Atendimento**
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| Avaliação | Numeros | -  | -  |
-
-#### Processo 4 – PROCESSO DE PAGAMENTO
+#### Processo 5 – PAGAMENTO
 
 **Requisição para Pagamento**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Chave Pix | Caixa de Texto | Telefone,E-mail,CPF ou Chave Aleatória | - |
+| Chave Pix | Caixa de Texto | Telefone, E-mail, CPF ou Chave Aleatória | - |
 | Valor | Numero | - | - |
 
 
-#### Processo 5 – PROCESSO DE ENCERRAMENTO DO SERVIÇO
+#### Processo 6 – ENCERRAMENTO DO SERVIÇO
 
 **Avaliação do serviço com nota entre 0 e 5**
 
