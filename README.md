@@ -4,7 +4,6 @@
 
 ## Integrantes
 
-* Augusto Fuscaldi
 * Daniel Estevam Pacheco de Souza
 * Gabriel Augusto Souza Borges
 * Ivan Oliveira Santos Junior
