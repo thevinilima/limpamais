@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createUser } from '../src/configs/db/controllers/User/CreateUser.js';
+import { createUser } from './src/configs/db/app/controllers/CreateUser.js';
 
 const router = Router();
 
