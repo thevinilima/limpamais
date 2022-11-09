@@ -2,7 +2,7 @@ import { sql } from 'slonik';
 import pool from './../../configs/db/index.js';
 import bcrypt from 'bcrypt'
 
-export const createUser = (res, req) => {
+export const createUser = (req, res) => {
   const {
     cel,
     password,
@@ -18,7 +18,7 @@ export const createUser = (res, req) => {
   } = req.body;
 
   bcrypt.hash(password, 10).then(async (hash) => {
-    const userAlreadyExists = await pool.oneFirst(sql`
+    const userAlreadyExists = await pool.exists(sql`
             select 1 from usuario where cpf_cnpj = ${document}
         `);
 
