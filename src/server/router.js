@@ -1,18 +1,8 @@
-import express from 'express';
-import { sql } from 'slonik';
-import pool from './src/configs/db/index.js';
+import { Router } from 'express';
+import { createUser } from '../src/configs/db/controllers/User/CreateUser.js';
 
-const app = express();
+const router = Router();
 
-// just testing db, remove after
-app.use('/test', async (_, res) => {
-  const result = await pool.query(sql`
-    create table test (
-      id serial,
-      name varchar(255)
-    )`);
+router.post('/createUser', createUser);
 
-  res.json({ result }).end();
-});
-
-export default app;
+export default router;
