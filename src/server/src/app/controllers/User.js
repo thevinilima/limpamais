@@ -40,18 +40,14 @@ export const createUser = (req, res) => {
 export const getUserData = async (req, res) => {
   const { verify } = jsonwebtoken;
   const { token } = req.headers;
-  console.log(token);
   const hashSplited = token.split(' ')[1];
 
-  const { subject } = verify(hashSplited, process.env.JWT_SECRET);
-  if (!subject) {
-    return res.status(401).json('Não autorizado');
-  }
+  const { sub } = verify(hashSplited, process.env.JWT_SECRET);
 
-  const userTel = subject;
+  const userTel = sub;
 
   const userData = await pool.one(sql`
-    select * from usuario where telefone = ${userTel}
+    select telefone, nome, cpf_cnpj, cep, logradouro, numero, complemento, bairro, cidade, uf from usuario where telefone = ${userTel}
     `);
 
   res.status(200).json({ userData });
