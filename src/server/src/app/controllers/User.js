@@ -1,6 +1,7 @@
 import { sql } from 'slonik';
-import pool from './../../configs/db/index.js';
+import pool from '../../configs/db/index.js';
 import bcrypt from 'bcrypt';
+import jsonwebtoken from 'jsonwebtoken';
 
 export const createUser = (req, res) => {
   const {
@@ -34,4 +35,24 @@ export const createUser = (req, res) => {
 
     res.status(200).json('Usuário cadastrado com sucesso!');
   });
+};
+
+export const getUserData = async (req, res) => {
+  const { verify } = jsonwebtoken;
+  const { token } = req.headers;
+  console.log(token);
+  const hashSplited = token.split(' ')[1];
+
+  const { subject } = verify(hashSplited, process.env.JWT_SECRET);
+  if (!subject) {
+    return res.status(401).json('Não autorizado');
+  }
+
+  const userTel = subject;
+
+  const userData = await pool.one(sql`
+    select * from usuario where telefone = ${userTel}
+    `);
+
+  res.status(200).json({ userData });
 };
