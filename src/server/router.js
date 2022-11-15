@@ -6,7 +6,7 @@ import { ensureAuthenticated } from './src/app/middlewares/ensureAuthenticated.j
 
 const router = Router();
 
-router.post('/createUser', createUser);
+router.post('/user', createUser);
 router.post('/login', login);
 
 router.get('/user', ensureAuthenticated, getUserData);
