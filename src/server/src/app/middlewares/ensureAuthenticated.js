@@ -1,18 +1,36 @@
 import jwt from 'jsonwebtoken';
+import User from '../models/User.js';
 
-export function ensureAuthenticated(request, response, next) {
-  const { token } = request.headers;
+export async function ensureAuthenticated(req, res, next) {
+  const { authorization } = req.headers;
 
-  if (!token) {
-    return response.status(401).json({
+  if (!authorization)
+    return res.status(401).json({
       error: 'Não autorizado',
     });
-  }
+
+  const parts = authorization.split(' ');
+
+  if (parts.length !== 2)
+    return res.status(401).json({
+      error: 'Não autorizado',
+    });
+
+  const [name, token] = parts;
+
+  if (!/^Bearer$/.test(name))
+    return res.status(401).json({
+      error: 'Não autorizado',
+    });
 
   try {
-    jwt.verify(token, process.env.JWT_SECRET);
+    const { telefone } = jwt.verify(token, process.env.JWT_SECRET);
+    if (!(await User.getByTel(telefone)))
+      return res.status(401).json({
+        error: 'Não autorizado',
+      });
   } catch (err) {
-    return response.status(401).json({
+    return res.status(401).json({
       error: 'Não autorizado',
     });
   }
