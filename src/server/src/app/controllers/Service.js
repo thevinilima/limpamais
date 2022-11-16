@@ -1,5 +1,5 @@
-import jwt from 'jsonwebtoken';
 import Service from '../models/Service.js';
+import User from '../models/User.js';
 
 export const createService = async (req, res) => {
   const { desc, dateTime, rooms, value, address } = req.body;
@@ -8,9 +8,9 @@ export const createService = async (req, res) => {
     return res.status(400).json('Preencha os campos obrigatórios');
   }
 
-  const { telefone } = jwt.verify(req.headers.token, process.env.JWT_SECRET);
+  const user = await User.getFromToken(req.headers.authorization);
 
-  const service = await Service.create(req.body, telefone);
+  const service = await Service.create(req.body, user.telefone);
 
   res.status(201).json(service);
 };

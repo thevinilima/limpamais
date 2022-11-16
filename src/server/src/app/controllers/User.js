@@ -1,7 +1,7 @@
 import { sql } from 'slonik';
 import pool from '../../configs/db/index.js';
 import bcrypt from 'bcrypt';
-import jsonwebtoken from 'jsonwebtoken';
+import User from '../models/User.js';
 
 export const createUser = (req, res) => {
   const { cel, password, name, document } = req.body;
@@ -19,24 +19,17 @@ export const createUser = (req, res) => {
 
     await pool.query(sql`
         INSERT INTO usuario (telefone, senha, nome, cpf_cnpj)
-        VALUES (${cel}, ${hash}, ${name}, ${document});`);
+        VALUES (${cel}, ${hash}, ${name}, ${document});
+    `);
 
     res.status(200).json('Usuário cadastrado com sucesso!');
   });
 };
 
 export const getUserData = async (req, res) => {
-  const { verify } = jsonwebtoken;
-  const { token } = req.headers;
-  const hashSplited = token.split(' ')[1];
+  const { authorization } = req.headers;
 
-  const { sub } = verify(hashSplited, process.env.JWT_SECRET);
+  const user = await User.getFromToken(authorization);
 
-  const userTel = sub;
-
-  const userData = await pool.one(sql`
-    select telefone, nome, cpf_cnpj from usuario where telefone = ${userTel}
-    `);
-
-  res.status(200).json({ userData });
+  res.status(200).json({ user });
 };
