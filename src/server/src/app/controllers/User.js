@@ -1,7 +1,7 @@
 import { sql } from 'slonik';
 import pool from '../../configs/db/index.js';
 import bcrypt from 'bcrypt';
-import User from '../models/User.js';
+import User from '../services/User.js';
 
 export const createUser = (req, res) => {
   const { cel, password, name, document } = req.body;

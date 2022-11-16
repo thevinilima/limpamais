@@ -1,5 +1,5 @@
-import Service from '../models/Service.js';
-import User from '../models/User.js';
+import Service from '../services/Service.js';
+import User from '../services/User.js';
 
 export const createService = async (req, res) => {
   const { desc, dateTime, rooms, value, address } = req.body;
