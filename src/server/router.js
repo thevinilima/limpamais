@@ -9,9 +9,11 @@ const router = Router();
 
 router.post('/login', login);
 
+// Users
 router.post('/user', ensureAuthenticated, createUser);
 router.get('/user', ensureAuthenticated, getUserData);
 
-router.post('/services', createService);
+// Services
+router.post('/services', ensureAuthenticated, createService);
 
 export default router;
