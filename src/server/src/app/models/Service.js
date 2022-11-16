@@ -2,7 +2,7 @@ import { sql } from 'slonik';
 import pool from '../../configs/db/index.js';
 
 const Service = {
-  save: async ({ desc, dateTime, rooms, value, address }, userTel) => {
+  create: async ({ desc, dateTime, rooms, value, address }, userTel) => {
     const createdServiceNumber = await pool.oneFirst(sql`
       insert into cria_servico (telefone_usuario)
       values (${userTel})

@@ -10,7 +10,7 @@ export const createService = async (req, res) => {
 
   const { telefone } = jwt.verify(req.headers.token, process.env.JWT_SECRET);
 
-  const service = await Service.save(req.body, telefone);
+  const service = await Service.create(req.body, telefone);
 
   res.status(201).json(service);
 };
