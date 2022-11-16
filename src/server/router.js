@@ -10,8 +10,8 @@ const router = Router();
 router.post('/login', login);
 
 // Users
-router.post('/user', ensureAuthenticated, createUser);
-router.get('/user', ensureAuthenticated, getUserData);
+router.post('/users', ensureAuthenticated, createUser);
+router.get('/users/current', ensureAuthenticated, getUserData);
 
 // Services
 router.post('/services', ensureAuthenticated, createService);
