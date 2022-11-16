@@ -1,8 +1,7 @@
-import jsonwebtoken from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 
 export function ensureAuthenticated(request, response, next) {
-  const { verify } = jsonwebtoken;
-  const token = request.headers.token;
+  const { token } = request.headers;
 
   if (!token) {
     return response.status(401).json({
@@ -11,7 +10,7 @@ export function ensureAuthenticated(request, response, next) {
   }
 
   try {
-    verify(token.split(' ')[1], process.env.JWT_SECRET);
+    jwt.verify(token, process.env.JWT_SECRET);
   } catch (err) {
     return response.status(401).json({
       error: 'Não autorizado',
