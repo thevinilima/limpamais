@@ -24,7 +24,7 @@
             <h2 class="title">Login</h2>
             <div class="input-field">
               <i class="bx bx-phone"></i>
-              <input type="text" placeholder="Nome / Telefone" />
+              <input  type="text" placeholder="Nome / Telefone" />
             </div>
             <div class="input-field">
               <i class="bx bx-lock"></i>
@@ -82,23 +82,23 @@
             </div>
             <div class="input-field" id="username" >
               <i class="bx bx-user"></i>
-              <input type="text" placeholder="Nome" />
+              <input name="name" type="text" placeholder="Nome" />
             </div>
             <div class="input-field" id="telefone">
               <i class="bx bx-phone"></i>
-              <input type="text" placeholder="Telefone" />
+              <input name="tel" type="text" placeholder="Telefone" />
             </div>
             <div class="input-field" id="cpf">
               <i class="bx bxs-id-card"></i>
-              <input type="number" placeholder="CPF" />
+              <input name="document" type="number" placeholder="CPF" />
             </div>
-            <div class="input-field hidden" id="cpnj">
+          <!--   <div class="input-field hidden" id="cpnj">
               <i class="bx bxs-business"></i>
-              <input type="number" placeholder="CNPJ" />
-            </div>
+              <input name="document" type="number" placeholder="CNPJ" />
+            </div> -->
             <div class="input-field" id="password">
               <i class="bx bx-lock"></i>
-              <input type="password" placeholder="Senha"  />
+              <input name="password" type="password" placeholder="Senha"  />
             </div>
             <input type="submit" value="Registre-se" class="btn solid" />
             <!--<p class="social-text">Registre-se com suas Redes Socias</p>
@@ -148,5 +148,7 @@
       </div>
     </div>
     <script src="index.js"></script>
+    <script src="js/auth.js"></script>
+
   </body>
 </html>

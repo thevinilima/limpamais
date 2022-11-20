@@ -4,10 +4,6 @@ const container = document.querySelector(".container");
 const inputs = document.querySelectorAll('input[name="user-type"]');
 const cpf = document.querySelector("#cpf");
 const cnpj = document.querySelector("#cnpj");
-const form = document.getElementById("form_login");
-const username = document.getElementById("telefone");
-const password = document.getElementById("password");
-
 
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
@@ -21,16 +17,19 @@ inputs.forEach((input) => input.addEventListener("change", change));
 
 const userTypes = {
   diarista: () => {
-    cpnj.classList.add("hidden");
+    cnpj.classList.add("hidden");
     cpf.classList.remove("hidden");
+    cnpj.setAttribute("disabled", true);
   },
   cpf: () => {
-    cpnj.classList.add("hidden");
+    cnpj.classList.add("hidden");
     cpf.classList.remove("hidden");
+    cnpj.setAttribute("disabled", true);
   },
   cnpj: () => {
-    cpnj.classList.remove("hidden");
+    cnpj.classList.remove("hidden");
     cpf.classList.add("hidden");
+    cpf.setAttribute("disabled", true);
   },
   
 };
@@ -41,9 +40,9 @@ function change(event) {
 }
 
 function login_form(event) {
-  event.preventDefault();
+  event.preventDefault(event);
   console.log(event);
 }
 function register_form(event) {
-  event.preventDefault();
+  event.preventDefault(event);
 }
