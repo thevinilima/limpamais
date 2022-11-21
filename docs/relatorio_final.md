@@ -269,10 +269,6 @@ As tecnologias que serão utilizadas para resolução do problema são:
 ![Diagrama de entidade relacional](imagens/DER.png "DER - Esboço para o banco de dados")
 
 
-Apresente o modelo de dados por meio de um modelo relacional ou Diagrama de Entidade-Relacionamento (DER) que contemple todos conceitos e atributos apresentados item anterior. 
-
-![Diagrama de Entidade Relacionamento de Exemplo](imagens/er_diagram.png "Diagrama de Entidade Relacionamento de Exemplo")
-
 ## 6. Indicadores de desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores.
