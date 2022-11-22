@@ -20,34 +20,20 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form" onsubmit="login_form()" id="form_login">
+          
+          <form action="" class="sign-in-form" onsubmit="login()" id="form_login">
             <h2 class="title">Login</h2>
             <div class="input-field">
               <i class="bx bx-phone"></i>
-              <input  type="text" placeholder="Nome / Telefone" />
+              <input  name="tel" type="text" placeholder="Nome / Telefone" />
             </div>
             <div class="input-field">
               <i class="bx bx-lock"></i>
-              <input type="password" placeholder="Senha" />
+              <input name="password" type="password" placeholder="Senha" />
             </div>
-            <input type="submit" value="Login" class="btn solid" />
-            <!-- <p class="social-text">Registre-se com suas Redes Socias</p>
-          <div class="social-media">
-            <a href="#" class="social-icon">
-              <i class="bx bx-facebook"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="bx bx-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="bx bx-google"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="bx bx-linkedin-in"></i>//
-            </a>
-          </div>
-        -->
+            <button type="submit" value="Login" class="btn solid" >Logar</button>
           </form>
+
           <form action="" class="sign-up-form" onsubmit="register_form()">
             <h2 class="title">Registre-se</h2>
             <div class="radio">
