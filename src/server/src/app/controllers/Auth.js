@@ -1,11 +1,10 @@
 import { sql } from 'slonik';
 import pool from '../../configs/db/index.js';
 import jsonwebtoken from 'jsonwebtoken';
-import bcryptjs from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 
 export const login = async (req, res) => {
   const { sign } = jsonwebtoken;
-  const { compare } = bcryptjs;
 
   const { password, tel } = req.body;
 
@@ -17,8 +16,9 @@ export const login = async (req, res) => {
     return res.status(400).json('Usuário e/ou senha incorreto');
   }
 
-  const passwordMatch = compare(password, user.senha);
-  if (!passwordMatch) {
+  const passwordMatch = bcrypt.compare(password, user.senha);
+
+  if (passwordMatch === false) {
     return res.status(400).json('Usuário e/ou senha incorreto');
   }
 
