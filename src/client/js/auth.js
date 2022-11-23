@@ -14,6 +14,7 @@ formRegister.addEventListener("submit", async function (e) {
       },
     });
 
+    alert('Usuário cadastrado com sucesso!')
     return response;
   } catch (error) {
     console.error(error.message);

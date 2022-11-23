@@ -12,3 +12,8 @@ const loadUserData = async () => {
 
   localStorage.setItem('user', JSON.stringify(user));
 };
+
+const getUser = () => JSON.parse(localStorage.getItem('user'))
+
+const display = document.querySelector('#username')
+display.innerHTML = getUser().nome
