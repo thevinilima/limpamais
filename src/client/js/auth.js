@@ -16,7 +16,7 @@ formRegister.addEventListener("submit", async function (e) {
 
     return response;
   } catch (error) {
-   console.error(error.message);
+    console.error(error.message);
   }
 });
 
@@ -37,11 +37,14 @@ formLogin.addEventListener("submit", async function (e) {
       },
     }).then((res) => res.json());
 
-    alert("Logado com sucesso!");
     localStorage.setItem("token", data.token);
-    loadUserData();
+    await loadUserData();
 
-    return response;
+    const path = location.pathname.split("/");
+    if (path.slice(-1) === "") path.pop();
+    path.pop();
+    path.push("pages", "contratante.html");
+    location.pathname = path.join("/");
   } catch (error) {
     console.error(error.message);
   }
