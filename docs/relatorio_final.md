@@ -279,8 +279,9 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 | --- | --- | --- | --- | --- | --- |
 | Taxa de serviços criados e atendidos | Acompanhar demanda por serviços medindo a porcentagem de atendimento | Mede % de serviços atendidos | Serviços criados/Serviços atendidos = %  | Tabela Servico | Processo intero |
 | Percentual de usuários ativos | Acompanhar relação de usuários ativos na plataforma que demandam serviço | Mede % de usuários ativos  |  | Tabela Usuario | Crescimento e Utilização |
-| Percentual de diaristas ativos | Acompanhar relação de diaristas ativos na plataforma que estão atendendo serviço | Mede % de usuários ativos  |  | Tabela Diarista | Crescimento e Utilização |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues | Mede % de material entregue dentro do mês |   | Tabela Pedidos | Clientes |
+| Percentual de diaristas ativos | Acompanhar relação de diaristas ativos na plataforma que estão atendendo serviço | Mede % de diaristas ativos  |  | Tabela Diarista | Crescimento e Utilização |
+| Percentual de avaliações | Levantar media de avaliações dos usuários e diaristas relacionados ao serviço | Percentual de avaliação em relação ao total das avaliações recebidas  |  | Tabela Avalia_Diarista e Tabela Avalia_Usuario | Feedback de atuação dos usuários |
+| Validação pagamento | Garantir que os pagamentos estão sendo feitos corretamente | Validar se o pagamento foi feito na plataforma |   | Tabela Pagamentos | Clientes |
 
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
 
