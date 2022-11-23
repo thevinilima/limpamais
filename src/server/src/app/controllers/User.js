@@ -21,9 +21,9 @@ exports.createUser = async (req, res) => {
 
   await pool.query(
     `
-    INSERT INTO usuario (telefone, senha, nome, cpf_cnpj)
-    VALUES ($1, $2, $3, $4);
-  `,
+      INSERT INTO usuario (telefone, senha, nome, cpf_cnpj)
+      VALUES ($1, $2, $3, $4);
+    `,
     [cel, hash, name, document]
   );
 
