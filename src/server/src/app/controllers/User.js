@@ -1,16 +1,17 @@
-import { sql } from 'slonik';
-import pool from '../../configs/db/index.js';
-import bcrypt from 'bcryptjs';
-import User from '../services/User.js';
+const pool = require('../../configs/db');
+const bcrypt = require('bcryptjs');
 
-export const createUser = async (req, res) => {
+const User = require('../services/User');
+
+exports.createUser = async (req, res) => {
   const { cel, password, name, document } = req.body;
 
-  const userAlreadyExists = await pool.exists(sql`
-    select 1 from usuario where cpf_cnpj = ${document}
-  `);
+  const { rowCount } = await pool.query(
+    'select 1 from usuario where cpf_cnpj = $1',
+    [document]
+  );
 
-  if (userAlreadyExists) {
+  if (rowCount) {
     return res
       .status(400)
       .json('Usuário com esse documento já está cadastrado');
@@ -18,15 +19,18 @@ export const createUser = async (req, res) => {
 
   const hash = await bcrypt.hash(password, 8);
 
-  await pool.query(sql`
-  INSERT INTO usuario (telefone, senha, nome, cpf_cnpj)
-  VALUES (${cel}, ${hash}, ${name}, ${document});
-  `);
+  await pool.query(
+    `
+    INSERT INTO usuario (telefone, senha, nome, cpf_cnpj)
+    VALUES ($1, $2, $3, $4);
+  `,
+    [cel, hash, name, document]
+  );
 
   res.status(200).json('Usuário cadastrado com sucesso!');
 };
 
-export const getUserData = async (req, res) => {
+exports.getUserData = async (req, res) => {
   const { authorization } = req.headers;
 
   const user = await User.getFromToken(authorization);

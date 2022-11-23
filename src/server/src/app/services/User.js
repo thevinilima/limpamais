@@ -1,28 +1,27 @@
-import jwt from 'jsonwebtoken';
-import { sql } from 'slonik';
-import pool from '../../configs/db/index.js';
+const pool = require('../../configs/db');
+const jwt = require('jsonwebtoken');
 
-const User = {
-  getByTel: async (telefone) => {
-    if (!telefone) return null;
+exports.getByTel = async (telefone) => {
+  if (!telefone) return null;
 
-    try {
-      const user = await pool.one(sql`
-        select telefone, nome, cpf_cnpj
-        from usuario
-        where telefone = ${telefone};
-      `);
+  try {
+    const user = await pool.query(
+      `
+      select telefone, nome, cpf_cnpj
+      from usuario
+      where telefone = $1;
+    `,
+      [telefone]
+    );
 
-      return user;
-    } catch (e) {
-      return null;
-    }
-  },
-  getFromToken: async (headerToken) => {
-    const token = headerToken.split(' ')[1];
-    const { telefone } = jwt.verify(token, process.env.JWT_SECRET);
-    return await User.getByTel(telefone);
-  },
+    return user;
+  } catch (e) {
+    return null;
+  }
 };
 
-export default User;
+exports.getFromToken = async (headerToken) => {
+  const token = headerToken.split(' ')[1];
+  const { telefone } = jwt.verify(token, process.env.JWT_SECRET);
+  return await this.getByTel(telefone);
+};

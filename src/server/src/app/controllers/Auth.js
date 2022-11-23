@@ -1,24 +1,26 @@
-import { sql } from 'slonik';
-import pool from '../../configs/db/index.js';
-import jsonwebtoken from 'jsonwebtoken';
-import bcrypt from 'bcryptjs';
+const pool = require('../../configs/db/index.js');
+const jsonwebtoken = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
-export const login = async (req, res) => {
+exports.login = async (req, res) => {
   const { sign } = jsonwebtoken;
 
   const { password, tel } = req.body;
 
-  const user = await pool.one(sql`
-    select * from usuario where telefone = ${tel}
-    `);
+  const { rows } = await pool.query(
+    'select * from usuario where telefone = $1',
+    [tel]
+  );
+
+  const user = rows[0];
 
   if (!user) {
     return res.status(400).json('Usuário e/ou senha incorreto');
   }
 
-  const passwordMatch = bcrypt.compare(password, user.senha);
+  const passwordMatch = await bcrypt.compare(password, user.senha);
 
-  if (passwordMatch === false) {
+  if (!passwordMatch) {
     return res.status(400).json('Usuário e/ou senha incorreto');
   }
 

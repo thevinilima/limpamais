@@ -1,9 +1,10 @@
-import { Router } from 'express';
-import { createUser } from './src/app/controllers/User.js';
-import { login } from './src/app/controllers/Auth.js';
-import { getUserData } from './src/app/controllers/User.js';
-import { ensureAuthenticated } from './src/app/middlewares/ensureAuthenticated.js';
-import { createService } from './src/app/controllers/Service.js';
+const { Router } = require('express');
+const { login } = require('./src/app/controllers/Auth.js');
+const { createService } = require('./src/app/controllers/Service.js');
+const { createUser, getUserData } = require('./src/app/controllers/User.js');
+const {
+  ensureAuthenticated,
+} = require('./src/app/middlewares/ensureAuthenticated.js');
 
 const router = Router();
 
@@ -16,4 +17,4 @@ router.get('/users/current', ensureAuthenticated, getUserData);
 // Services
 router.post('/services', ensureAuthenticated, createService);
 
-export default router;
+module.exports = router;

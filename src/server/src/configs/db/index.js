@@ -1,13 +1,17 @@
-import { createPool } from 'slonik';
-import { dbConfig } from './db.config.js';
+const { Pool } = require('pg');
+const dbConfig = require('./db.config');
 
 const { user, password, host, port, database } = dbConfig;
-const connectionStr = `postgres://${user}:${password}@${host}:${port}/${database}`;
 
-const pool = await createPool(connectionStr, {
+const pool = new Pool({
+  host,
+  user,
+  password,
+  database,
+  port,
   ssl: {
     rejectUnauthorized: false,
   },
 });
 
-export default pool;
+module.exports = pool;

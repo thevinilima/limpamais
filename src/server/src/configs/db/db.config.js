@@ -1,8 +1,8 @@
-import { config } from 'dotenv';
+const { config } = require('dotenv');
 
 config();
 
-export const dbConfig = {
+module.exports = {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   user: process.env.DB_USER,

@@ -1,7 +1,8 @@
-import jwt from 'jsonwebtoken';
-import User from '../services/User.js';
+const jwt = require('jsonwebtoken');
 
-export async function ensureAuthenticated(req, res, next) {
+const User = require('../services/User');
+
+exports.ensureAuthenticated = async (req, res, next) => {
   const { authorization } = req.headers;
 
   if (!authorization)
@@ -36,4 +37,4 @@ export async function ensureAuthenticated(req, res, next) {
   }
 
   return next();
-}
+};

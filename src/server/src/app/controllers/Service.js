@@ -1,7 +1,7 @@
-import Service from '../services/Service.js';
-import User from '../services/User.js';
+const User = require('../services/User');
+const Service = require('../services/Service');
 
-export const createService = async (req, res) => {
+exports.createService = async (req, res) => {
   const { desc, dateTime, rooms, value, address } = req.body;
 
   if (!desc || !dateTime || !rooms || !value || !address.cep) {
