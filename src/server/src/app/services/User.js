@@ -5,7 +5,7 @@ exports.getByTel = async (telefone) => {
   if (!telefone) return null;
 
   try {
-    const user = await pool.query(
+    const result = await pool.query(
       `
       select telefone, nome, cpf_cnpj
       from usuario
@@ -14,7 +14,9 @@ exports.getByTel = async (telefone) => {
       [telefone]
     );
 
-    return user;
+    if (!result.rowCount) return null
+
+    return result.rows[0];
   } catch (e) {
     return null;
   }
