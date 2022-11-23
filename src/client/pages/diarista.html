@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image-x/png" href="imgs/icons8-musical-notes-cute-clipart-32.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="../css/diarista.css">
+
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <header></header>
+    
+
+    <section class="text">
+        <aside>
+
+            <div class="header_aside">
+                
+                <h3>Username</h3>
+                <p class="profission">Profissão</p>
+
+            </div>
+
+            <div class="miniDashboard ">
+                
+                <h3 class="servicos">Serviços</h3>
+
+                <div class="dados">
+                    <span>Solicitações pendentes:</span> <span>0</span>
+                </div>
+
+                <div class="dados">
+                    <span>Serviços em processo:</span> <span>0</span>
+                </div>
+                
+                <div class="dados">
+                    <span>Serviços concluidos:</span> <span>0</span>
+                </div>
+
+            </div>
+
+            <div class="pagamentoPendente">
+                <span>Aguardando pagamento:</span> <span>0</span>
+            </div>
+
+            <a href="#" style="text-decoration: none;">
+                <div class="navSair">
+
+                    <i class="bx bx-log-out icon"></i>
+                    <span class="text nav-text">Sair</span>
+
+                </div>
+            </a>
+
+
+        </aside>
+
+        <main>
+
+            <div class="card">
+
+            </div>
+
+            <div class="card">
+
+            </div>
+
+            <div class="card">
+
+            </div>
+
+
+            <div class="botao">
+                
+                <button id="criaServico">⭯</button>
+            </div>
+
+            <div class="modalInsercao">
+
+                <h3 class="tituloModal">Preencha as informações de Solicitação de seviço</h3>
+
+                <button id="fecharX">X</button>
+
+                <div class="container">
+
+                    <div class="direito">
+
+                        <div class="descricao">
+                            <p>Descrição de atividades:</p>
+                            <input style="height: 60px; width: 600px;" type="text">
+                        </div>
+
+                        <p style="display: block;">Endereço:</p>
+
+                        <div class="endereco">
+                           
+
+                            <div class="especificos">
+                            
+                                <p>logradouro:</p>
+                                <input type="text">
+
+                                <p>Numero:</p>
+                                <input type="number">
+
+                                <p>complemento</p>
+                                <input type="text">
+
+                            </div>
+                            
+                            <div class="gerais">
+
+                                <p>bairro</p>
+                                <input type="text">
+
+                                <p>CEP</p>
+                                <input type="number">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="esquerdo">
+                        <p>Metros Quadrados:</p>
+                        <input type="text">
+
+                        <p>Data:</p>
+                        <input type="date">
+
+                        <p>Horário:</p>
+                        <input type="time">
+
+                        <p>observações:</p>
+                        <input style="height: 100px;" type="text">
+
+                    </div>
+                </div>
+
+                <div class="butaoSolicita">
+                    <button id="criaSolicitacao">Criar Solicitação</button>
+                 </div>
+
+            </div>
+
+        </main>
+    </section>
+
+
+    <script src="../js/diarista.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+body {
+
+    margin: 0;
+
+
+    height: 100vh;
+}
+
+
+header{
+
+    background-color: #2DC7AB;
+    width: 100%;
+    height: 70px;
+
+
+}
+
+
+
+.text{
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+section{
+
+    display: flex;
+    flex-direction: row;
+
+    height: 100%;
+
+}
+
+
+aside{
+
+    display: flex;
+    flex-direction: column;
+
+     width: 20vw;
+
+    background-color: aliceblue;
+
+    border-right: solid black 2px;
+    
+}
+
+.header_aside{
+    margin-left: 15px;
+}
+
+main{
+
+    background-color: aliceblue;
+
+    flex: 1;
+
+    display: flex;
+
+    padding: 25px; 
+
+}
+
+
+.miniDashboard{
+
+    margin-top: 15px;
+}
+
+.servicos{
+
+    text-align: center;
+
+}
+
+.profission{
+
+    margin-top: -15px;
+}
+
+.dados{
+
+    margin-top: 25px;
+
+    background-color: aliceblue;
+    height: 50px;
+
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pagamentoPendente{
+
+    margin-top:100px;
+
+    background-color: aliceblue;
+    height: 50px;
+
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navSair{
+
+    font-size: 23px;
+
+    display: block;
+    margin-top: 135px;
+    margin-left: auto;
+    margin-right: auto;
+
+ 
+    color: black;
+
+    height: 50px;
+    width: 230px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15cm;
+
+}
+
+.navSair:hover{
+
+    background-color: #2DC7AB;
+   
+    color: white;
+}
+
+
+#criaServico{
+
+    font-size: 50px;
+    color: white;
+    background-color: #2DC7AB;
+    border-radius: 100%;
+
+    border: none;
+
+    width: 90px;
+    height: 90px;
+
+    border: 2px rgb(175, 224, 201) groove;
+
+}
+
+
+
+#criaServico:hover{
+
+    cursor: pointer;
+    border: none;
+    
+}
+.botao{
+
+
+
+    height: 120px;
+    width: 70vw;
+    position: absolute;
+    bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalInsercao{
+
+    width: 1000px;
+    height: 700px;
+
+
+    border: solid 1PX black;
+    background-color: #eeecec;
+
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+
+  
+
+    display: none;
+
+}
+
+#fecharX{
+
+    border: none;
+
+    position: absolute;
+    top: 7px;
+    right: 7px;
+
+
+}
+
+.tituloModal{
+
+    text-align: center;
+}
+
+#criaSolicitacao{
+
+    position: absolute;
+    bottom: 15px;
+
+    font-size: 20px;
+    color: white;
+    background-color: #2DC7AB;
+    border-radius: 10px;
+
+    width: 200px;
+    height: 50px;
+
+}
+
+.butaoSolicita{
+    height: 70px;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+
+    height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.direito{
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.endereco{
+
+    display: flex;
+    flex-direction: row;
+}
+
+input{
+
+    width: 200px;
+    height: 30px;
+}
+
+.especificos{
+
+    margin-left: 20px;
+}
+
+.gerais{
+
+ margin-left: 35px;
+}
+
+.esquerdo{
+
+    margin-left: 40px;
+}
+
+.card{
+    
+    background-color: red;
+
+    margin-right: 30px;
+
+    width: 150px;
+    height: 150px;
+}
