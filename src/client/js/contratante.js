@@ -9,3 +9,24 @@ const IsNotLogged = () => {
 window.onload = () => {
   IsNotLogged();
 };
+
+let formCreateService = document.querySelector('#form_login');
+formCreateService.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const formData = {};
+
+  try {
+    const data = await fetch('http://localhost:3003/services ', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((res) => res.json());
+
+    // fecha modal
+  } catch (error) {
+    alert(error.message);
+  }
+});
