@@ -47,3 +47,11 @@ exports.create = async ({ desc, dateTime, rooms, value, address }, userTel) => {
 
   return service;
 };
+
+exports.getServices = async () => {
+  const result = await pool.query(`select * from servico;`);
+
+  if (!result.rowCount) return null;
+
+  return result;
+};

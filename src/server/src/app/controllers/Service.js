@@ -14,3 +14,13 @@ exports.createService = async (req, res) => {
 
   res.status(201).json(service);
 };
+
+exports.getServices = async (req, res) => {
+  try {
+    const services = await Service.getServices();
+    console.log(services);
+    return res.status(201).json(services);
+  } catch (err) {
+    return res.status(400).json('Falhou a requisição');
+  }
+};

@@ -1,6 +1,9 @@
 const { Router } = require('express');
 const { login } = require('./src/app/controllers/Auth.js');
-const { createService } = require('./src/app/controllers/Service.js');
+const {
+  createService,
+  getServices,
+} = require('./src/app/controllers/Service.js');
 const { createUser, getUserData } = require('./src/app/controllers/User.js');
 const {
   ensureAuthenticated,
@@ -16,5 +19,6 @@ router.get('/users/current', ensureAuthenticated, getUserData);
 
 // Services
 router.post('/services', ensureAuthenticated, createService);
+router.get('/services', ensureAuthenticated, getServices);
 
 module.exports = router;
