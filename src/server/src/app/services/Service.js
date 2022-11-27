@@ -75,3 +75,15 @@ exports.getRequesterServices = async (tel) => {
 
   return result;
 };
+
+exports.createTreatmentService = async (num_servico_atendido, tel_diarista) => {
+  const result = await pool.query(
+    `insert into atende_servico (num_servico_atendido, telefone_diarista)
+  values  ($1, $2) returning *`,
+    [num_servico_atendido, tel_diarista]
+  );
+
+  if (!result.rowCount) return null;
+
+  return result;
+};

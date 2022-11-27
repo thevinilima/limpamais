@@ -4,6 +4,7 @@ const {
   createService,
   getServices,
   getRequesterServices,
+  createTreatmentService,
 } = require('./src/app/controllers/Service.js');
 const { createUser, getUserData } = require('./src/app/controllers/User.js');
 const {
@@ -20,6 +21,7 @@ router.get('/users/current', ensureAuthenticated, getUserData);
 
 // Services
 router.post('/services', ensureAuthenticated, createService);
+router.post('/services/treatment', ensureAuthenticated, createTreatmentService);
 router.get('/services', ensureAuthenticated, getServices);
 router.get('/services/requester', ensureAuthenticated, getRequesterServices);
 
