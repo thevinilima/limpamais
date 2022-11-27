@@ -1,7 +1,7 @@
 const pool = require('../../configs/db');
 
 exports.create = async ({ desc, dateTime, rooms, value, address }, userTel) => {
-  const createdServiceNumber = await pool.query(
+  await pool.query(
     `
     insert into cria_servico (telefone_usuario)
     values ($1)
@@ -9,6 +9,14 @@ exports.create = async ({ desc, dateTime, rooms, value, address }, userTel) => {
   `,
     [userTel]
   );
+
+  const res = await pool.query(
+    `
+    select * from cria_servico where telefone_usuario = ${userTel} order by num_servico desc limit 1;
+  `
+  );
+
+  const num_servico = res.rows[0].num_servico;
 
   const service = await pool.query(
     `
@@ -26,11 +34,11 @@ exports.create = async ({ desc, dateTime, rooms, value, address }, userTel) => {
       cidade,
       uf
     )
-    values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+    values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
     returning *;
   `,
     [
-      createdServiceNumber,
+      num_servico,
       desc,
       dateTime,
       rooms,

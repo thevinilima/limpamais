@@ -12,7 +12,7 @@ exports.createService = async (req, res) => {
 
   const service = await Service.create(req.body, user.telefone);
 
-  res.status(201).json(service);
+  res.status(201).json({ service, message: 'Serviço criado com sucesso!' });
 };
 
 exports.getServices = async (req, res) => {
