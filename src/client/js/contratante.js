@@ -1,3 +1,4 @@
+const token = localStorage.getItem('token');
 const root = document.getElementById('root');
 
 const IsNotLogged = () => {
@@ -10,22 +11,40 @@ window.onload = () => {
   IsNotLogged();
 };
 
-let formCreateService = document.querySelector('#form_login');
-formCreateService.addEventListener('submit', async function (e) {
+let btnCreateService = document.querySelector('.butaoSolicita');
+btnCreateService.addEventListener('click', async function (e) {
   e.preventDefault();
 
-  const formData = {};
+  const formData = {
+    desc: document.querySelector('#desc').value,
+    dateTime:
+      document.querySelector('#data').value +
+      ' ' +
+      document.querySelector('#hora').value,
+    rooms: parseInt(document.querySelector('#rooms').value),
+    value: parseInt(document.querySelector('#valor').value),
+    address: {
+      cep: document.querySelector('#cep').value,
+      logradouro: document.querySelector('#logradouro').value,
+      numero: parseInt(document.querySelector('#numero').value),
+      complemento: document.querySelector('#complemento').value,
+      bairro: document.querySelector('#bairro').value,
+      cidade: document.querySelector('#cidade').value,
+      uf: document.querySelector('#uf').value,
+    },
+  };
 
   try {
-    const data = await fetch('http://localhost:3003/services ', {
+    const response = await fetch('http://localhost:3003/services ', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
     }).then((res) => res.json());
 
-    // fecha modal
+    alert(response);
   } catch (error) {
     alert(error.message);
   }
