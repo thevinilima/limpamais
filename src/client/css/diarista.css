@@ -305,4 +305,5 @@ input{
     border-radius: 5px;
     padding: 2%;
     margin: 2%;
+    max-height: 600px;
 }

@@ -288,3 +288,21 @@ input{
 
     margin-left: 40px;
 }
+
+#container-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+.card{
+    
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 2%;
+    max-height: 600px;
+}
