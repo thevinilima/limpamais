@@ -7,7 +7,7 @@
 * Daniel Estevam Pacheco de Souza
 * Gabriel Augusto Souza Borges
 * Ivan Oliveira Santos Junior
-* Marcus Viniccius 
+* Marcus Viniccius Souza de Freitas
 * Rafael Pierre Martins
 * Vinicius Assis Lima
 
