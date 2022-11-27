@@ -14,6 +14,11 @@ window.onload = () => {
 let btnCreateService = document.querySelector('.butaoSolicita');
 btnCreateService.addEventListener('click', async function (e) {
   e.preventDefault();
+  let container = document.querySelector('#main');
+  let loading = document.createElement('P');
+  let textloading = document.createTextNode('Carregando...');
+  loading.appendChild(textloading);
+  container.appendChild(loading);
 
   const formData = {
     desc: document.querySelector('#desc').value,
@@ -44,7 +49,8 @@ btnCreateService.addEventListener('click', async function (e) {
       },
     }).then((res) => res.json());
 
-    alert(response);
+    loading.remove();
+    alert(response.message);
   } catch (error) {
     alert(error.message);
   }
