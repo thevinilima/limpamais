@@ -23,3 +23,12 @@ exports.getServices = async (req, res) => {
     return res.status(400).json('Falhou a requisição');
   }
 };
+
+exports.getRequesterServices = async (req, res) => {
+  try {
+    const services = await Service.getRequesterServices(req.headers.tel);
+    return res.json({ services });
+  } catch (err) {
+    return res.status(400).json('Falhou a requisição');
+  }
+};

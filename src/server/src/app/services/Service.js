@@ -63,3 +63,15 @@ exports.getServices = async () => {
 
   return result;
 };
+
+exports.getRequesterServices = async (tel) => {
+  const result = await pool.query(`SELECT *
+  FROM servico
+  INNER JOIN cria_servico
+  ON servico.num_servico_criado = cria_servico.num_servico 
+  where cria_servico.telefone_usuario = ${tel};`);
+
+  if (!result.rowCount) return null;
+
+  return result;
+};
