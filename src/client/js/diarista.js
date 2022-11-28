@@ -80,7 +80,7 @@ const generateServicosCards = () => {
     card.appendChild(valor);
     let data_horario = document.createElement('P');
     let data_horarioT = document.createTextNode(
-      `Data e Horário: ${cards[i].data_horario}`
+      `Data e Horário: ${new Date(cards[i].data_horario).toLocaleString()}`
     );
     data_horario.appendChild(data_horarioT);
     card.appendChild(data_horario);
