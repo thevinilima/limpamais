@@ -30,63 +30,63 @@ const generateServicosCards = () => {
   const container = document.getElementById('container-servicos');
   const cards = JSON.parse(localStorage.getItem('servicesAvailable'));
 
-  for (let i = 0; cards.length; i++) {
+  cards?.forEach(currCard => {
     let card = document.createElement('DIV');
     let num_servico_criado = document.createElement('H1');
     let num_servico_criadoT = document.createTextNode(
-      `Serviço: ${cards[i].num_servico_criado}`
+      `Serviço: ${currCard.num_servico_criado}`
     );
     num_servico_criado.appendChild(num_servico_criadoT);
     card.appendChild(num_servico_criado);
     let bairro = document.createElement('P');
-    let bairroT = document.createTextNode(`Bairro: ${cards[i].bairro}`);
+    let bairroT = document.createTextNode(`Bairro: ${currCard.bairro}`);
     bairro.appendChild(bairroT);
     card.appendChild(bairro);
     let cep = document.createElement('P');
-    let cepT = document.createTextNode(`CEP: ${cards[i].cep}`);
+    let cepT = document.createTextNode(`CEP: ${currCard.cep}`);
     cep.appendChild(cepT);
     card.appendChild(cep);
     let cidade = document.createElement('P');
-    let cidadeT = document.createTextNode(`Cidade: ${cards[i].cidade}`);
+    let cidadeT = document.createTextNode(`Cidade: ${currCard.cidade}`);
     cidade.appendChild(cidadeT);
     cidade.appendChild(bairro);
     let comodos = document.createElement('P');
-    let comodosT = document.createTextNode(`Cômodos: ${cards[i].comodos}`);
+    let comodosT = document.createTextNode(`Cômodos: ${currCard.comodos}`);
     comodos.appendChild(comodosT);
     card.appendChild(comodos);
     let descricao_atividade = document.createElement('P');
     let descricao_atividadeT = document.createTextNode(
-      `Descrição: ${cards[i].descricao_atividade}`
+      `Descrição: ${currCard.descricao_atividade}`
     );
     descricao_atividade.appendChild(descricao_atividadeT);
     card.appendChild(descricao_atividade);
     let logradouro = document.createElement('P');
     let logradouroT = document.createTextNode(
-      `Logradouro ${cards[i].logradouro}`
+      `Logradouro ${currCard.logradouro}`
     );
     logradouro.appendChild(logradouroT);
     card.appendChild(logradouro);
     let numero = document.createElement('P');
-    let numeroT = document.createTextNode(`Número: ${cards[i].numero}`);
+    let numeroT = document.createTextNode(`Número: ${currCard.numero}`);
     numero.appendChild(numeroT);
     card.appendChild(numero);
     let uf = document.createElement('P');
-    let ufT = document.createTextNode(`UF: ${cards[i].uf}`);
+    let ufT = document.createTextNode(`UF: ${currCard.uf}`);
     uf.appendChild(ufT);
     card.appendChild(uf);
     let valor = document.createElement('P');
-    let valorT = document.createTextNode(`Valor: ${cards[i].valor}`);
+    let valorT = document.createTextNode(`Valor: ${currCard.valor}`);
     valor.appendChild(valorT);
     card.appendChild(valor);
     let data_horario = document.createElement('P');
     let data_horarioT = document.createTextNode(
-      `Data e Horário: ${new Date(cards[i].data_horario).toLocaleString()}`
+      `Data e Horário: ${new Date(currCard.data_horario).toLocaleString()}`
     );
     data_horario.appendChild(data_horarioT);
     card.appendChild(data_horario);
     card.classList = 'card';
     container.appendChild(card);
-  }
+  });
 };
 
 const logoutBtn = document.querySelector('.navSair');
