@@ -1,4 +1,5 @@
 let formRegister = document.querySelector('.sign-up-form');
+const errorMsg = document.querySelector('.error-msg');
 
 formRegister.addEventListener('submit', async function (e) {
   e.preventDefault();
@@ -30,13 +31,18 @@ formLogin.addEventListener('submit', async function (e) {
   parseInt(loginFormData.tel);
 
   try {
-    const data = await fetch('http://localhost:3003/login ', {
+    const res = await fetch('http://localhost:3003/login ', {
       method: 'POST',
       body: JSON.stringify(loginFormData),
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((res) => res.json());
+    });
+    const data = await res.json();
+    if (res.status === 401) {
+      errorMsg.innerHTML = data;
+      return;
+    }
 
     localStorage.setItem('token', data.token);
     await loadUserData();

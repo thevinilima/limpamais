@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap%27");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap%27');
 
 * {
   padding: 0;
@@ -8,7 +8,7 @@
 
 body,
 input {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .container {
   position: relative;
@@ -18,7 +18,7 @@ input {
   overflow: hidden;
 }
 .container::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 2000px;
   height: 2000px;
@@ -365,4 +365,9 @@ form.sign-up-form {
   padding: 18px 0px;
   font-size: 20px;
   font-weight: 400px;
+}
+
+.error-msg {
+  color: tomato;
+  font-size: 0.9em;
 }

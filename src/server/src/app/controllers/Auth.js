@@ -15,13 +15,13 @@ exports.login = async (req, res) => {
   const user = rows[0];
 
   if (!user) {
-    return res.status(400).json('Usuário e/ou senha incorreto');
+    return res.status(401).json('Telefone e/ou senha incorreto');
   }
 
   const passwordMatch = await bcrypt.compare(password, user.senha);
 
   if (!passwordMatch) {
-    return res.status(400).json('Usuário e/ou senha incorreto');
+    return res.status(401).json('Telefone e/ou senha incorreto');
   }
 
   const token = sign({ telefone: user.telefone }, process.env.JWT_SECRET, {

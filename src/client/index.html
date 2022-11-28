@@ -23,20 +23,19 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          
           <form action="" class="sign-in-form" id="form_login">
             <h2 class="title">Login</h2>
+            <div class="error-msg"></div>
             <div class="input-field">
               <i class="bx bx-phone"></i>
-              <input  name="tel" type="text" placeholder="Nome / Telefone" />
+              <input name="tel" type="number" placeholder="Telefone" />
             </div>
             <div class="input-field">
               <i class="bx bx-lock"></i>
               <input name="password" type="password" placeholder="Senha" />
             </div>
-            <button type="submit" value="Login" class="btn solid" >Logar</button>
+            <button type="submit" value="Login" class="btn solid">Logar</button>
           </form>
-
           <form action="" class="sign-up-form" onsubmit="register_form()">
             <h2 class="title">Registre-se</h2>
             <div class="radio">
@@ -69,25 +68,30 @@
                 <label for="diarista_for">Diarista</label>
               </div>
             </div>
-            <div class="input-field" id="usernameField" >
+            <div class="input-field" id="usernameField">
               <i class="bx bx-user"></i>
               <input name="name" type="text" placeholder="Nome" />
             </div>
             <div class="input-field" id="telefone">
               <i class="bx bx-phone"></i>
-              <input name="cel" type="text" placeholder="Telefone" maxlength="9" />
+              <input
+                name="cel"
+                type="text"
+                placeholder="Telefone"
+                maxlength="9"
+              />
             </div>
             <div class="input-field" id="cpf">
               <i class="bx bxs-id-card"></i>
               <input name="document" type="number" placeholder="CPF" />
             </div>
-          <!--   <div class="input-field hidden" id="cpnj">
+            <!--   <div class="input-field hidden" id="cpnj">
               <i class="bx bxs-business"></i>
               <input name="document" type="number" placeholder="CNPJ" />
             </div> -->
             <div class="input-field" id="password">
               <i class="bx bx-lock"></i>
-              <input name="password" type="password" placeholder="Senha"  />
+              <input name="password" type="password" placeholder="Senha" />
             </div>
             <input type="submit" value="Registre-se" class="btn solid" />
             <!--<p class="social-text">Registre-se com suas Redes Socias</p>
