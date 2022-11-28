@@ -179,12 +179,27 @@ main {
 
   font-size: 20px;
   color: white;
-  background-color: #2dc7ab;
   border-radius: 10px;
 
   width: 200px;
   height: 50px;
+}
+
+#serviceActionBtn.aberto {
+  background-color: #2dc7ab;
   cursor: pointer;
+}
+
+#serviceActionBtn.aceito, #serviceActionBtn.pagamento {
+  background-color: antiquewhite;
+  color: black;
+  cursor: not-allowed;
+}
+
+#serviceActionBtn.finalizado {
+  background-color: transparent;
+  color: black;
+  cursor: not-allowed;
 }
 
 .butaoSolicita {
@@ -252,4 +267,16 @@ input {
   margin: 2%;
   max-height: 600px;
   cursor: pointer;
+}
+
+.card.aceito {
+  background-color: antiquewhite;
+}
+
+.card.pagamento {
+  background-color: lightblue;
+}
+
+.card.finalizado {
+  background-color: rgb(175, 224, 201);
 }

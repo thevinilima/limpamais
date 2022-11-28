@@ -1,5 +1,6 @@
-window.onload = async () => {
+const loadServices = async () => {
   const container = document.getElementById('container-servicos');
+  container.innerHTML = null;
   let img = document.createElement('IMG');
   img.setAttribute('src', '../imgs/loading-gif.gif');
   container.appendChild(img);
@@ -25,12 +26,14 @@ window.onload = async () => {
   img.remove();
   generateServicosCards();
 };
+window.onload = loadServices;
 
 const getServices = () => JSON.parse(localStorage.getItem('servicesAvailable'));
 
 const generateServicosCards = () => {
   const container = document.getElementById('container-servicos');
   const services = getServices();
+  container.innerHTML = null;
 
   services?.forEach(service => {
     let card = document.createElement('DIV');
@@ -76,23 +79,28 @@ const generateServicosCards = () => {
     let ufT = document.createTextNode(`UF: ${service.uf}`);
     uf.appendChild(ufT);
     card.appendChild(uf);
-    let valor = document.createElement('P');
-    let valorT = document.createTextNode(`Valor: ${service.valor}`);
-    valor.appendChild(valorT);
-    card.appendChild(valor);
     let data_horario = document.createElement('P');
     let data_horarioT = document.createTextNode(
       `Data e Horário: ${new Date(service.data_horario).toLocaleString()}`
     );
     data_horario.appendChild(data_horarioT);
     card.appendChild(data_horario);
+    let valor = document.createElement('P');
+    let valorT = document.createTextNode(
+      `Valor: ${service.valor.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+      })}`
+    );
+    valor.appendChild(valorT);
+    card.appendChild(valor);
 
     card.setAttribute(
       'onclick',
       `handleServiceCardClick(${service.num_servico_criado})`
     );
 
-    card.classList = 'card';
+    card.classList = `card ${service.status.toLowerCase()}`;
     container.appendChild(card);
   });
 };
@@ -114,20 +122,36 @@ const handleServiceCardClick = numServico => {
   if (!service) return;
 
   modal.style.display = 'block';
-  document.querySelector('#desc').innerHTML += service.descricao_atividade;
-  document.querySelector('#lograd').innerHTML += service.logradouro;
-  document.querySelector('#numero').innerHTML += service.numero;
-  document.querySelector('#comp').innerHTML += service.complemento;
-  document.querySelector('#cep').innerHTML += service.cep;
-  document.querySelector('#bairro').innerHTML += service.bairro;
-  document.querySelector('#comodos').innerHTML += service.comodos;
-  document.querySelector('#dataHora').innerHTML += new Date(
-    service.data_horario
-  ).toLocaleString();
-  document.querySelector('#valor').innerHTML += service.valor;
-  document
-    .querySelector('#serviceActionBtn')
-    .setAttribute(
+  document.querySelector('#desc').innerHTML =
+    'Descrição de atividades: ' + service.descricao_atividade;
+  document.querySelector('#lograd').innerHTML =
+    'Logradouro: ' + service.logradouro;
+  document.querySelector('#numero').innerHTML = 'Número: ' + service.numero;
+  document.querySelector('#comp').innerHTML =
+    'Complemento: ' + service.complemento;
+  document.querySelector('#cep').innerHTML = 'CEP: ' + service.cep;
+  document.querySelector('#bairro').innerHTML = 'Bairro: ' + service.bairro;
+  document.querySelector('#comodos').innerHTML = 'Cômodos: ' + service.comodos;
+  document.querySelector('#dataHora').innerHTML =
+    'Data/Hora: ' + new Date(service.data_horario).toLocaleString();
+  document.querySelector('#valor').innerHTML =
+    'Valor: ' +
+    service.valor.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    });
+  const button = document.querySelector('#serviceActionBtn');
+  button.className = service.status.toLowerCase();
+  button.innerHTML =
+    service.status === 'ABERTO'
+      ? 'Pegar Serviço'
+      : service.status === 'ACEITO'
+      ? 'Aceito'
+      : service.status === 'PAGAMENTO'
+      ? 'Pagamento Pendente'
+      : 'Finalizado';
+  if (service.status === 'ABERTO')
+    button.setAttribute(
       'onclick',
       `handleTakeService(${service.num_servico_criado})`
     );
@@ -135,7 +159,7 @@ const handleServiceCardClick = numServico => {
 
 const handleTakeService = async numServico => {
   const token = localStorage.getItem('token');
-  if (!token) return;
+  if (!token || !numServico) return;
 
   const res = await fetch('http://localhost:3003/services/take/' + numServico, {
     method: 'POST',
@@ -143,7 +167,10 @@ const handleTakeService = async numServico => {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
-  }).then(response => response.json());
+  });
 
-  console.log(res);
+  if (res.status === 200) {
+    modal.style.display = 'none';
+    loadServices();
+  }
 };
