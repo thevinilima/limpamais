@@ -8,12 +8,12 @@ const loadUserData = async () => {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
-  }).then((res) => res.json());
+  }).then(res => res.json());
 
   localStorage.setItem('user', JSON.stringify(user));
 };
 
 const getUser = () => JSON.parse(localStorage.getItem('user'));
 
-const display = document.querySelector('#username');
+const display = document.querySelector('#username-display');
 display.innerHTML = getUser().nome;
