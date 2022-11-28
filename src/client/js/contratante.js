@@ -71,14 +71,16 @@ const getRequesterServices = async () => {
   const userTel = JSON.parse(localStorage.getItem('user')).telefone;
   let response;
   try {
-    response = await fetch('http://localhost:3003/services/requester', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-        tel: userTel,
-      },
-    }).then(response => response.json());
+    response = await fetch(
+      'http://localhost:3003/services/requester/' + userTel,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    ).then(response => response.json());
   } catch (err) {
     console.log(err.message);
   }

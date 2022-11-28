@@ -27,7 +27,7 @@ exports.getServices = async (req, res) => {
 
 exports.getRequesterServices = async (req, res) => {
   try {
-    const services = await Service.getRequesterServices(req.headers.tel);
+    const services = await Service.getRequesterServices(req.params.tel);
     return res.json({ services });
   } catch (err) {
     return res.status(400).json('Falhou a requisição');

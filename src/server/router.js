@@ -24,7 +24,11 @@ router.get('/users/current', ensureAuthenticated, getUserData);
 router.post('/services', ensureAuthenticated, createService);
 router.post('/services/treatment', ensureAuthenticated, createTreatmentService);
 router.get('/services', ensureAuthenticated, getServices);
-router.get('/services/requester', ensureAuthenticated, getRequesterServices);
+router.get(
+  '/services/requester/:tel',
+  ensureAuthenticated,
+  getRequesterServices
+);
 router.post('/services/take/:numServico', ensureAuthenticated, takeService);
 
 module.exports = router;
