@@ -184,6 +184,7 @@ main {
 
   width: 200px;
   height: 50px;
+  cursor: pointer;
 }
 
 .butaoSolicita {
@@ -250,4 +251,5 @@ input {
   padding: 2%;
   margin: 2%;
   max-height: 600px;
+  cursor: pointer;
 }

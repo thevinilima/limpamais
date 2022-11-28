@@ -23,6 +23,7 @@
 
     <title>LimpaMais</title>
 
+    <script src="../js/home.js" defer></script>
     <script src="../js/user.js" defer></script>
   </head>
 
@@ -77,51 +78,30 @@
           <div class="container">
             <div class="direito">
               <div class="descricao">
-                <p>Descrição de atividades:</p>
-                <input style="height: 60px; width: 600px" type="text" />
+                <p id="desc">Descrição de atividades:&nbsp;</p>
               </div>
-
-              <p style="display: block">Endereço:</p>
-
+              <p style="display: block">Endereço</p>
               <div class="endereco">
                 <div class="especificos">
-                  <p>logradouro:</p>
-                  <input type="text" />
-
-                  <p>Numero:</p>
-                  <input type="number" />
-
-                  <p>complemento</p>
-                  <input type="text" />
+                  <p id="lograd">Logradouro:&nbsp;</p>
+                  <p id="numero">Número:&nbsp;</p>
+                  <p id="comp">Complemento:&nbsp;</p>
                 </div>
-
                 <div class="gerais">
-                  <p>bairro</p>
-                  <input type="text" />
-
-                  <p>CEP</p>
-                  <input type="number" />
+                  <p id="bairro">Bairro:&nbsp;</p>
+                  <p id="cep">CEP:&nbsp;</p>
                 </div>
               </div>
             </div>
-
             <div class="esquerdo">
-              <p>Metros Quadrados:</p>
-              <input type="text" />
-
-              <p>Data:</p>
-              <input type="date" />
-
-              <p>Horário:</p>
-              <input type="time" />
-
-              <p>observações:</p>
-              <input style="height: 100px" type="text" />
+              <p id="comodos">Cômodos:&nbsp;</p>
+              <p id="dataHora">Data/Hora:&nbsp;</p>
+              <p id="valor">Valor: R$&nbsp;</p>
             </div>
           </div>
 
           <div class="butaoSolicita">
-            <button id="criaSolicitacao">Criar Solicitação</button>
+            <button id="criaSolicitacao">Pegar Serviço</button>
           </div>
         </div>
       </main>

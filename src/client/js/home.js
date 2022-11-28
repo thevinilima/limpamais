@@ -1,32 +1,23 @@
+const botaoModal = document.getElementById('criaServico');
 
-const botaoModal = document.getElementById("criaServico");
+botaoModal?.addEventListener('click', function () {
+  let modal = document.querySelector('.modalInsercao');
 
-botaoModal.addEventListener("click", function (){
-
-
-    let modal = document.querySelector('.modalInsercao');
-
-    modal.style.display = 'block';
+  modal.style.display = 'block';
 });
 
+const fecharModal = document.getElementById('fecharX');
 
-const fecharModal = document.getElementById("fecharX");
+fecharModal.addEventListener('click', function () {
+  let fechar = document.querySelector('.modalInsercao');
 
-fecharModal.addEventListener("click", function (){
-
-
-    let fechar = document.querySelector('.modalInsercao');
-
-    fechar.style.display = 'none';
+  fechar.style.display = 'none';
 });
 
+const criaSolicitacao = document.getElementById('criaSolicitacao');
 
-const criaSolicitacao = document.getElementById("criaSolicitacao");
+criaSolicitacao.addEventListener('click', function () {
+  let fechar = document.querySelector('.modalInsercao');
 
-criaSolicitacao.addEventListener("click", function (){
-
-
-    let fechar = document.querySelector('.modalInsercao');
-
-    fechar.style.display = 'none';
+  fechar.style.display = 'none';
 });
