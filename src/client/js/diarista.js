@@ -125,4 +125,25 @@ const handleServiceCardClick = numServico => {
     service.data_horario
   ).toLocaleString();
   document.querySelector('#valor').innerHTML += service.valor;
+  document
+    .querySelector('#serviceActionBtn')
+    .setAttribute(
+      'onclick',
+      `handleTakeService(${service.num_servico_criado})`
+    );
+};
+
+const handleTakeService = async numServico => {
+  const token = localStorage.getItem('token');
+  if (!token) return;
+
+  const res = await fetch('http://localhost:3003/services/take/' + numServico, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+  }).then(response => response.json());
+
+  console.log(res);
 };

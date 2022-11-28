@@ -1,5 +1,6 @@
 const User = require('../services/User');
 const Service = require('../services/Service');
+const pool = require('../../configs/db');
 
 exports.createService = async (req, res) => {
   const { desc, dateTime, rooms, value, address } = req.body;
@@ -51,4 +52,24 @@ exports.createTreatmentService = async (req, res) => {
   res
     .status(201)
     .json({ service, message: 'Serviço obtido para atendimento com sucesso!' });
+};
+
+exports.takeService = async (req, res) => {
+  const { numServico } = req.params;
+  if (!numServico) return res.status(400).json('Informe o número do serviço');
+
+  try {
+    await pool.query(
+      `
+        UPDATE servico
+        SET status = 'ACEITO'
+        WHERE num_servico_criado = $1
+      `,
+      [numServico]
+    );
+
+    res.status(200).end();
+  } catch {
+    res.status(500).json('Algo deu errado');
+  }
 };

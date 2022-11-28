@@ -1,5 +1,4 @@
 const botaoModal = document.getElementById('criaServico');
-
 botaoModal?.addEventListener('click', function () {
   let modal = document.querySelector('.modalInsercao');
 
@@ -7,7 +6,6 @@ botaoModal?.addEventListener('click', function () {
 });
 
 const fecharModal = document.getElementById('fecharX');
-
 fecharModal.addEventListener('click', function () {
   let fechar = document.querySelector('.modalInsercao');
 
@@ -15,8 +13,7 @@ fecharModal.addEventListener('click', function () {
 });
 
 const criaSolicitacao = document.getElementById('criaSolicitacao');
-
-criaSolicitacao.addEventListener('click', function () {
+criaSolicitacao?.addEventListener('click', function () {
   let fechar = document.querySelector('.modalInsercao');
 
   fechar.style.display = 'none';
