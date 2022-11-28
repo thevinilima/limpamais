@@ -47,10 +47,11 @@ formLogin.addEventListener('submit', async function (e) {
     localStorage.setItem('token', data.token);
     await loadUserData();
 
+    const user = getUser();
     const path = location.pathname.split('/');
     if (path.slice(-1) === '') path.pop();
     path.pop();
-    path.push('pages', 'contratante.html');
+    path.push('pages', user.is_diarista ? 'diarista.html' : 'contratante.html');
     location.pathname = path.join('/');
   } catch (error) {
     alert(error.message);

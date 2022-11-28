@@ -7,14 +7,14 @@ exports.getByTel = async (telefone) => {
   try {
     const result = await pool.query(
       `
-      select telefone, nome, cpf_cnpj
+      select telefone, nome, cpf_cnpj, is_diarista
       from usuario
       where telefone = $1;
     `,
       [telefone]
     );
 
-    if (!result.rowCount) return null
+    if (!result.rowCount) return null;
 
     return result.rows[0];
   } catch (e) {
