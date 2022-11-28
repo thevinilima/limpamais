@@ -41,7 +41,7 @@
             <div class="radio">
               <div class="CPF">
                 <input
-                  name="user-type"
+                  name="type"
                   type="radio"
                   value="cpf"
                   id="cpf_for"
@@ -50,17 +50,12 @@
                 <label for="cpf_for">CPF</label>
               </div>
               <div class="CNPJ">
-                <input
-                  name="user-type"
-                  type="radio"
-                  value="cnpj"
-                  id="cpnj_for"
-                />
+                <input name="type" type="radio" value="cnpj" id="cpnj_for" />
                 <label for="cpnj_for">CNPJ</label>
               </div>
               <div class="Diarista">
                 <input
-                  name="user-type"
+                  name="type"
                   type="radio"
                   value="diarista"
                   id="diarista_for"
@@ -79,30 +74,43 @@
                 type="text"
                 placeholder="Telefone"
                 maxlength="9"
+                required
               />
             </div>
             <div class="input-field" id="cpf">
-              <i class="bx bxs-id-card"></i>
+              <i class="bx bx-id-card"></i>
               <input
                 name="document"
                 type="number"
                 placeholder="CPF"
                 maxlength="11"
+                required
               />
             </div>
             <div class="input-field hidden" id="cnpj">
-              <i class="bx bxs-business"></i>
+              <i class="bx bx-buildings"></i>
               <input
                 name="document"
                 type="number"
                 placeholder="CNPJ"
                 maxlength="14"
                 disabled
+                required
               />
             </div>
             <div class="input-field" id="password">
               <i class="bx bx-lock"></i>
               <input name="password" type="password" placeholder="Senha" />
+            </div>
+            <div class="input-field hidden" id="pix">
+              <i class="bx bx-wallet"></i>
+              <input
+                type="text"
+                name="pix"
+                placeholder="Chave Pix"
+                disabled
+                required
+              />
             </div>
             <input type="submit" value="Registre-se" class="btn solid" />
             <!--<p class="social-text">Registre-se com suas Redes Socias</p>
