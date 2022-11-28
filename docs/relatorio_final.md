@@ -277,10 +277,10 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 
 | **Indicador** | **Objetivos** | **Descrição** | **Cálculo** | **Fonte dados** | **Perspectiva** |
 | --- | --- | --- | --- | --- | --- |
-| Taxa de serviços criados e atendidos | Acompanhar demanda por serviços medindo a porcentagem de atendimento | Mede % de serviços atendidos | Serviços criados/Serviços atendidos = %  | Tabela Servico | Processo interno |
-| Percentual de usuários ativos | Acompanhar relação de usuários ativos na plataforma que demandam serviço | Mede % de usuários ativos  | Nº usuarios cadastrados - Nº usuarios com serviços ativos = % | Tabela Usuario | Crescimento e Utilização |
-| Percentual de diaristas ativos | Acompanhar relação de diaristas ativos na plataforma que estão atendendo serviço | Mede % de diaristas ativos  | Nº diaristas cadastrados - Nº diaristas com serviços ativos = % | Tabela Diarista | Crescimento e Utilização |
-| Percentual de avaliações | Levantar media de avaliações dos usuários e diaristas relacionados ao serviço | Percentual de avaliação em relação ao total das avaliações recebidas  | Total das avaliações/Nº de avaliações recebidas = %  | Tabela Avalia_Diarista e Tabela Avalia_Usuario | Feedback de atuação dos usuários |
+| Taxa de serviços criados e atendidos | Acompanhar demanda por serviços medindo a porcentagem de atendimento | Mede % de serviços atendidos | Serviços criados/Serviços atendidos * 100 = %  | Tabela Servico e Tabela Atende_Servico| Processo interno |
+| Percentual de usuários ativos | Acompanhar relação de usuários ativos na plataforma que demandam serviço | Mede % de usuários ativos  | Nº usuarios cadastrados/Nº usuarios com serviços ativos * 100 = % | Tabela Usuario e Tabela Cria_Servico | Crescimento e Utilização |
+| Percentual de diaristas ativos | Acompanhar relação de diaristas ativos na plataforma que estão atendendo serviço | Mede % de diaristas ativos  | Nº diaristas cadastrados/Nº diaristas com serviços ativos * 100 = % | Tabela Diarista e Tabela Atende_Servico | Crescimento e Utilização |
+| Percentual de avaliações | Levantar media de avaliações dos usuários e diaristas relacionados ao serviço | Percentual de avaliação em relação ao total das avaliações recebidas  | Total das avaliações/Nº de avaliações recebidas * 100 = %  | Tabela Avalia_Diarista e Tabela Avalia_Usuario | Feedback de atuação dos usuários |
 | Validação pagamento | Garantir que os pagamentos estão sendo feitos corretamente | Validar se o pagamento foi feito na plataforma |   | Tabela Pagamento | Clientes |
 
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
