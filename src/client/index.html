@@ -83,12 +83,23 @@
             </div>
             <div class="input-field" id="cpf">
               <i class="bx bxs-id-card"></i>
-              <input name="document" type="number" placeholder="CPF" />
+              <input
+                name="document"
+                type="number"
+                placeholder="CPF"
+                maxlength="11"
+              />
             </div>
-            <!--   <div class="input-field hidden" id="cpnj">
+            <div class="input-field hidden" id="cnpj">
               <i class="bx bxs-business"></i>
-              <input name="document" type="number" placeholder="CNPJ" />
-            </div> -->
+              <input
+                name="document"
+                type="number"
+                placeholder="CNPJ"
+                maxlength="14"
+                disabled
+              />
+            </div>
             <div class="input-field" id="password">
               <i class="bx bx-lock"></i>
               <input name="password" type="password" placeholder="Senha" />
