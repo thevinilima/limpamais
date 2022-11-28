@@ -84,14 +84,14 @@ const getRequesterServices = async () => {
   }
 
   response = response.services.rows;
-  localStorage.setItem('servicesAvaiable', JSON.stringify(response));
+  localStorage.setItem('servicesAvailable', JSON.stringify(response));
   loading.remove();
   generateServicosCards();
 };
 
 const generateServicosCards = () => {
   const container = document.getElementById('main');
-  const cards = JSON.parse(localStorage.getItem('servicesAvaiable'));
+  const cards = JSON.parse(localStorage.getItem('servicesAvailable'));
 
   cards?.forEach(currCard => {
     let card = document.createElement('DIV');
@@ -151,3 +151,12 @@ const generateServicosCards = () => {
     container.appendChild(card);
   });
 };
+
+const logoutBtn = document.querySelector('.navSair');
+logoutBtn.addEventListener('click', () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  localStorage.removeItem('servicesAvailable');
+
+  location.pathname = '/src/client';
+});

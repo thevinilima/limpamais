@@ -1,309 +1,253 @@
 body {
+  margin: 0;
 
-    margin: 0;
-
-
-    height: 100vh;
+  height: 100vh;
 }
 
-
-header{
-
-    background-color: #2DC7AB;
-    width: 100%;
-    height: 70px;
-
-
+header {
+  background-color: #2dc7ab;
+  width: 100%;
+  height: 70px;
 }
 
-
-
-.text{
-
-    font-family: Arial, Helvetica, sans-serif;
+a {
+  text-decoration: none;
 }
 
-
-
-
-section{
-
-    display: flex;
-    flex-direction: row;
-
-    height: 100%;
-
+.text {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+section {
+  display: flex;
+  flex-direction: row;
 
-aside{
-
-    display: flex;
-    flex-direction: column;
-
-     width: 20vw;
-
-    background-color: aliceblue;
-
-    border-right: solid black 2px;
-    
+  height: 100%;
 }
 
-.header_aside{
-    margin-left: 15px;
+aside {
+  display: flex;
+  flex-direction: column;
+
+  width: 20vw;
+
+  background-color: aliceblue;
+
+  border-right: solid black 2px;
 }
 
-main{
-
-    background-color: aliceblue;
-
-    flex: 1;
-
-    display: flex;
-
-    padding: 25px; 
-
+.header_aside {
+  margin-left: 15px;
 }
 
+main {
+  background-color: aliceblue;
 
-.miniDashboard{
+  flex: 1;
 
-    margin-top: 15px;
+  display: flex;
+
+  padding: 25px;
 }
 
-.servicos{
-
-    text-align: center;
-
+.miniDashboard {
+  margin-top: 15px;
 }
 
-.profission{
-
-    margin-top: -15px;
+.servicos {
+  text-align: center;
 }
 
-.dados{
-
-    margin-top: 25px;
-
-    background-color: aliceblue;
-    height: 50px;
-
-    padding: 5px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.profission {
+  margin-top: -15px;
 }
 
-.pagamentoPendente{
+.dados {
+  margin-top: 25px;
 
-    margin-top:100px;
+  background-color: aliceblue;
+  height: 50px;
 
-    background-color: aliceblue;
-    height: 50px;
+  padding: 5px;
 
-    padding: 5px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navSair{
+.pagamentoPendente {
+  margin-top: 100px;
 
-    font-size: 23px;
+  background-color: aliceblue;
+  height: 50px;
 
-    display: block;
-    margin-top: 135px;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 5px;
 
- 
-    color: black;
-
-    height: 50px;
-    width: 230px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 15cm;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navSair:hover{
+.navSair {
+  font-size: 20px;
 
-    background-color: #2DC7AB;
-   
-    color: white;
+  margin-top: 135px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: black;
+
+  height: 50px;
+  width: 230px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 15cm;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
+.navSair:hover {
+  background-color: #2dc7ab;
 
-#criaServico{
-
-    font-size: 50px;
-    color: white;
-    background-color: #2DC7AB;
-    border-radius: 100%;
-
-    border: none;
-
-    width: 90px;
-    height: 90px;
-
-    border: 2px rgb(175, 224, 201) groove;
-
+  color: white;
 }
 
+#criaServico {
+  font-size: 50px;
+  color: white;
+  background-color: #2dc7ab;
+  border-radius: 100%;
 
+  border: none;
 
-#criaServico:hover{
+  width: 90px;
+  height: 90px;
 
-    cursor: pointer;
-    border: none;
-    
-}
-.botao{
-
-
-
-    height: 120px;
-    width: 70vw;
-    position: absolute;
-    bottom: 0px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 2px rgb(175, 224, 201) groove;
 }
 
-.modalInsercao{
+#criaServico:hover {
+  cursor: pointer;
+  border: none;
+}
+.botao {
+  height: 120px;
+  width: 70vw;
+  position: absolute;
+  bottom: 0px;
 
-    width: 1000px;
-    height: 700px;
-
-
-    border: solid 1PX black;
-    background-color: #eeecec;
-
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-
-  
-
-    display: none;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#fecharX{
+.modalInsercao {
+  width: 1000px;
+  height: 700px;
 
-    border: none;
+  border: solid 1px black;
+  background-color: #eeecec;
 
-    position: absolute;
-    top: 7px;
-    right: 7px;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
 
-
+  display: none;
 }
 
-.tituloModal{
+#fecharX {
+  border: none;
 
-    text-align: center;
+  position: absolute;
+  top: 7px;
+  right: 7px;
 }
 
-#criaSolicitacao{
-
-    position: absolute;
-    bottom: 15px;
-
-    font-size: 20px;
-    color: white;
-    background-color: #2DC7AB;
-    border-radius: 10px;
-
-    width: 200px;
-    height: 50px;
-
+.tituloModal {
+  text-align: center;
 }
 
-.butaoSolicita{
-    height: 70px;
-    width: 100%;
+#criaSolicitacao {
+  position: absolute;
+  bottom: 15px;
 
-    position: absolute;
-    bottom: 0px;
+  font-size: 20px;
+  color: white;
+  background-color: #2dc7ab;
+  border-radius: 10px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 200px;
+  height: 50px;
 }
 
-.container{
+.butaoSolicita {
+  height: 70px;
+  width: 100%;
 
-    height: 50vh;
+  position: absolute;
+  bottom: 0px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.direito{
+.container {
+  height: 50vh;
 
-    display: flex;
-
-    flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.endereco{
+.direito {
+  display: flex;
 
-    display: flex;
-    flex-direction: row;
+  flex-direction: column;
 }
 
-input{
-
-    width: 200px;
-    height: 30px;
+.endereco {
+  display: flex;
+  flex-direction: row;
 }
 
-.especificos{
-
-    margin-left: 20px;
+input {
+  width: 200px;
+  height: 30px;
 }
 
-.gerais{
-
- margin-left: 35px;
+.especificos {
+  margin-left: 20px;
 }
 
-.esquerdo{
+.gerais {
+  margin-left: 35px;
+}
 
-    margin-left: 40px;
+.esquerdo {
+  margin-left: 40px;
 }
 
 #container-servicos {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    justify-content: space-around;
-    overflow-y: scroll;
-    max-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  overflow-y: scroll;
+  max-height: 100vh;
 }
 
-.card{
-    
-    border: solid 1px grey;
-    border-radius: 5px;
-    padding: 2%;
-    margin: 2%;
-    max-height: 600px;
+.card {
+  border: solid 1px grey;
+  border-radius: 5px;
+  padding: 2%;
+  margin: 2%;
+  max-height: 600px;
 }

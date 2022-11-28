@@ -15,5 +15,8 @@ const loadUserData = async () => {
 
 const getUser = () => JSON.parse(localStorage.getItem('user'));
 
-const display = document.querySelector('#username-display');
-display.innerHTML = getUser().nome;
+const user = getUser();
+if (user) {
+  const display = document.querySelector('#username-display');
+  display.innerHTML = getUser()?.nome;
+}

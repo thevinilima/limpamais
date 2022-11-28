@@ -15,20 +15,20 @@ window.onload = async () => {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-    }).then((response) => response.json());
+    }).then(response => response.json());
   } catch (err) {
     console.log(err.message);
   }
 
   response = response.services.rows;
-  localStorage.setItem('servicesAvaiable', JSON.stringify(response));
+  localStorage.setItem('servicesAvailable', JSON.stringify(response));
   img.remove();
   generateServicosCards();
 };
 
 const generateServicosCards = () => {
   const container = document.getElementById('container-servicos');
-  const cards = JSON.parse(localStorage.getItem('servicesAvaiable'));
+  const cards = JSON.parse(localStorage.getItem('servicesAvailable'));
 
   for (let i = 0; cards.length; i++) {
     let card = document.createElement('DIV');
@@ -88,3 +88,12 @@ const generateServicosCards = () => {
     container.appendChild(card);
   }
 };
+
+const logoutBtn = document.querySelector('.navSair');
+logoutBtn.addEventListener('click', () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  localStorage.removeItem('servicesAvailable');
+
+  location.pathname = '/src/client';
+});
