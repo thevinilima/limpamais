@@ -266,7 +266,7 @@ As tecnologias que serão utilizadas para resolução do problema são:
 ## 5. Modelo de dados
 
 
-![Diagrama de entidade relacional](imagens/DER.png "DER - Esboço para o banco de dados")
+![Diagrama de entidade relacional](imagens/DER.png)
 
 
 ## 6. Indicadores de desempenho
