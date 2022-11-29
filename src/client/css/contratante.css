@@ -172,7 +172,7 @@ main {
   text-align: center;
 }
 
-#criaSolicitacao {
+#serviceActionBtn {
   position: absolute;
   bottom: 15px;
 
@@ -183,6 +183,24 @@ main {
 
   width: 200px;
   height: 50px;
+}
+
+#serviceActionBtn.aberto {
+  background-color: antiquewhite;
+  color: black;
+  cursor: not-allowed;
+}
+
+#serviceActionBtn.aceito,
+#serviceActionBtn.pagamento {
+  background-color: #2dc7ab;
+  cursor: not-allowed;
+}
+
+#serviceActionBtn.finalizado {
+  background-color: transparent;
+  color: black;
+  cursor: not-allowed;
 }
 
 .butaoSolicita {
@@ -249,4 +267,17 @@ input {
   padding: 2%;
   margin: 2%;
   max-height: 600px;
+  cursor: pointer;
+}
+
+.card.aceito {
+  background-color: antiquewhite;
+}
+
+.card.pagamento {
+  background-color: lightblue;
+}
+
+.card.finalizado {
+  background-color: rgb(175, 224, 201);
 }

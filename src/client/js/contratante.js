@@ -162,7 +162,7 @@ const generateServicosCards = () => {
       `handleServiceCardClick(${service.num_servico_criado})`
     );
 
-    card.classList = 'card';
+    card.classList = `card ${service.status.toLowerCase()}`;
     container.appendChild(card);
   });
 };
@@ -184,39 +184,33 @@ const handleServiceCardClick = numServico => {
   if (!service) return;
 
   modal.style.display = 'block';
-  document.querySelector('#desc').innerHTML =
-    'Descrição de atividades: ' + service.descricao_atividade;
-  document.querySelector('#lograd').innerHTML =
-    'Logradouro: ' + service.logradouro;
-  document.querySelector('#numero').innerHTML = 'Número: ' + service.numero;
-  document.querySelector('#comp').innerHTML =
-    'Complemento: ' + service.complemento;
-  document.querySelector('#cep').innerHTML = 'CEP: ' + service.cep;
-  document.querySelector('#bairro').innerHTML = 'Bairro: ' + service.bairro;
-  document.querySelector('#comodos').innerHTML = 'Cômodos: ' + service.comodos;
-  document.querySelector('#dataHora').innerHTML =
-    'Data/Hora: ' + new Date(service.data_horario).toLocaleString();
-  document.querySelector('#valor').innerHTML =
-    'Valor: ' +
-    service.valor.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    });
+
+  document.querySelector('#desc').value = service.descricao_atividade;
+  const time = new Date(service.data_horario).toISOString().split('T');
+  document.querySelector('#data').value = time[0];
+  document.querySelector('#hora').value = time[1].split('.')[0];
+  document.querySelector('#rooms').value = service.comodos;
+  document.querySelector('#valor').value = service.valor;
+
+  document.querySelector('#cep').value = service.cep;
+  document.querySelector('#logradouro').value = service.logradouro;
+  document.querySelector('#numero').value = service.numero;
+  document.querySelector('#complemento').value = service.complemento;
+  document.querySelector('#bairro').value = service.bairro;
+  document.querySelector('#cidade').value = service.cidade;
+  document.querySelector('#uf').value = service.uf;
+
   const button = document.querySelector('#serviceActionBtn');
   button.className = service.status.toLowerCase();
   button.innerHTML =
     service.status === 'ABERTO'
-      ? 'Pegar Serviço'
+      ? 'Aguardando interessados'
       : service.status === 'ACEITO'
       ? 'Aceito'
       : service.status === 'PAGAMENTO'
       ? 'Pagamento Pendente'
       : 'Finalizado';
-  if (service.status === 'ABERTO')
-    button.setAttribute(
-      'onclick',
-      `handleTakeService(${service.num_servico_criado})`
-    );
+  button.setAttribute('disabled', true);
 };
 
 const handleTakeService = async numServico => {
