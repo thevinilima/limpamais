@@ -16,7 +16,7 @@ const loadServices = async () => {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-    }).then(response => response.json());
+    }).then((response) => response.json());
   } catch (err) {
     console.log(err.message);
   }
@@ -35,7 +35,7 @@ const generateServicosCards = () => {
   const services = getServices();
   container.innerHTML = null;
 
-  services?.forEach(service => {
+  services?.forEach((service) => {
     let card = document.createElement('DIV');
     let num_servico_criado = document.createElement('H1');
     let num_servico_criadoT = document.createTextNode(
@@ -115,9 +115,9 @@ logoutBtn.addEventListener('click', () => {
 });
 
 const modal = document.querySelector('.modalInsercao');
-const handleServiceCardClick = numServico => {
+const handleServiceCardClick = (numServico) => {
   const service = getServices()?.find(
-    service => service.num_servico_criado === numServico
+    (service) => service.num_servico_criado === numServico
   );
   if (!service) return;
 
@@ -140,6 +140,10 @@ const handleServiceCardClick = numServico => {
       style: 'currency',
       currency: 'BRL',
     });
+  const btnFinalizar = document.querySelector('.finalizar-btn');
+  const btnAguardarPagamento = document.querySelector(
+    '.aguardar-pagamento-btn'
+  );
   const button = document.querySelector('#serviceActionBtn');
   button.className = service.status.toLowerCase();
   button.innerHTML =
@@ -150,14 +154,68 @@ const handleServiceCardClick = numServico => {
       : service.status === 'PAGAMENTO'
       ? 'Pagamento Pendente'
       : 'Finalizado';
+
+  if (service.status === 'ACEITO') {
+    btnFinalizar.disabled = true;
+    btnAguardarPagamento.disabled = false;
+  } else if (service.status === 'PAGAMENTO') {
+    btnAguardarPagamento.disabled = true;
+    btnFinalizar.disabled = false;
+  } else if (service.status === 'ABERTO') {
+    btnAguardarPagamento.disabled = true;
+    btnFinalizar.disabled = true;
+  } else {
+    btnAguardarPagamento.disabled = true;
+    btnFinalizar.disabled = true;
+  }
+
   if (service.status === 'ABERTO')
     button.setAttribute(
       'onclick',
       `handleTakeService(${service.num_servico_criado})`
     );
+
+  btnFinalizar.setAttribute(
+    'onclick',
+    `setStatus("FINALIZADO", ${service.num_servico_criado})`
+  );
+  btnAguardarPagamento.setAttribute(
+    'onclick',
+    `setStatus("PAGAMENTO", ${service.num_servico_criado})`
+  );
 };
 
-const handleTakeService = async numServico => {
+async function setStatus(newStatus, num_servico) {
+  const token = localStorage.getItem('token');
+  if (!token || !num_servico) return;
+
+  try {
+    await fetch('http://localhost:3003/services/setstatus/' + num_servico, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        newStatus: newStatus,
+      }),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        alert(response.message);
+        window.location.reload();
+      });
+  } catch (err) {
+    console.log(err);
+  }
+
+  if (res.status === 200) {
+    modal.style.display = 'none';
+    loadServices();
+  }
+}
+
+const handleTakeService = async (numServico) => {
   const token = localStorage.getItem('token');
   if (!token || !numServico) return;
 
