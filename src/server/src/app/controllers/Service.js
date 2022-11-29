@@ -73,3 +73,17 @@ exports.takeService = async (req, res) => {
     res.status(500).json('Algo deu errado');
   }
 };
+
+exports.setServiceStatus = async (req, res) => {
+  const { numServico } = req.params;
+  if (!numServico) return res.status(400).json('Informe o número do serviço');
+  try {
+    const service = await Service.setServiceStatus(
+      req.body.newStatus,
+      numServico
+    );
+    return res.json({ message: 'Status atualizado com sucesso!', service });
+  } catch (err) {
+    return res.status(400).json(err);
+  }
+};
