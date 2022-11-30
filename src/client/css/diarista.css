@@ -1,7 +1,12 @@
-body {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap%27');
 
+body,input {
+  margin: 0;
   height: 100vh;
+}
+
+body, input, textarea, button {
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -12,10 +17,6 @@ header {
 
 a {
   text-decoration: none;
-}
-
-.text {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
@@ -38,6 +39,7 @@ aside {
 
 .header_aside {
   margin-left: 15px;
+  font-size: larger;
 }
 
 main {
@@ -52,19 +54,25 @@ main {
 
 .miniDashboard {
   margin-top: 15px;
+  font-size: large;
 }
 
 .servicos {
   text-align: center;
+  font-size: larger;
+  font-weight: 700px;
 }
 
 .profission {
   margin-top: -15px;
+  font-weight: 500;
+  font-size: larger;
 }
 
 .dados {
   margin-top: 25px;
-
+  font-weight: 500px;
+  font-size: larger;
   background-color: aliceblue;
   height: 50px;
 
@@ -77,7 +85,8 @@ main {
 
 .pagamentoPendente {
   margin-top: 100px;
-
+  font-weight: 500px;
+  font-size: larger;
   background-color: aliceblue;
   height: 50px;
 
@@ -117,35 +126,6 @@ main {
   color: white;
 }
 
-#criaServico {
-  font-size: 50px;
-  color: white;
-  background-color: #2dc7ab;
-  border-radius: 100%;
-
-  border: none;
-
-  width: 90px;
-  height: 90px;
-
-  border: 2px rgb(175, 224, 201) groove;
-}
-
-#criaServico:hover {
-  cursor: pointer;
-  border: none;
-}
-.botao {
-  height: 120px;
-  width: 70vw;
-  position: absolute;
-  bottom: 0px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .modalInsercao {
   width: 1000px;
   height: 700px;
@@ -155,8 +135,7 @@ main {
 
   position: absolute;
   top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  left: 40%;
 
   display: none;
 }
@@ -191,7 +170,7 @@ main {
 }
 
 #serviceActionBtn.aceito, #serviceActionBtn.pagamento {
-  background-color: antiquewhite;
+  background-color: lightblue;
   color: black;
   cursor: not-allowed;
 }
@@ -252,6 +231,7 @@ input {
 }
 
 #container-servicos {
+  background-color: aliceblue;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -261,22 +241,35 @@ input {
 }
 
 .card {
-  border: solid 1px grey;
+  background-color: whitesmoke;
+  border: solid 2px black;
   border-radius: 5px;
   padding: 2%;
   margin: 2%;
   max-height: 600px;
   cursor: pointer;
 }
-
-.card.aceito {
-  background-color: antiquewhite;
+.card:hover{
+  background-color: wheat;
+}
+.card.aceito{
+  background-color: whitesmoke;
+}
+.card.aceito:hover {
+  background-color: lightgreen;
 }
 
-.card.pagamento {
-  background-color: lightblue;
+.card.pagamento:hover {
+  background-color: lightcoral;
 }
-
 .card.finalizado {
-  background-color: rgb(175, 224, 201);
+  background-color: lightgrey;
+}
+.card.finalizado:hover {
+  background-color: grey;
+  
+}
+.navSair{
+  width: 200px;
+  height: 35px;
 }

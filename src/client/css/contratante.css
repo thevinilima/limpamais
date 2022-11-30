@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap%27');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-
   height: 100vh;
+}
+
+body, input, textarea, button {
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -12,10 +21,6 @@ header {
 
 a {
   text-decoration: none;
-}
-
-.text {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
@@ -29,7 +34,7 @@ aside {
   display: flex;
   flex-direction: column;
 
-  width: 250px;
+  width: 20vw;
 
   background-color: aliceblue;
 
@@ -38,6 +43,7 @@ aside {
 
 .header_aside {
   margin-left: 15px;
+  font-size: larger;
 }
 
 main {
@@ -46,23 +52,30 @@ main {
   flex: 1;
 
   display: flex;
+  position: relative;
 }
 
 .miniDashboard {
   margin-top: 15px;
+  font-size: large;
 }
 
 .servicos {
   text-align: center;
+  font-size: larger;
+  font-weight: 700px;
 }
 
 .profission {
   margin-top: -15px;
+  font-weight: 500;
+  font-size: larger;
 }
 
 .dados {
   margin-top: 25px;
-
+  font-weight: 500px;
+  font-size: larger;
   background-color: aliceblue;
   height: 50px;
 
@@ -127,34 +140,29 @@ main {
   height: 90px;
 
   border: 2px rgb(175, 224, 201) groove;
+  
+  position: fixed;
+  right: 6rem;
+  bottom: 4rem;
 }
 
 #criaServico:hover {
   cursor: pointer;
   border: none;
 }
-.botao {
-  height: 120px;
-  width: 100%;
-
-  position: absolute;
-  bottom: 0px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .modalInsercao {
   width: 1000px;
   height: 700px;
 
-  border: solid 1px black;
+  border: solid 1px #ccc;
+  border-radius: 10px;
   background-color: #eeecec;
+  box-shadow: 0px 0px 15px 2px #555;
 
   position: absolute;
-  top: 50%;
-  left: 60%;
+  top: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
   display: none;
@@ -238,6 +246,10 @@ main {
 input {
   width: 200px;
   height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #777;
+  padding: 5px;
 }
 
 .especificos {
@@ -262,7 +274,7 @@ input {
 }
 
 .card {
-  border: solid 1px grey;
+  border: solid 2px black;
   border-radius: 5px;
   padding: 2%;
   margin: 2%;
@@ -271,13 +283,13 @@ input {
 }
 
 .card.aceito {
-  background-color: antiquewhite;
+  background-color: whitesmoke;
 }
 
 .card.pagamento {
-  background-color: lightblue;
+  background-color: lightcoral;
 }
 
 .card.finalizado {
-  background-color: rgb(175, 224, 201);
+  background-color: lightgrey;
 }
