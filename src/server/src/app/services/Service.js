@@ -87,3 +87,16 @@ exports.createTreatmentService = async (num_servico_atendido, tel_diarista) => {
 
   return result;
 };
+
+exports.setServiceStatus = async (newStatus, serviceId) => {
+  const result = await pool.query(
+    `UPDATE servico
+    SET status = $1
+    WHERE num_servico_criado = $2`,
+    [newStatus, serviceId]
+  );
+
+  if (!result.rowCount) return null;
+
+  return result;
+};

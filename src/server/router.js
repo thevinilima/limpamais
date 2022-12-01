@@ -6,6 +6,7 @@ const {
   getRequesterServices,
   createTreatmentService,
   takeService,
+  setServiceStatus,
 } = require('./src/app/controllers/Service.js');
 const { createUser, getUserData } = require('./src/app/controllers/User.js');
 const {
@@ -30,5 +31,10 @@ router.get(
   getRequesterServices
 );
 router.post('/services/take/:numServico', ensureAuthenticated, takeService);
+router.patch(
+  '/services/setstatus/:numServico',
+  ensureAuthenticated,
+  setServiceStatus
+);
 
 module.exports = router;
