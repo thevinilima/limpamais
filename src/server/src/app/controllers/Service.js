@@ -87,3 +87,26 @@ exports.setServiceStatus = async (req, res) => {
     return res.status(400).json(err);
   }
 };
+
+exports.rateService = async (req, res) => {
+  const { numServico } = req.params;
+  if (!numServico) return res.status(400).json('Informe o número do serviço');
+  try {
+    const response = await Service.rateService(req.body.score, numServico);
+    return res.json({ message: 'nota atribuída com sucesso!', response });
+  } catch (err) {
+    return res.status(400).json(err);
+  }
+};
+
+exports.getMyAverageRate = async (req, res) => {
+  const { telefoneUsuario } = req.params;
+  if (!telefoneUsuario)
+    return res.status(400).json('Informe o número de telefone');
+  try {
+    await Service.getMyAverageRate(telefoneUsuario);
+    return res.status(200);
+  } catch (err) {
+    return res.status(400).json(err);
+  }
+};

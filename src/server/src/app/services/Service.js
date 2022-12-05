@@ -100,3 +100,27 @@ exports.setServiceStatus = async (newStatus, serviceId) => {
 
   return result;
 };
+
+exports.rateService = async (score, serviceId) => {
+  const result = await pool.query(
+    `UPDATE cria_servico
+    SET nota = $1
+    WHERE num_servico = $2`,
+    [score, serviceId]
+  );
+
+  if (!result.rowCount) return null;
+
+  return result;
+};
+
+exports.getMyAverageRate = async (telefoneUsuario) => {
+  const result = await pool.query(
+    `select avg(nota) from cria_servico where telefone_usuario = $1`,
+    [telefoneUsuario]
+  );
+
+  if (!result.rowCount) return null;
+
+  return result.rows[0];
+};
