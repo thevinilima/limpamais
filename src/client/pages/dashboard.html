@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image-x/png" href="imgs/icons8-musical-notes-cute-clipart-32.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <title>Dashboard</title>
+</head>
+
+
+<body>
+
+    <header></header>
+    
+
+    <section class="text">
+        <aside>
+
+            <div class="header_aside">
+                
+                <h3>Dashboard</h3>
+                
+
+            </div>
+
+            <div class="espacobotoes">
+
+                <div class="dados">
+                    <button id="botaoServicosCriados" class="botoesDados">Taxa de serviços criados e atendidos</button>
+                </div>
+
+                <div class="dados">
+                    <button id="botaoUsuariosAtivos" class="botoesDados">Percentual de usuários ativos</button>
+                </div>
+                
+                <div class="dados">
+                    <button id="botaoDiaristaAtivos" class="botoesDados">Percentual de diaristas ativos</button>
+                </div>
+
+                <div class="dados">
+                    <button id="botaoAvaliacoes" class="botoesDados">Percentual de avaliações</button>
+                </div>
+
+                <div class="dados">
+                    <button id="botaoValidacaoPagamentos" class="botoesDados">Validação pagamento</button>
+                </div>
+
+            </div>
+
+
+            <a href="#" style="margin-top: 135px; text-decoration: none;">
+                <div class="navSair">
+
+                    <i class="bx bx-log-out icon"></i>
+                    <span class="text nav-text">Sair</span>
+
+                </div>
+            </a>
+
+
+        </aside>
+
+        <main>
+
+
+            <div id="modalServicosCriados" class="modal">
+
+                <button id="fexa" class="fecharX">X</button>
+
+                <h2 class="tituloModal">
+                    Serviços criados e atendidos
+                </h2>
+
+                <div class="dadosDash"> 
+
+                    <div class="quantidade"> 
+
+                        <h3 class="quants">Quantidade:</h3>
+
+                        <p class="valor">23</p>
+
+                    </div>
+
+                    <div class="grafico">
+                    
+                        <div id="alturaGrafico1" class="valorGrafico"></div>
+                    
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="modalUsuariosAtivos" class="modal">
+
+                <button id="fexa2" class="fecharX">X</button>
+
+                <h2 class="tituloModal">
+                    Usuários ativos
+                </h2>
+
+                <div class="dadosDash"> 
+
+                    <div class="quantidade"> 
+
+                        <h3 class="quants">Quantidade:</h3>
+
+                        <p class="valor">40</p>
+
+                    </div>
+
+                    <div class="grafico">
+                    
+                        <div id="alturaGrafico2" class="valorGrafico"></div>
+                    
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="modalDiaristaAtivos" class="modal">
+
+                <button id="fexa3" class="fecharX">X</button>
+
+                <h2 class="tituloModal">
+                    Diaristas ativos
+                </h2>
+
+                <div class="dadosDash"> 
+
+                    <div class="quantidade"> 
+
+                        <h3 class="quants">Quantidade:</h3>
+
+                        <p class="valor">51</p>
+
+                    </div>
+
+                    <div class="grafico">
+                    
+                        <div id="alturaGrafico3" class="valorGrafico"></div>
+                    
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="modalAvaliacoes" class="modal">
+
+                <button id="fexa4" class="fecharX">X</button>
+
+                <h2 class="tituloModal">
+                    Avaliações
+                </h2>
+
+                <div class="dadosDash"> 
+
+                    <div class="quantidade"> 
+
+                        <h3 class="quants">Quantidade:</h3>
+
+                        <p class="valor">11</p>
+
+                    </div>
+
+                    <div class="grafico">
+                    
+                        <div id="alturaGrafico4" class="valorGrafico"></div>
+                    
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="modalValidacaoPagamentos" class="modal">
+
+                <button id="fexa5" class="fecharX">X</button>
+
+                <h2 class="tituloModal">
+                    Validação de pagamento
+                </h2>
+
+                <div class="dadosDash"> 
+
+                    <div class="quantidade"> 
+
+                        <h3 class="quants">Quantidade:</h3>
+
+                        <p class="valor">12</p>
+
+                    </div>
+
+                    <div class="grafico">
+                    
+                        <div id="alturaGrafico5" class="valorGrafico"></div>
+                    
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </main>
+    </section>
+
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
