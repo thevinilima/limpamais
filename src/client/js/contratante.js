@@ -58,8 +58,6 @@ const handleCreateService = async e => {
     alert(error.message);
   }
 };
-const btnCreateService = document.querySelector('#serviceActionBtn');
-btnCreateService?.addEventListener('click', handleCreateService);
 
 const getRequesterServices = async () => {
   let container = document.querySelector('#main');
@@ -203,9 +201,9 @@ const handleServiceCardClick = numServico => {
   document.querySelector('#cidade').value = service.cidade;
   document.querySelector('#uf').value = service.uf;
 
-  btnCreateService.removeEventListener('click', handleCreateService);
-  btnCreateService.className = service.status.toLowerCase();
-  btnCreateService.innerHTML =
+  const button = document.querySelector('#serviceActionBtn');
+  button.className = service.status.toLowerCase();
+  button.innerHTML =
     service.status === 'ABERTO'
       ? 'Aguardando interessados'
       : service.status === 'ACEITO'
@@ -213,17 +211,15 @@ const handleServiceCardClick = numServico => {
       : service.status === 'PAGAMENTO'
       ? 'Fazer Pagamento'
       : 'Finalizado';
-  btnCreateService.setAttribute('disabled', true);
+  button.setAttribute('disabled', true);
 
   if (service.status === 'PAGAMENTO') {
-    btnCreateService.removeAttribute('disabled');
-    btnCreateService.setAttribute(
+    button.removeAttribute('disabled');
+    button.setAttribute(
       'onclick',
       `handlePayment(${service.num_servico_criado})`
     );
   }
-
-  btnCreateService?.addEventListener('click', handleCreateService);
 };
 
 const handlePayment = async numServico => {
@@ -232,23 +228,22 @@ const handlePayment = async numServico => {
   );
   if (!service) return;
 
-  console.log(service.pix_diarista);
+  document.querySelector('#pix-container').classList.remove('hidden');
+  const pixInput = document.querySelector('#pix');
+  pixInput.value = service.pix_diarista;
 };
 
-const handleTakeService = async numServico => {
-  const token = localStorage.getItem('token');
-  if (!token || !numServico) return;
+const handleCopyPix = () => {
+  const input = document.querySelector('#pix');
 
-  const res = await fetch('http://localhost:3003/services/take/' + numServico, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-  });
+  input.select();
+  input.setSelectionRange(0, 99999);
 
-  if (res.status === 200) {
-    modal.style.display = 'none';
-    loadServices();
-  }
+  navigator.clipboard.writeText(input.value);
+
+  const feedback = document.querySelector('#copied-text');
+  feedback.classList.remove('hidden');
+  setTimeout(() => {
+    feedback.classList.add('hidden');
+  }, 1.5 * 1000);
 };

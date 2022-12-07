@@ -156,7 +156,7 @@ main {
 
 .modalInsercao {
   width: 1000px;
-  height: 700px;
+  max-height: 800px;
 
   border: solid 1px #ccc;
   border-radius: 10px;
@@ -184,15 +184,11 @@ main {
 }
 
 #serviceActionBtn {
-  position: absolute;
-  bottom: 15px;
-
   font-size: 20px;
   color: white;
   background-color: #2dc7ab;
   border-radius: 10px;
 
-  width: 200px;
   height: 50px;
 }
 
@@ -221,18 +217,12 @@ main {
 .butaoSolicita {
   height: 70px;
   width: 100%;
-
-  position: absolute;
-  bottom: 0px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .container {
-  height: 50vh;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -248,6 +238,19 @@ main {
 .endereco {
   display: flex;
   flex-direction: row;
+}
+
+#pix-container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.copy-btn {
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 input {
@@ -299,4 +302,8 @@ input {
 
 .card.finalizado {
   background-color: lightgrey;
+}
+
+.hidden {
+  display: none !important;
 }

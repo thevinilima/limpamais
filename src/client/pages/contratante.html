@@ -132,8 +132,20 @@
             </div>
           </div>
 
+          <div id="pix-container" class="hidden">
+            <label for="pix">Chave Pix:</label>
+            <input type="text" id="pix" disabled />
+            <i
+              class="bx bx-copy copy-btn"
+              title="Copiar"
+              onclick="handleCopyPix()"
+            ></i>
+            <span class="hidden" id="copied-text">Copiado!</span>
+          </div>
           <div class="butaoSolicita">
-            <button id="serviceActionBtn">Criar Solicitação</button>
+            <button id="serviceActionBtn" onclick="handleCreateService()">
+              Criar Solicitação
+            </button>
           </div>
         </div>
       </main>
