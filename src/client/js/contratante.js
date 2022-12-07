@@ -14,8 +14,7 @@ window.onload = () => {
 
 const getServices = () => JSON.parse(localStorage.getItem('servicesAvailable'));
 
-let btnCreateService = document.querySelector('.butaoSolicita');
-btnCreateService.addEventListener('click', async function (e) {
+const handleCreateService = async e => {
   e.preventDefault();
   let container = document.querySelector('#main');
   let loading = document.createElement('h1');
@@ -58,7 +57,9 @@ btnCreateService.addEventListener('click', async function (e) {
   } catch (error) {
     alert(error.message);
   }
-});
+};
+const btnCreateService = document.querySelector('#serviceActionBtn');
+btnCreateService?.addEventListener('click', handleCreateService);
 
 const getRequesterServices = async () => {
   let container = document.querySelector('#main');
@@ -185,6 +186,8 @@ const handleServiceCardClick = numServico => {
 
   modal.style.display = 'block';
 
+  document.querySelector('.tituloModal').innerHTML = 'Detalhes do serviço';
+
   document.querySelector('#desc').value = service.descricao_atividade;
   const time = new Date(service.data_horario).toISOString().split('T');
   document.querySelector('#data').value = time[0];
@@ -200,17 +203,36 @@ const handleServiceCardClick = numServico => {
   document.querySelector('#cidade').value = service.cidade;
   document.querySelector('#uf').value = service.uf;
 
-  const button = document.querySelector('#serviceActionBtn');
-  button.className = service.status.toLowerCase();
-  button.innerHTML =
+  btnCreateService.removeEventListener('click', handleCreateService);
+  btnCreateService.className = service.status.toLowerCase();
+  btnCreateService.innerHTML =
     service.status === 'ABERTO'
       ? 'Aguardando interessados'
       : service.status === 'ACEITO'
       ? 'Aceito'
       : service.status === 'PAGAMENTO'
-      ? 'Pagamento Pendente'
+      ? 'Fazer Pagamento'
       : 'Finalizado';
-  button.setAttribute('disabled', true);
+  btnCreateService.setAttribute('disabled', true);
+
+  if (service.status === 'PAGAMENTO') {
+    btnCreateService.removeAttribute('disabled');
+    btnCreateService.setAttribute(
+      'onclick',
+      `handlePayment(${service.num_servico_criado})`
+    );
+  }
+
+  btnCreateService?.addEventListener('click', handleCreateService);
+};
+
+const handlePayment = async numServico => {
+  const service = getServices()?.find(
+    service => service.num_servico_criado === numServico
+  );
+  if (!service) return;
+
+  console.log(service.pix_diarista);
 };
 
 const handleTakeService = async numServico => {

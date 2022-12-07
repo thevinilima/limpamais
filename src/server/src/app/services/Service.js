@@ -65,11 +65,35 @@ exports.getServices = async () => {
 };
 
 exports.getRequesterServices = async (tel) => {
-  const result = await pool.query(`SELECT *
-  FROM servico
-  INNER JOIN cria_servico
-  ON servico.num_servico_criado = cria_servico.num_servico 
-  where cria_servico.telefone_usuario = ${tel};`);
+  const result = await pool.query(
+    `
+    SELECT
+      s.num_servico_criado,
+      s.descricao_atividade,
+      s.data_horario,
+      s.comodos,
+      s.valor,
+      s.cep,
+      s.logradouro,
+      s.numero,
+      s.complemento,
+      s.bairro,
+      s.cidade,
+      s.uf,
+      s.status,
+      (
+        select d.chave_pix from diarista d
+        where d.telefone = ats.telefone_diarista
+      ) as pix_diarista
+    FROM servico s
+    INNER JOIN cria_servico cs
+    ON s.num_servico_criado = cs.num_servico
+    LEFT JOIN atende_servico ats
+    ON s.num_servico_criado = ats.num_servico_atendido
+    WHERE cs.telefone_usuario = $1;
+  `,
+    [tel]
+  );
 
   if (!result.rowCount) return null;
 
@@ -79,7 +103,7 @@ exports.getRequesterServices = async (tel) => {
 exports.createTreatmentService = async (num_servico_atendido, tel_diarista) => {
   const result = await pool.query(
     `insert into atende_servico (num_servico_atendido, telefone_diarista)
-  values  ($1, $2) returning *`,
+    values  ($1, $2) returning *`,
     [num_servico_atendido, tel_diarista]
   );
 
