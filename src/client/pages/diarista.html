@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      type="image-x/png"
+      href="imgs/icons8-musical-notes-cute-clipart-32.png"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/diarista.css" />
+
+    <title>LimpaMais</title>
+
+    <script src="../js/home.js" defer></script>
+    <script src="../js/user.js" defer></script>
+  </head>
+
+  <body>
+    <header></header>
+
+    <section class="text">
+      <aside>
+        <div class="header_aside">
+          <h3 id="username-display"></h3>
+          <p class="profission">Diarista</p>
+        </div>
+
+        <div class="miniDashboard">
+          <h3 class="servicos">Serviços</h3>
+
+          <div class="dados">
+            <span>Solicitações pendentes:</span> <span>0</span>
+          </div>
+
+          <div class="dados">
+            <span>Serviços em processo:</span> <span>0</span>
+          </div>
+
+          <div class="dados">
+            <span>Serviços concluidos:</span> <span>0</span>
+          </div>
+        </div>
+
+        <div class="pagamentoPendente">
+          <span>Aguardando pagamento:</span> <span>0</span>
+        </div>
+
+        <div class="logout">
+          <button class="navSair">
+            <i class="bx bx-log-out icon"></i>
+            <span class="text nav-text">Sair</span>
+          </button>
+        </div>
+      </aside>
+
+      <main>
+        <div id="container-servicos"></div>
+
+        <div class="modalInsercao">
+          <h3 class="tituloModal">
+            Preencha as informações de Solicitação de seviço
+          </h3>
+
+          <button id="fecharX">X</button>
+
+          <div class="container">
+            <div class="direito">
+              <div class="descricao">
+                <p id="desc"></p>
+              </div>
+              <p style="display: block">Endereço</p>
+              <div class="endereco">
+                <div class="especificos">
+                  <p id="lograd"></p>
+                  <p id="numero"></p>
+                  <p id="comp"></p>
+                </div>
+                <div class="gerais">
+                  <p id="bairro"></p>
+                  <p id="cep"></p>
+                </div>
+              </div>
+            </div>
+            <div class="esquerdo">
+              <p id="comodos"></p>
+              <p id="dataHora"></p>
+              <p id="valor"></p>
+            </div>
+          </div>
+
+          <div class="butaoSolicita">
+            <button
+              id="serviceActionBtn"
+              data-defaultText="Pegar Serviço"
+            ></button>
+            <button class="aguardar-pagamento-btn">Cobrar Serviço</button>
+            <button class="finalizar-btn">Confirmar pagamento</button>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script src="../js/diarista.js"></script>
+  </body>
+</html>

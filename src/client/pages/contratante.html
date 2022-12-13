@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      type="image-x/png"
+      href="imgs/icons8-musical-notes-cute-clipart-32.png"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/contratante.css" />
+
+    <title>LimpaMais</title>
+
+    <script src="../js/home.js" defer></script>
+    <script src="../js/user.js" defer></script>
+    <script src="../js/contratante.js" defer></script>
+  </head>
+
+  <body>
+    <header></header>
+
+    <section class="text" id="root">
+      <aside>
+        <div class="header_aside">
+          <h3 id="username-display"></h3>
+          <p class="profission">Contratante</p>
+        </div>
+
+        <div class="miniDashboard">
+          <h3 class="servicos">Serviços</h3>
+
+          <div class="dados">
+            <span>Solicitações pendentes: </span> <span>0</span>
+          </div>
+
+          <div class="dados">
+            <span>Serviços em processo: </span> <span>0</span>
+          </div>
+
+          <div class="dados">
+            <span>Serviços concluídos: </span><span>0</span>
+          </div>
+        </div>
+
+        <div class="pagamentoPendente">
+          <span>Aguardando pagamento: </span> <span>0</span>
+        </div>
+
+        <div class="logout">
+          <button class="navSair">
+            <i class="bx bx-log-out icon"></i>
+            <span class="text nav-text">Sair</span>
+          </button>
+        </div>
+      </aside>
+
+      <main id="main">
+        <button id="criaServico">+</button>
+
+        <div class="modalInsercao">
+          <h3 class="tituloModal">
+            Preencha as informações de Solicitação de seviço
+          </h3>
+
+          <button id="fecharX">X</button>
+
+          <div class="container">
+            <div class="direito">
+              <div class="descricao">
+                <p>Descrição de atividades:</p>
+                <input
+                  id="desc"
+                  style="height: 60px; width: 600px"
+                  type="text"
+                />
+              </div>
+
+              <p style="display: block">Endereço:</p>
+
+              <div class="endereco">
+                <div class="especificos">
+                  <p>logradouro:</p>
+                  <input id="logradouro" type="text" />
+
+                  <p>Numero:</p>
+                  <input id="numero" type="number" />
+
+                  <p>complemento</p>
+                  <input id="complemento" type="text" />
+
+                  <p>Cidade</p>
+                  <input id="cidade" type="text" />
+                </div>
+
+                <div class="gerais">
+                  <p>bairro</p>
+                  <input id="bairro" type="text" />
+
+                  <p>CEP</p>
+                  <input id="cep" type="number" />
+
+                  <p>UF</p>
+                  <input id="uf" type="text" />
+                </div>
+              </div>
+            </div>
+
+            <div class="esquerdo">
+              <p>Cômodos:</p>
+              <input id="rooms" type="text" />
+
+              <p>Data:</p>
+              <input type="date" id="data" />
+
+              <p>Horário:</p>
+              <input type="time" id="hora" />
+
+              <p>Valor:</p>
+              <input type="number" id="valor" />
+            </div>
+          </div>
+
+          <div id="pix-container" class="hidden">
+            <label for="pix">Chave Pix:</label>
+            <input type="text" id="pix" disabled />
+            <i
+              class="bx bx-copy copy-btn"
+              title="Copiar"
+              onclick="handleCopyPix()"
+            ></i>
+            <span class="hidden" id="copied-text">Copiado!</span>
+          </div>
+          <div class="butaoSolicita">
+            <button
+              id="serviceActionBtn"
+              onclick="handleCreateService()"
+              data-default-text="Criar Solicitação"
+            ></button>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

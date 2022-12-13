@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap%27');
+
+body,
+input {
+  margin: 0;
+  height: 100vh;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #2dc7ab;
+  width: 100%;
+  height: 70px;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+
+  width: 20vw;
+
+  background-color: aliceblue;
+
+  border-right: solid black 2px;
+}
+
+.header_aside {
+  margin-left: 15px;
+  font-size: larger;
+}
+
+main {
+  background-color: aliceblue;
+
+  flex: 1;
+
+  display: flex;
+
+  padding: 25px;
+}
+
+.miniDashboard {
+  margin-top: 15px;
+  font-size: large;
+}
+
+.servicos {
+  text-align: center;
+  font-size: larger;
+  font-weight: 700px;
+}
+
+.profission {
+  margin-top: -15px;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.dados {
+  margin-top: 25px;
+  font-weight: 500px;
+  font-size: larger;
+  background-color: aliceblue;
+  height: 50px;
+
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagamentoPendente {
+  margin-top: 100px;
+  font-weight: 500px;
+  font-size: larger;
+  background-color: aliceblue;
+  height: 50px;
+
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navSair {
+  font-size: 20px;
+
+  margin-top: 135px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: black;
+
+  height: 50px;
+  width: 230px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 15cm;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navSair:hover {
+  background-color: #2dc7ab;
+
+  color: white;
+}
+
+.modalInsercao {
+  width: 1000px;
+  max-height: 800px;
+
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  background-color: #eeecec;
+  box-shadow: 0px 0px 15px 2px #555;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+}
+
+#fecharX {
+  border: none;
+
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.tituloModal {
+  text-align: center;
+}
+
+#serviceActionBtn {
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+
+  height: 50px;
+}
+
+#serviceActionBtn.aberto {
+  background-color: #2dc7ab;
+  cursor: pointer;
+}
+
+#serviceActionBtn.aceito,
+#serviceActionBtn.pagamento {
+  background-color: lightblue;
+  color: black;
+  cursor: not-allowed;
+}
+
+#serviceActionBtn.finalizado {
+  background-color: transparent;
+  color: black;
+  cursor: not-allowed;
+}
+
+.butaoSolicita {
+  height: 70px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.direito {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.endereco {
+  display: flex;
+  flex-direction: row;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+}
+
+.especificos {
+  margin-left: 20px;
+}
+
+.gerais {
+  margin-left: 35px;
+}
+
+.esquerdo {
+  margin-left: 40px;
+}
+
+#container-servicos {
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 2%;
+  margin: 2%;
+  max-height: 600px;
+  cursor: pointer;
+}
+.card.aceito {
+  background-color: whitesmoke;
+}
+.card.aceito {
+  background-color: lightgreen;
+}
+.card.pagamento {
+  background-color: lightcoral;
+}
+.card.finalizado {
+  background-color: lightgrey;
+}
+.card.finalizado {
+  background-color: lightgray;
+}
+.navSair {
+  width: 200px;
+  height: 35px;
+}
+
+.hidden {
+  display: none !important;
+}
