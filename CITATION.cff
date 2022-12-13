@@ -1,0 +1,35 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Limpa Mais
+authors:
+  - family-names: Estevam Pacheco de Souza
+    given-names: Daniel 
+  - family-names: Augusto Souza Borges
+    given-names: Gabriel
+  - family-names: Francisco de Oliveira Júnior 
+    given-names: Ivan
+  - family-names: Souza de Freitas
+    given-names: Marcus Viniccius
+  - family-names: Pierre Martins
+    given-names: Rafael
+  - family-names: Assis Lima
+    given-names: Vinicius
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Teixeira Silva
+    given-names: Cristiano Geraldo
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Lima Reis
+    given-names: Felipe Augusto
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Bastos de Paula
+    given-names: Hugo
+keywords:
+  - Diarista
+  - Software de limpeza
+repository-code: 
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2022-12-14
