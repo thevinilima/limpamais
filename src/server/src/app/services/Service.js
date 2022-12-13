@@ -140,7 +140,7 @@ exports.rateService = async (score, serviceId) => {
 
 exports.getMyAverageRate = async (telefoneUsuario) => {
   const result = await pool.query(
-    `select avg(nota) from cria_servico where telefone_usuario = $1`,
+    `select avg(avaliacao_usuario) from avalia_usuario where telefone_usuario = $1`,
     [telefoneUsuario]
   );
 

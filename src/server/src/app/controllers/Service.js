@@ -108,8 +108,8 @@ exports.getMyAverageRate = async (req, res) => {
   if (!telefoneUsuario)
     return res.status(400).json('Informe o número de telefone');
   try {
-    await Service.getMyAverageRate(telefoneUsuario);
-    return res.status(200);
+    const rating = await Service.getMyAverageRate(telefoneUsuario);
+    return res.json(rating);
   } catch (err) {
     return res.status(400).json(err);
   }

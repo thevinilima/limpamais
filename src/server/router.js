@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const { login } = require('./src/app/controllers/Auth.js');
+const { rateDiarista } = require('./src/app/controllers/Diarista.js');
 const {
   createService,
   getServices,
@@ -44,5 +45,8 @@ router.patch(
   setServiceStatus
 );
 router.patch('/services/rate/:numServico', ensureAuthenticated, rateService);
+
+// Diarista
+router.post('/diarista/rate', ensureAuthenticated, rateDiarista);
 
 module.exports = router;
