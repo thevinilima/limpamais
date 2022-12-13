@@ -18,8 +18,12 @@ exports.createService = async (req, res) => {
 
 exports.getServices = async (req, res) => {
   try {
-    const services = await Service.getServices();
-    return res.json({ services });
+    const { rows } = await Service.getServices();
+    rows?.sort((service) => {
+      if (service.status === 'FINALIZADO') return 1;
+      return -1;
+    });
+    return res.json(rows);
   } catch (err) {
     return res.status(400).json('Falhou a requisição');
   }
@@ -27,8 +31,8 @@ exports.getServices = async (req, res) => {
 
 exports.getRequesterServices = async (req, res) => {
   try {
-    const services = await Service.getRequesterServices(req.params.tel);
-    return res.json({ services });
+    const { rows } = await Service.getRequesterServices(req.params.tel);
+    return res.json(rows);
   } catch (err) {
     return res.status(400).json('Falhou a requisição');
   }

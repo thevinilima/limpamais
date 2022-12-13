@@ -290,18 +290,23 @@ input {
   margin: 2%;
   max-height: 600px;
   cursor: pointer;
+  background-color: white;
 }
 
 .card.aceito {
   background-color: whitesmoke;
 }
-
+.card.aceito {
+  background-color: lightgreen;
+}
 .card.pagamento {
   background-color: lightcoral;
 }
-
 .card.finalizado {
   background-color: lightgrey;
+}
+.card.finalizado {
+  background-color: lightgray;
 }
 
 .hidden {

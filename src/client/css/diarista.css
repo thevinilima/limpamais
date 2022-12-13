@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap%27');
 
-body,input {
+body,
+input {
   margin: 0;
   height: 100vh;
 }
 
-body, input, textarea, button {
+body,
+input,
+textarea,
+button {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -168,7 +172,8 @@ main {
   cursor: pointer;
 }
 
-#serviceActionBtn.aceito, #serviceActionBtn.pagamento {
+#serviceActionBtn.aceito,
+#serviceActionBtn.pagamento {
   background-color: lightblue;
   color: black;
   cursor: not-allowed;
@@ -235,7 +240,7 @@ input {
 }
 
 .card {
-  background-color: whitesmoke;
+  background-color: white;
   border: solid 2px black;
   border-radius: 5px;
   padding: 2%;
@@ -243,27 +248,22 @@ input {
   max-height: 600px;
   cursor: pointer;
 }
-.card:hover{
-  background-color: wheat;
-}
-.card.aceito{
+.card.aceito {
   background-color: whitesmoke;
 }
-.card.aceito:hover {
+.card.aceito {
   background-color: lightgreen;
 }
-
-.card.pagamento:hover {
+.card.pagamento {
   background-color: lightcoral;
 }
 .card.finalizado {
   background-color: lightgrey;
 }
-.card.finalizado:hover {
-  background-color: grey;
-  
+.card.finalizado {
+  background-color: lightgray;
 }
-.navSair{
+.navSair {
   width: 200px;
   height: 35px;
 }

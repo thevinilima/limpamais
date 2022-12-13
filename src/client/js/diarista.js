@@ -16,12 +16,11 @@ const loadServices = async () => {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-    }).then((response) => response.json());
+    }).then(response => response.json());
   } catch (err) {
     console.log(err.message);
   }
 
-  response = response.services.rows;
   localStorage.setItem('servicesAvailable', JSON.stringify(response));
   img.remove();
   generateServicosCards();
@@ -35,7 +34,7 @@ const generateServicosCards = () => {
   const services = getServices();
   container.innerHTML = null;
 
-  services?.forEach((service) => {
+  services?.forEach(service => {
     let card = document.createElement('DIV');
     let num_servico_criado = document.createElement('H1');
     let num_servico_criadoT = document.createTextNode(
@@ -81,7 +80,13 @@ const generateServicosCards = () => {
     card.appendChild(uf);
     let data_horario = document.createElement('P');
     let data_horarioT = document.createTextNode(
-      `Data e Horário: ${new Date(service.data_horario).toLocaleString()}`
+      `Data e Horário: ${new Date(service.data_horario).toLocaleString(
+        'pt-BR',
+        {
+          dateStyle: 'short',
+          timeStyle: 'short',
+        }
+      )}`
     );
     data_horario.appendChild(data_horarioT);
     card.appendChild(data_horario);
@@ -115,9 +120,9 @@ logoutBtn.addEventListener('click', () => {
 });
 
 const modal = document.querySelector('.modalInsercao');
-const handleServiceCardClick = (numServico) => {
+const handleServiceCardClick = numServico => {
   const service = getServices()?.find(
-    (service) => service.num_servico_criado === numServico
+    service => service.num_servico_criado === numServico
   );
   if (!service) return;
 
@@ -133,7 +138,11 @@ const handleServiceCardClick = (numServico) => {
   document.querySelector('#bairro').innerHTML = 'Bairro: ' + service.bairro;
   document.querySelector('#comodos').innerHTML = 'Cômodos: ' + service.comodos;
   document.querySelector('#dataHora').innerHTML =
-    'Data/Hora: ' + new Date(service.data_horario).toLocaleString();
+    'Data/Hora: ' +
+    new Date(service.data_horario).toLocaleString('pt-BR', {
+      dateStyle: 'short',
+      timeStyle: 'short',
+    });
   document.querySelector('#valor').innerHTML =
     'Valor: ' +
     service.valor.toLocaleString('pt-BR', {
@@ -177,7 +186,7 @@ const handleServiceCardClick = (numServico) => {
 
   btnFinalizar.setAttribute(
     'onclick',
-    `setStatus("FINALIZADO", ${service.num_servico_criado})`
+    `handleEndService(${service.num_servico_criado})`
   );
   btnAguardarPagamento.setAttribute(
     'onclick',
@@ -200,8 +209,8 @@ async function setStatus(newStatus, num_servico) {
         newStatus: newStatus,
       }),
     })
-      .then((response) => response.json())
-      .then((response) => {
+      .then(response => response.json())
+      .then(response => {
         alert(response.message);
         window.location.reload();
       });
@@ -215,9 +224,29 @@ async function setStatus(newStatus, num_servico) {
   }
 }
 
-const handleTakeService = async (numServico) => {
+const handleTakeService = async numServico => {
   const token = localStorage.getItem('token');
   if (!token || !numServico) return;
+
+  const res = await fetch('http://localhost:3003/services/take/' + numServico, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (res.status === 200) {
+    modal.style.display = 'none';
+    loadServices();
+  }
+};
+
+const handleEndService = async numServico => {
+  const token = localStorage.getItem('token');
+  if (!token || !numServico) return;
+
+  setStatus('FINALIZADO', numServico);
 
   const res = await fetch('http://localhost:3003/services/take/' + numServico, {
     method: 'POST',

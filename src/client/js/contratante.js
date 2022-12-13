@@ -86,7 +86,6 @@ const getRequesterServices = async () => {
     console.log(err.message);
   }
 
-  response = response.services.rows;
   localStorage.setItem('servicesAvailable', JSON.stringify(response));
   loading.remove();
   generateServicosCards();
@@ -142,7 +141,13 @@ const generateServicosCards = () => {
     card.appendChild(uf);
     let data_horario = document.createElement('P');
     let data_horarioT = document.createTextNode(
-      `Data e Horário: ${new Date(service.data_horario).toLocaleString()}`
+      `Data e Horário: ${new Date(service.data_horario).toLocaleString(
+        'pt-BR',
+        {
+          dateStyle: 'short',
+          timeStyle: 'short',
+        }
+      )}`
     );
     data_horario.appendChild(data_horarioT);
     card.appendChild(data_horario);
