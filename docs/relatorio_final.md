@@ -279,7 +279,10 @@ As tecnologias que serão utilizadas para resolução do problema são:
 
 ## 7.Sistema desenvolvido
 
-Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
+O Limpa Mais, desenvolvido para facilitar o encontro de diaristas e de novas oportunidades de trabalho, funciona da seguinte forma:
+
+. A tela inicial, contem a opção do usuário caso seja cadastrado fazer o acesso através dos campos da area de login: 
+(imagens/telaInicial.png)
 
 ## 8. Conclusão
 
