@@ -282,7 +282,7 @@ As tecnologias que serão utilizadas para resolução do problema são:
 O Limpa Mais, desenvolvido para facilitar o encontro de diaristas e de novas oportunidades de trabalho, funciona da seguinte forma:
 
 . A tela inicial, contem a opção do usuário caso seja cadastrado fazer o acesso através dos campos da area de login: 
-![telaInicial](imagens/telaInicial.png)
+![telaInicial](imagens/telaLogin.png)
 
 ## 8. Conclusão
 
