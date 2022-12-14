@@ -249,7 +249,6 @@ const handleTakeService = async numServico => {
 };
 
 const handleRatingChange = async () => {
-  console.log(lastPayment);
   const token = localStorage.getItem('token');
   const select = document.querySelector('#rating-select');
   if (!token || !select.value || !lastPayment || !currentNumServico) return;
@@ -288,6 +287,9 @@ const handleEndService = async numServico => {
     res.json().then(response => {
       lastPayment = response;
       document.querySelector('#rating-container').classList.remove('hidden');
+      document.querySelector('.finalizar-btn').disabled = true;
+      document.querySelector('#serviceActionBtn').innerHTML =
+        'Avaliação Pendente';
     });
   }
 };

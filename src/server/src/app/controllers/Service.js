@@ -18,7 +18,10 @@ exports.createService = async (req, res) => {
 
 exports.getServices = async (req, res) => {
   try {
-    const { rows } = await Service.getServices();
+    const { authorization } = req.headers;
+
+    const user = await User.getFromToken(authorization);
+    const { rows } = await Service.getServices({tel: user.telefone});
     rows?.sort((service) => {
       if (service.status === 'FINALIZADO') return 1;
       return -1;

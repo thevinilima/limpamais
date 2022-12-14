@@ -56,8 +56,19 @@ exports.create = async ({ desc, dateTime, rooms, value, address }, userTel) => {
   return service;
 };
 
-exports.getServices = async () => {
-  const result = await pool.query(`select * from servico;`);
+exports.getServices = async ({ tel }) => {
+  const result = await pool.query(
+    `select s1.*
+    from servico s1
+    where s1.status = 'ABERTO'
+    union
+      select s2.*
+      from servico s2
+      join atende_servico ats
+      on ats.num_servico_atendido = s2.num_servico_criado
+      where ats.telefone_diarista = $1;`,
+    [tel]
+  );
 
   if (!result.rowCount) return null;
 
