@@ -281,8 +281,14 @@ As tecnologias que serão utilizadas para resolução do problema são:
 
 O Limpa Mais, desenvolvido para facilitar o encontro de diaristas e de novas oportunidades de trabalho, funciona da seguinte forma:
 
-. A tela inicial, contem a opção do usuário caso seja cadastrado fazer o acesso através dos campos da area de login: 
+. A tela inicial, contem a opção de login através dos campos 'Telefone' e 'Senha' para acesso do usuário, caso seja seu primeiro acesso, ele consegue se cadastrar na plataforma através do botão 'REGISTRE-SE' : 
 ![telaInicial](imagens/telaLogin.png)
+ - Na tela de registro, basta o usuário escolher entre as opções:
+CPF: Para se cadastrar com o perfil de pessoa física contratante;
+CNPJ: Para se cadastrar com o perfil de pessoa jurídica contratante;
+Diarista: Para se cadastrar com o perfil de prestador de serviços.
+Após isso, basta preencher os campos solicitados.
+![telaInicial](imagens/telaRegistro.png)
 
 ## 8. Conclusão
 
