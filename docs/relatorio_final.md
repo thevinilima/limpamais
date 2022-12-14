@@ -301,13 +301,20 @@ Ao acessar o botão '+' para criar uma nova solicitação de serviço, o usuári
 
 ![telaSolicitacao](imagens/telaSolicitacao.png)
 
+Após o serviço ser atendido, o usuário tem acesso a chave pix do diarista para realizar o pagamento pela sua instituição financeira. Com o pagamento realizado ele pode clicar em 'Fazer Pagamento', essa ação encerra a solicitação de serviço criada por ele, caso o usuário Diarista associado ao serviço confirme o pagamento.
+
+![telaPagamento](imagens/telaPagamento.png)
+
 Acessando a plataforma com um perfil de usuário Diarista, Você terá acesso ao histórico de solicitações de serviço, os detalhes desses serviços e a classificação de cada um, informando se a solicitação está pendente, em processo, concluída ou aguardando pagamento.
 
 ![telaDiarista](imagens/telaDiarista.png)
 
-Para aceitar uma nova solicitação de serviço o usuário diarista precisa escolher o card do serviço e ao abrir ele e concordar com as informações inseridas, utilizar o botão 'Pegar Serviço'
+Para aceitar uma nova solicitação de serviço o usuário diarista precisa escolher o card do serviço e ao abrir ele e concordar com as informações inseridas, utilizar o botão 'Pegar Serviço'. 
+Nessa mesma tela, após a realização do serviço, a Diarista possui as opções de 'Cobrar pagamento' ao usuário Contratante e 'Confirmar pagamento' para concluir aquele serviço.
 
 ![telaAceiteServico](imagens/telaAceiteServico.png)
+
+
 
 ## 8. Conclusão
 
