@@ -15,7 +15,7 @@
 
 * Hugo Bastos de Paula
 * Felipe Augusto Lima Reis
-* Cristiano Geraldo Teixeira Silva
+* Cristiano Neves Rodrigues
 
 ## Instruções de utilização
 
