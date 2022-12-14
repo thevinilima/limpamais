@@ -285,9 +285,9 @@ A tela inicial, contem a opção de login através dos campos 'Telefone' e 'Senh
 ![telaInicial](imagens/telaLogin.png)
 
 Na tela de registro, basta o usuário escolher entre as opções:
-  CPF: Para se cadastrar com o perfil de pessoa física contratante;
-  CNPJ: Para se cadastrar com o perfil de pessoa jurídica contratante;
-  Diarista: Para se cadastrar com o perfil de prestador de serviços.
+- CPF: Para se cadastrar com o perfil de pessoa física contratante;
+- CNPJ: Para se cadastrar com o perfil de pessoa jurídica contratante;
+- Diarista: Para se cadastrar com o perfil de prestador de serviços.
  
  Após isso, basta preencher os campos solicitados.
 ![telaRegistro](imagens/telaRegistro.png)
