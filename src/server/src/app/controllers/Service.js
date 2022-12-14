@@ -21,7 +21,7 @@ exports.getServices = async (req, res) => {
     const { authorization } = req.headers;
 
     const user = await User.getFromToken(authorization);
-    const { rows } = await Service.getServices({tel: user.telefone});
+    const { rows } = await Service.getServices({ tel: user.telefone });
     rows?.sort((service) => {
       if (service.status === 'FINALIZADO') return 1;
       return -1;
@@ -35,6 +35,10 @@ exports.getServices = async (req, res) => {
 exports.getRequesterServices = async (req, res) => {
   try {
     const { rows } = await Service.getRequesterServices(req.params.tel);
+    rows?.sort((service) => {
+      if (service.status === 'FINALIZADO') return 1;
+      return -1;
+    });
     return res.json(rows);
   } catch (err) {
     return res.status(400).json('Falhou a requisição');

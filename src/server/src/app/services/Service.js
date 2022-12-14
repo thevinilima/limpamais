@@ -79,28 +79,19 @@ exports.getRequesterServices = async (tel) => {
   const result = await pool.query(
     `
     SELECT
-      s.num_servico_criado,
-      s.descricao_atividade,
-      s.data_horario,
-      s.comodos,
-      s.valor,
-      s.cep,
-      s.logradouro,
-      s.numero,
-      s.complemento,
-      s.bairro,
-      s.cidade,
-      s.uf,
-      s.status,
+      s.*,
       (
         select d.chave_pix from diarista d
         where d.telefone = ats.telefone_diarista
-      ) as pix_diarista
+      ) as pix_diarista,
+      p.id_pagamento
     FROM servico s
     INNER JOIN cria_servico cs
     ON s.num_servico_criado = cs.num_servico
     LEFT JOIN atende_servico ats
     ON s.num_servico_criado = ats.num_servico_atendido
+    LEFT JOIN pagamento p
+    ON p.num_servico_pago = s.num_servico_criado
     WHERE cs.telefone_usuario = $1;
   `,
     [tel]

@@ -12,7 +12,8 @@ body {
 body,
 input,
 textarea,
-button {
+button,
+select {
   font-family: 'Poppins', sans-serif;
 }
 
