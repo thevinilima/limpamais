@@ -293,6 +293,7 @@ Na tela de registro, basta o usuário escolher entre as opções:
 ![telaRegistro](imagens/telaRegistro.png)
 
 Acessando a plataforma com um perfil de usuário contratante, você terá acesso ao histórico de serviços criados, os detalhes desses serviços e a classificação de cada um, informando se o serviço está pendente, em processo ou concluído.
+
 O botão '+' te da a opção de criar uma nova solicitação de serviço e o btão 'SAIR' encerra seu acesso ao sistema.
 ![telaContratante](imagens/telaContratante.png)
 
