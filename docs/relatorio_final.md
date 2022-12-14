@@ -285,14 +285,15 @@ A tela inicial, contem a opção de login através dos campos 'Telefone' e 'Senh
 ![telaInicial](imagens/telaLogin.png)
 
 Na tela de registro, basta o usuário escolher entre as opções:
- - CPF: Para se cadastrar com o perfil de pessoa física contratante;
- - CNPJ: Para se cadastrar com o perfil de pessoa jurídica contratante;
- - Diarista: Para se cadastrar com o perfil de prestador de serviços.
+  CPF: Para se cadastrar com o perfil de pessoa física contratante;
+  CNPJ: Para se cadastrar com o perfil de pessoa jurídica contratante;
+  Diarista: Para se cadastrar com o perfil de prestador de serviços.
  
  Após isso, basta preencher os campos solicitados.
 ![telaRegistro](imagens/telaRegistro.png)
 
 - USUÁRIO PF/PJ
+
 Acessando a plataforma com um perfil de usuário contratante, você terá acesso ao histórico de serviços criados, os detalhes desses serviços e a classificação de cada um, informando se o serviço está pendente, em processo ou concluído.
 
 O botão '+' te da a opção de criar uma nova solicitação de serviço e o btão 'SAIR' encerra seu acesso ao sistema.
@@ -307,6 +308,7 @@ Após o serviço ser atendido, o usuário tem acesso a chave pix do diarista par
 ![telaPagamento](imagens/telaPagamento.png)
 
 - USUÁRIO DIARISTA
+ 
 Acessando a plataforma com um perfil de usuário Diarista, Você terá acesso ao histórico de solicitações de serviço, os detalhes desses serviços e a classificação de cada um, informando se a solicitação está pendente, em processo, concluída ou aguardando pagamento.
 
 ![telaDiarista](imagens/telaDiarista.png)
