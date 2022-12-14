@@ -92,25 +92,12 @@ exports.setServiceStatus = async (req, res) => {
   }
 };
 
-exports.rateService = async (req, res) => {
-  const { numServico } = req.params;
-  if (!numServico) return res.status(400).json('Informe o número do serviço');
+exports.handleServicePayment = async (req, res) => {
   try {
-    const response = await Service.rateService(req.body.score, numServico);
-    return res.json({ message: 'nota atribuída com sucesso!', response });
-  } catch (err) {
-    return res.status(400).json(err);
-  }
-};
+    const payment = await Service.payService({ ...req.params, ...req.body });
 
-exports.getMyAverageRate = async (req, res) => {
-  const { telefoneUsuario } = req.params;
-  if (!telefoneUsuario)
-    return res.status(400).json('Informe o número de telefone');
-  try {
-    const rating = await Service.getMyAverageRate(telefoneUsuario);
-    return res.json(rating);
+    res.status(201).json(payment);
   } catch (err) {
-    return res.status(400).json(err);
+    res.status(400).json(err);
   }
 };

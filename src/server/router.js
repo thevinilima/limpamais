@@ -8,8 +8,7 @@ const {
   createTreatmentService,
   takeService,
   setServiceStatus,
-  rateService,
-  getMyAverageRate,
+  handleServicePayment,
 } = require('./src/app/controllers/Service.js');
 const { createUser, getUserData } = require('./src/app/controllers/User.js');
 const {
@@ -33,18 +32,17 @@ router.get(
   ensureAuthenticated,
   getRequesterServices
 );
-router.get(
-  '/services/rate/:telefoneUsuario',
-  ensureAuthenticated,
-  getMyAverageRate
-);
 router.post('/services/take/:numServico', ensureAuthenticated, takeService);
 router.patch(
   '/services/setstatus/:numServico',
   ensureAuthenticated,
   setServiceStatus
 );
-router.patch('/services/rate/:numServico', ensureAuthenticated, rateService);
+router.post(
+  '/services/pay/:numServico',
+  ensureAuthenticated,
+  handleServicePayment
+);
 
 // Diarista
 router.post('/diarista/rate', ensureAuthenticated, rateDiarista);

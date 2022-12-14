@@ -125,26 +125,28 @@ exports.setServiceStatus = async (newStatus, serviceId) => {
   return result;
 };
 
-exports.rateService = async (score, serviceId) => {
-  const result = await pool.query(
-    `UPDATE cria_servico
-    SET nota = $1
-    WHERE num_servico = $2`,
-    [score, serviceId]
+exports.payService = async ({ numServico }) => {
+  const payment = await pool.query(
+    `insert into pagamento (
+      num_servico_pago,
+      telefone_usuario,
+      telefone_diarista
+    ) values ($1, (
+      select cs.telefone_usuario
+      from servico s
+      join cria_servico cs
+      on cs.num_servico = s.num_servico_criado
+      where s.num_servico_criado = $1
+    ), (
+      select ats.telefone_diarista
+      from servico s
+      join atende_servico ats
+      on ats.num_servico_atendido = s.num_servico_criado
+      where s.num_servico_criado = $1
+    ))
+    returning *;`,
+    [numServico]
   );
 
-  if (!result.rowCount) return null;
-
-  return result;
-};
-
-exports.getMyAverageRate = async (telefoneUsuario) => {
-  const result = await pool.query(
-    `select avg(avaliacao_usuario) from avalia_usuario where telefone_usuario = $1`,
-    [telefoneUsuario]
-  );
-
-  if (!result.rowCount) return null;
-
-  return result.rows[0];
+  return payment.rows[0] || null;
 };
