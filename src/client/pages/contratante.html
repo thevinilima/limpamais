@@ -38,26 +38,6 @@
           <p class="profission">Contratante</p>
         </div>
 
-        <div class="miniDashboard">
-          <h3 class="servicos">Serviços</h3>
-
-          <div class="dados">
-            <span>Solicitações pendentes: </span> <span>0</span>
-          </div>
-
-          <div class="dados">
-            <span>Serviços em processo: </span> <span>0</span>
-          </div>
-
-          <div class="dados">
-            <span>Serviços concluídos: </span><span>0</span>
-          </div>
-        </div>
-
-        <div class="pagamentoPendente">
-          <span>Aguardando pagamento: </span> <span>0</span>
-        </div>
-
         <div class="logout">
           <button class="navSair">
             <i class="bx bx-log-out icon"></i>
@@ -146,6 +126,7 @@
             <button
               id="serviceActionBtn"
               onclick="handleCreateService()"
+              type="button"
               data-default-text="Criar Solicitação"
             ></button>
             <div id="rating-container" class="hidden">
@@ -162,6 +143,7 @@
             </div>
           </div>
         </div>
+        <div id="list"></div>
       </main>
     </section>
   </body>

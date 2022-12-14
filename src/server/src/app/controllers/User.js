@@ -41,7 +41,8 @@ exports.createUser = async (req, res) => {
     }
 
     res.status(200).json('Usuário cadastrado com sucesso!');
-  } catch {
+  } catch (e) {
+    console.log(e);
     res.status(500).json('Algo deu errado');
   }
 };

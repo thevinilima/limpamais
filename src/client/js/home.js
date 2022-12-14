@@ -5,9 +5,13 @@ botaoModal?.addEventListener('click', function () {
   modal.style.display = 'block';
 });
 
+let firstTime = true;
 const resetButton = () => {
   const actionButton = document.querySelector('#serviceActionBtn');
-  actionButton?.removeAttribute('onclick');
+  if (!firstTime) {
+    actionButton?.removeAttribute('onclick');
+    firstTime = false;
+  }
   actionButton?.removeAttribute('class');
   actionButton.innerHTML = actionButton.dataset.defaultText;
 };

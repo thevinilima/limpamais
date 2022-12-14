@@ -15,8 +15,7 @@ window.onload = () => {
 
 const getServices = () => JSON.parse(localStorage.getItem('servicesAvailable'));
 
-const handleCreateService = async e => {
-  e.preventDefault();
+const handleCreateService = async () => {
   let container = document.querySelector('#main');
   let loading = document.createElement('h1');
   let textloading = document.createTextNode('Carregando...');
@@ -96,7 +95,8 @@ const getRequesterServices = async () => {
 };
 
 const generateServicosCards = () => {
-  const container = document.getElementById('main');
+  const container = document.getElementById('list');
+  container.innerHTML = null;
   const services = getServices();
 
   services?.forEach(service => {

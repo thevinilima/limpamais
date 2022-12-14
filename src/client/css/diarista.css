@@ -233,10 +233,10 @@ input {
 #container-servicos {
   background-color: aliceblue;
   display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+  /* flex-wrap: wrap; */
+  /* margin: auto; */
   justify-content: space-around;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   max-height: 100vh;
 }
 

@@ -193,6 +193,11 @@ main {
   height: 50px;
 }
 
+#list {
+  display: flex;
+  padding: 20px;
+}
+
 #serviceActionBtn.aberto {
   background-color: antiquewhite;
   color: black;

@@ -9,9 +9,6 @@ const pool = new Pool({
   password,
   database,
   port,
-  ssl: {
-    rejectUnauthorized: false,
-  },
 });
 
 module.exports = pool;

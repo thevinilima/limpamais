@@ -34,13 +34,14 @@ exports.getServices = async (req, res) => {
 
 exports.getRequesterServices = async (req, res) => {
   try {
-    const { rows } = await Service.getRequesterServices(req.params.tel);
-    rows?.sort((service) => {
+    const result = await Service.getRequesterServices(req.params.tel);
+    result?.rows?.sort((service) => {
       if (service.status === 'FINALIZADO') return 1;
       return -1;
     });
-    return res.json(rows);
+    return res.json(result?.rows || []);
   } catch (err) {
+    console.log(err);
     return res.status(400).json('Falhou a requisição');
   }
 };
@@ -79,7 +80,16 @@ exports.takeService = async (req, res) => {
       [numServico]
     );
 
-    res.status(200).end();
+    const user = await User.getFromToken(req.headers.authorization);
+
+    const atendeServico = await pool.query(
+      `insert into atende_servico (num_servico_atendido, telefone_diarista)
+       values ($1, $2)
+       returning *`,
+      [numServico, user.telefone]
+    );
+
+    res.status(200).json(atendeServico);
   } catch {
     res.status(500).json('Algo deu errado');
   }
