@@ -298,7 +298,16 @@ O botão '+' te da a opção de criar uma nova solicitação de serviço e o bt�
 ![telaContratante](imagens/telaContratante.png)
 
 Ao acessar o botão '+' para criar uma nova solicitação de serviço, o usuário precisa preencher os campos solicitados. Caso os campos sejam validados, basta o usuário finalizar o processo com o botão 'Criar Solicitação'. Assim, a solicitação de serviço é gerada e enviada para os prestadores de serviço.
+
 ![telaSolicitacao](imagens/telaSolicitacao.png)
+
+Acessando a plataforma com um perfil de usuário Diarista, Você terá acesso ao histórico de solicitações de serviço, os detalhes desses serviços e a classificação de cada um, informando se a solicitação está pendente, em processo, concluída ou aguardando pagamento.
+
+![telaDiarista](imagens/telaDiarista.png)
+
+Para aceitar uma nova solicitação de serviço o usuário diarista precisa escolher o card do serviço e ao abrir ele e concordar com as informações inseridas, utilizar o botão 'Pegar Serviço'
+
+![telaAceiteServico](imagens/telaAceiteServico.png)
 
 ## 8. Conclusão
 
