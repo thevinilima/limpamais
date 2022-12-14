@@ -105,6 +105,18 @@
             ></button>
             <button class="aguardar-pagamento-btn">Cobrar Serviço</button>
             <button class="finalizar-btn">Confirmar pagamento</button>
+            <div id="rating-container" class="hidden">
+              <label for="rating-select">Avaliação do Contratante:</label>
+              <select id="rating-select" onchange="handleRatingChange()">
+                <option value="" disabled selected>0 - 5</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
           </div>
         </div>
       </main>

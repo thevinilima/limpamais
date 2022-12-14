@@ -1,4 +1,9 @@
+let currentNumServico = null;
+let lastPayment = null;
+
 const loadServices = async () => {
+  currentNumServico = null;
+  lastPayment = null;
   const container = document.getElementById('container-servicos');
   container.innerHTML = null;
   let img = document.createElement('IMG');
@@ -125,6 +130,7 @@ const handleServiceCardClick = numServico => {
     service => service.num_servico_criado === numServico
   );
   if (!service) return;
+  currentNumServico = numServico;
 
   modal.style.display = 'block';
   document.querySelector('#desc').innerHTML =
@@ -242,13 +248,35 @@ const handleTakeService = async numServico => {
   }
 };
 
+const handleRatingChange = async () => {
+  console.log(lastPayment);
+  const token = localStorage.getItem('token');
+  const select = document.querySelector('#rating-select');
+  if (!token || !select.value || !lastPayment || !currentNumServico) return;
+
+  const res = await fetch('http://localhost:3003/users/rate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      rating: select.value,
+      idPagamento: lastPayment.id_pagamento,
+      numServico: currentNumServico,
+    }),
+  });
+
+  if (res.status === 200) {
+    setStatus('FINALIZADO', currentNumServico);
+  }
+};
+
 const handleEndService = async numServico => {
   const token = localStorage.getItem('token');
   if (!token || !numServico) return;
 
-  setStatus('FINALIZADO', numServico);
-
-  const res = await fetch('http://localhost:3003/services/take/' + numServico, {
+  const res = await fetch('http://localhost:3003/services/pay/' + numServico, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -256,8 +284,10 @@ const handleEndService = async numServico => {
     },
   });
 
-  if (res.status === 200) {
-    modal.style.display = 'none';
-    loadServices();
+  if (res.status === 201) {
+    res.json().then(response => {
+      lastPayment = response;
+      document.querySelector('#rating-container').classList.remove('hidden');
+    });
   }
 };

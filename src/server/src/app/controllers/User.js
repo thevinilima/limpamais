@@ -53,3 +53,12 @@ exports.getUserData = async (req, res) => {
 
   res.status(200).json({ user });
 };
+
+exports.rateUser = async (req, res) => {
+  try {
+    const createdRating = await User.rate(req.body);
+    res.json(createdRating);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+};
