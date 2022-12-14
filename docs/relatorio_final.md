@@ -297,6 +297,9 @@ Acessando a plataforma com um perfil de usuário contratante, você terá acesso
 O botão '+' te da a opção de criar uma nova solicitação de serviço e o btão 'SAIR' encerra seu acesso ao sistema.
 ![telaContratante](imagens/telaContratante.png)
 
+Ao acessar o botão '+' para criar uma nova solicitação de serviço, o usuário precisa preencher os campos solicitados. Caso os campos sejam validados, basta o usuário finalizar o processo com o botão 'Criar Solicitação'. Assim, a solicitação de serviço é gerada e enviada para os prestadores de serviço.
+![telaSolicitacao](imagens/telaSolicitacao.png)
+
 ## 8. Conclusão
 
 Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as observações pessoais de cada aluno. Poderá também apresentar sugestões de novas linhas de estudo.
