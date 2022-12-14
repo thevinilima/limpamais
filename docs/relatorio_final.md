@@ -283,11 +283,13 @@ O Limpa Mais, desenvolvido para facilitar o encontro de diaristas e de novas opo
 
 . A tela inicial, contem a opção de login através dos campos 'Telefone' e 'Senha' para acesso do usuário, caso seja seu primeiro acesso, ele consegue se cadastrar na plataforma através do botão 'REGISTRE-SE' : 
 ![telaInicial](imagens/telaLogin.png)
- - Na tela de registro, basta o usuário escolher entre as opções:
-CPF: Para se cadastrar com o perfil de pessoa física contratante;
-CNPJ: Para se cadastrar com o perfil de pessoa jurídica contratante;
-Diarista: Para se cadastrar com o perfil de prestador de serviços.
-Após isso, basta preencher os campos solicitados.
+
+Na tela de registro, basta o usuário escolher entre as opções:
+ - CPF: Para se cadastrar com o perfil de pessoa física contratante;
+ - CNPJ: Para se cadastrar com o perfil de pessoa jurídica contratante;
+ - Diarista: Para se cadastrar com o perfil de prestador de serviços.
+ 
+ Após isso, basta preencher os campos solicitados.
 ![telaInicial](imagens/telaRegistro.png)
 
 ## 8. Conclusão
