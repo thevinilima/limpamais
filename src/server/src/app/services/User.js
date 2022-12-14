@@ -27,3 +27,26 @@ exports.getFromToken = async (headerToken) => {
   const { telefone } = jwt.verify(token, process.env.JWT_SECRET);
   return await this.getByTel(telefone);
 };
+
+exports.rate = async ({ idPagamento, numServico, rating }) => {
+  const { rows } = await pool.query(
+    `
+    insert into avalia_usuario (
+      id_pagamento,
+      telefone_usuario,
+      avaliacao_usuario
+    )
+    values ($1, (
+      select u.telefone
+      from usuario u
+      join cria_servico cs
+      on cs.telefone_usuario = u.telefone
+      where cs.num_servico = $2
+    ), $3)
+    returning *;
+  `,
+    [idPagamento, numServico, rating]
+  );
+
+  return rows[0];
+};

@@ -5,6 +5,18 @@ botaoModal?.addEventListener('click', function () {
   modal.style.display = 'block';
 });
 
+let firstTime = true;
+const resetButton = () => {
+  const actionButton = document.querySelector('#serviceActionBtn');
+  if (!firstTime) {
+    actionButton?.removeAttribute('onclick');
+    firstTime = false;
+  }
+  actionButton?.removeAttribute('class');
+  actionButton.innerHTML = actionButton.dataset.defaultText;
+};
+resetButton();
+
 const fecharModal = document.getElementById('fecharX');
 fecharModal.addEventListener('click', function () {
   let fechar = document.querySelector('.modalInsercao');
@@ -15,10 +27,7 @@ fecharModal.addEventListener('click', function () {
   inputs.forEach(input => {
     input.value = '';
   });
-  const button = document.querySelector('#serviceActionBtn');
-  button?.removeAttribute('onclick');
-  button?.removeAttribute('class');
-  button.innerHTML = button.dataset.defaultText;
+  resetButton();
 });
 
 const criaSolicitacao = document.getElementById('criaSolicitacao');

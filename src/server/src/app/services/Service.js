@@ -56,8 +56,19 @@ exports.create = async ({ desc, dateTime, rooms, value, address }, userTel) => {
   return service;
 };
 
-exports.getServices = async () => {
-  const result = await pool.query(`select * from servico;`);
+exports.getServices = async ({ tel }) => {
+  const result = await pool.query(
+    `select s1.*
+    from servico s1
+    where s1.status = 'ABERTO'
+    union
+      select s2.*
+      from servico s2
+      join atende_servico ats
+      on ats.num_servico_atendido = s2.num_servico_criado
+      where ats.telefone_diarista = $1;`,
+    [tel]
+  );
 
   if (!result.rowCount) return null;
 
@@ -68,28 +79,19 @@ exports.getRequesterServices = async (tel) => {
   const result = await pool.query(
     `
     SELECT
-      s.num_servico_criado,
-      s.descricao_atividade,
-      s.data_horario,
-      s.comodos,
-      s.valor,
-      s.cep,
-      s.logradouro,
-      s.numero,
-      s.complemento,
-      s.bairro,
-      s.cidade,
-      s.uf,
-      s.status,
+      s.*,
       (
         select d.chave_pix from diarista d
         where d.telefone = ats.telefone_diarista
-      ) as pix_diarista
+      ) as pix_diarista,
+      p.id_pagamento
     FROM servico s
     INNER JOIN cria_servico cs
     ON s.num_servico_criado = cs.num_servico
     LEFT JOIN atende_servico ats
     ON s.num_servico_criado = ats.num_servico_atendido
+    LEFT JOIN pagamento p
+    ON p.num_servico_pago = s.num_servico_criado
     WHERE cs.telefone_usuario = $1;
   `,
     [tel]
@@ -125,26 +127,28 @@ exports.setServiceStatus = async (newStatus, serviceId) => {
   return result;
 };
 
-exports.rateService = async (score, serviceId) => {
-  const result = await pool.query(
-    `UPDATE cria_servico
-    SET nota = $1
-    WHERE num_servico = $2`,
-    [score, serviceId]
+exports.payService = async ({ numServico }) => {
+  const payment = await pool.query(
+    `insert into pagamento (
+      num_servico_pago,
+      telefone_usuario,
+      telefone_diarista
+    ) values ($1, (
+      select cs.telefone_usuario
+      from servico s
+      join cria_servico cs
+      on cs.num_servico = s.num_servico_criado
+      where s.num_servico_criado = $1
+    ), (
+      select ats.telefone_diarista
+      from servico s
+      join atende_servico ats
+      on ats.num_servico_atendido = s.num_servico_criado
+      where s.num_servico_criado = $1
+    ))
+    returning *;`,
+    [numServico]
   );
 
-  if (!result.rowCount) return null;
-
-  return result;
-};
-
-exports.getMyAverageRate = async (telefoneUsuario) => {
-  const result = await pool.query(
-    `select avg(avaliacao_usuario) from avalia_usuario where telefone_usuario = $1`,
-    [telefoneUsuario]
-  );
-
-  if (!result.rowCount) return null;
-
-  return result.rows[0];
+  return payment.rows[0] || null;
 };

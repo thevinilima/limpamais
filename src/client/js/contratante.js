@@ -1,5 +1,6 @@
 const token = localStorage.getItem('token');
 const root = document.getElementById('root');
+let currentService = null;
 
 const IsNotLogged = () => {
   if (!localStorage.getItem('token')) {
@@ -14,8 +15,7 @@ window.onload = () => {
 
 const getServices = () => JSON.parse(localStorage.getItem('servicesAvailable'));
 
-const handleCreateService = async e => {
-  e.preventDefault();
+const handleCreateService = async () => {
   let container = document.querySelector('#main');
   let loading = document.createElement('h1');
   let textloading = document.createTextNode('Carregando...');
@@ -59,12 +59,15 @@ const handleCreateService = async e => {
   }
 };
 
+const modal = document.querySelector('.modalInsercao');
 const getRequesterServices = async () => {
   let container = document.querySelector('#main');
   let loading = document.createElement('h1');
   let textloading = document.createTextNode('Carregando...');
   loading.appendChild(textloading);
   container.appendChild(loading);
+  currentService = null;
+  modal.style.display = 'none';
 
   const token = localStorage.getItem('token');
   if (!token) return;
@@ -92,7 +95,8 @@ const getRequesterServices = async () => {
 };
 
 const generateServicosCards = () => {
-  const container = document.getElementById('main');
+  const container = document.getElementById('list');
+  container.innerHTML = null;
   const services = getServices();
 
   services?.forEach(service => {
@@ -180,12 +184,12 @@ logoutBtn.addEventListener('click', () => {
   location.pathname = '/src/client';
 });
 
-const modal = document.querySelector('.modalInsercao');
 const handleServiceCardClick = numServico => {
   const service = getServices()?.find(
     service => service.num_servico_criado === numServico
   );
   if (!service) return;
+  currentService = service;
 
   modal.style.display = 'block';
 
@@ -225,6 +229,10 @@ const handleServiceCardClick = numServico => {
       `handlePayment(${service.num_servico_criado})`
     );
   }
+
+  if (service.status === 'FINALIZADO') {
+    document.querySelector('#rating-container').classList.remove('hidden');
+  } else document.querySelector('#rating-container').classList.add('hidden');
 };
 
 const handlePayment = async numServico => {
@@ -251,4 +259,25 @@ const handleCopyPix = () => {
   setTimeout(() => {
     feedback.classList.add('hidden');
   }, 1.5 * 1000);
+};
+
+const handleRatingChange = async () => {
+  const token = localStorage.getItem('token');
+  const select = document.querySelector('#rating-select');
+  if (!token || !select.value || !currentService) return;
+
+  const res = await fetch('http://localhost:3003/diaristas/rate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      rating: select.value,
+      idPagamento: currentService.id_pagamento,
+      numServico: currentService.num_servico_criado,
+    }),
+  });
+
+  if (res.status === 200) getRequesterServices();
 };

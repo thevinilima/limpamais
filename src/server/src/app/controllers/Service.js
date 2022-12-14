@@ -18,7 +18,10 @@ exports.createService = async (req, res) => {
 
 exports.getServices = async (req, res) => {
   try {
-    const { rows } = await Service.getServices();
+    const { authorization } = req.headers;
+
+    const user = await User.getFromToken(authorization);
+    const { rows } = await Service.getServices({ tel: user.telefone });
     rows?.sort((service) => {
       if (service.status === 'FINALIZADO') return 1;
       return -1;
@@ -31,9 +34,14 @@ exports.getServices = async (req, res) => {
 
 exports.getRequesterServices = async (req, res) => {
   try {
-    const { rows } = await Service.getRequesterServices(req.params.tel);
-    return res.json(rows);
+    const result = await Service.getRequesterServices(req.params.tel);
+    result?.rows?.sort((service) => {
+      if (service.status === 'FINALIZADO') return 1;
+      return -1;
+    });
+    return res.json(result?.rows || []);
   } catch (err) {
+    console.log(err);
     return res.status(400).json('Falhou a requisição');
   }
 };
@@ -72,7 +80,16 @@ exports.takeService = async (req, res) => {
       [numServico]
     );
 
-    res.status(200).end();
+    const user = await User.getFromToken(req.headers.authorization);
+
+    const atendeServico = await pool.query(
+      `insert into atende_servico (num_servico_atendido, telefone_diarista)
+       values ($1, $2)
+       returning *`,
+      [numServico, user.telefone]
+    );
+
+    res.status(200).json(atendeServico);
   } catch {
     res.status(500).json('Algo deu errado');
   }
@@ -92,25 +109,12 @@ exports.setServiceStatus = async (req, res) => {
   }
 };
 
-exports.rateService = async (req, res) => {
-  const { numServico } = req.params;
-  if (!numServico) return res.status(400).json('Informe o número do serviço');
+exports.handleServicePayment = async (req, res) => {
   try {
-    const response = await Service.rateService(req.body.score, numServico);
-    return res.json({ message: 'nota atribuída com sucesso!', response });
-  } catch (err) {
-    return res.status(400).json(err);
-  }
-};
+    const payment = await Service.payService({ ...req.params, ...req.body });
 
-exports.getMyAverageRate = async (req, res) => {
-  const { telefoneUsuario } = req.params;
-  if (!telefoneUsuario)
-    return res.status(400).json('Informe o número de telefone');
-  try {
-    const rating = await Service.getMyAverageRate(telefoneUsuario);
-    return res.json(rating);
+    res.status(201).json(payment);
   } catch (err) {
-    return res.status(400).json(err);
+    res.status(400).json(err);
   }
 };

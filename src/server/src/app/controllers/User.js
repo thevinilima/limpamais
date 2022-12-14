@@ -41,7 +41,8 @@ exports.createUser = async (req, res) => {
     }
 
     res.status(200).json('Usuário cadastrado com sucesso!');
-  } catch {
+  } catch (e) {
+    console.log(e);
     res.status(500).json('Algo deu errado');
   }
 };
@@ -52,4 +53,13 @@ exports.getUserData = async (req, res) => {
   const user = await User.getFromToken(authorization);
 
   res.status(200).json({ user });
+};
+
+exports.rateUser = async (req, res) => {
+  try {
+    const createdRating = await User.rate(req.body);
+    res.json(createdRating);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 };
