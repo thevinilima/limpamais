@@ -322,7 +322,8 @@ Nessa mesma tela, após a realização do serviço, a Diarista possui as opçõe
 
 ## 8. Conclusão
 
-Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as observações pessoais de cada aluno. Poderá também apresentar sugestões de novas linhas de estudo.
+Esse sistema pretende auxiliar o contrato de Diaristas para a prestação de serviço, diminuindo a dificuldade que as pessoas possuem em se conectar com esses prestadores de serviço e encerrando a dependencia por indicações. E assim, os diaristas encontrem novos clientes para prestar o seu serviço e aumentem sua cartela de clientes, beneficiando assim sua renda financeira, com a facilidade em receber novas oportunidades de trabalho. 
+Após a definição do problema e jutificativa do mesmo, foram discutidas formas para a implementação da solução entre os membros da equipe do projto com orientação dos professores designados. Nessas definições, foram observadas por exemplo a necessidade do usuário possuir um numero de telefone para acesso e comunicação, a chave pix para evitar o pagamento manual e diminuir os possíveis transtornos que possam vir a existir nesse processo. Necessário no futuro, avaliare estudar a possibilidade de integrar uma API de validação de pagamento juntamente ao aplicativo de instituição financeira que ele será realizado para que o processo se encerre de forma automática. Com isso, conclui-se assim a entrega da primeira versão do sistema para apresentação final e utilização de terceiros.
 
 # APÊNDICES
 
