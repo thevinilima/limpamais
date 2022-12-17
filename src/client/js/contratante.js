@@ -42,14 +42,17 @@ const handleCreateService = async () => {
   };
 
   try {
-    const response = await fetch('http://localhost:3003/services ', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    }).then(res => res.json());
+    const response = await fetch(
+      'https://limpa-api-production-436c.up.railway.app/services ',
+      {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    ).then(res => res.json());
 
     loading.remove();
     alert(response.message);
@@ -76,7 +79,8 @@ const getRequesterServices = async () => {
   let response;
   try {
     response = await fetch(
-      'http://localhost:3003/services/requester/' + userTel,
+      'https://limpa-api-production-436c.up.railway.app/services/requester/' +
+        userTel,
       {
         method: 'GET',
         headers: {
@@ -266,18 +270,21 @@ const handleRatingChange = async () => {
   const select = document.querySelector('#rating-select');
   if (!token || !select.value || !currentService) return;
 
-  const res = await fetch('http://localhost:3003/diaristas/rate', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({
-      rating: select.value,
-      idPagamento: currentService.id_pagamento,
-      numServico: currentService.num_servico_criado,
-    }),
-  });
+  const res = await fetch(
+    'https://limpa-api-production-436c.up.railway.app/diaristas/rate',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        rating: select.value,
+        idPagamento: currentService.id_pagamento,
+        numServico: currentService.num_servico_criado,
+      }),
+    }
+  );
 
   if (res.status === 200) getRequesterServices();
 };

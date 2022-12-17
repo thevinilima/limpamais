@@ -15,13 +15,16 @@ const loadServices = async () => {
 
   let response;
   try {
-    response = await fetch('http://localhost:3003/services', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    }).then(response => response.json());
+    response = await fetch(
+      'https://limpa-api-production-436c.up.railway.app/services',
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    ).then(response => response.json());
   } catch (err) {
     console.log(err.message);
   }
@@ -205,16 +208,20 @@ async function setStatus(newStatus, num_servico) {
   if (!token || !num_servico) return;
 
   try {
-    await fetch('http://localhost:3003/services/setstatus/' + num_servico, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        newStatus: newStatus,
-      }),
-    })
+    await fetch(
+      'https://limpa-api-production-436c.up.railway.app/services/setstatus/' +
+        num_servico,
+      {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          newStatus: newStatus,
+        }),
+      }
+    )
       .then(response => response.json())
       .then(response => {
         alert(response.message);
@@ -234,13 +241,17 @@ const handleTakeService = async numServico => {
   const token = localStorage.getItem('token');
   if (!token || !numServico) return;
 
-  const res = await fetch('http://localhost:3003/services/take/' + numServico, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-  });
+  const res = await fetch(
+    'https://limpa-api-production-436c.up.railway.app/services/take/' +
+      numServico,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 
   if (res.status === 200) {
     modal.style.display = 'none';
@@ -253,18 +264,21 @@ const handleRatingChange = async () => {
   const select = document.querySelector('#rating-select');
   if (!token || !select.value || !lastPayment || !currentNumServico) return;
 
-  const res = await fetch('http://localhost:3003/users/rate', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({
-      rating: select.value,
-      idPagamento: lastPayment.id_pagamento,
-      numServico: currentNumServico,
-    }),
-  });
+  const res = await fetch(
+    'https://limpa-api-production-436c.up.railway.app/users/rate',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        rating: select.value,
+        idPagamento: lastPayment.id_pagamento,
+        numServico: currentNumServico,
+      }),
+    }
+  );
 
   if (res.status === 200) {
     setStatus('FINALIZADO', currentNumServico);
@@ -275,13 +289,17 @@ const handleEndService = async numServico => {
   const token = localStorage.getItem('token');
   if (!token || !numServico) return;
 
-  const res = await fetch('http://localhost:3003/services/pay/' + numServico, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-  });
+  const res = await fetch(
+    'https://limpa-api-production-436c.up.railway.app/services/pay/' +
+      numServico,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 
   if (res.status === 201) {
     res.json().then(response => {

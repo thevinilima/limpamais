@@ -7,13 +7,16 @@ formRegister.addEventListener('submit', async function (e) {
   const formData = Object.fromEntries(form.entries());
 
   try {
-    const response = await fetch('http://localhost:3003/users', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await fetch(
+      'https://limpa-api-production-436c.up.railway.app/users',
+      {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     alert('Usuário cadastrado com sucesso!');
     return response;
@@ -31,13 +34,16 @@ formLogin.addEventListener('submit', async function (e) {
   parseInt(loginFormData.tel);
 
   try {
-    const res = await fetch('http://localhost:3003/login ', {
-      method: 'POST',
-      body: JSON.stringify(loginFormData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const res = await fetch(
+      'https://limpa-api-production-436c.up.railway.app/login ',
+      {
+        method: 'POST',
+        body: JSON.stringify(loginFormData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
     const data = await res.json();
     if (res.status === 401) {
       errorMsg.innerHTML = data;
