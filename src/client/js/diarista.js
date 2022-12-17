@@ -124,7 +124,7 @@ logoutBtn.addEventListener('click', () => {
   localStorage.removeItem('user');
   localStorage.removeItem('servicesAvailable');
 
-  location.pathname = '/src/client';
+  location.pathname = '/';
 });
 
 const modal = document.querySelector('.modalInsercao');
